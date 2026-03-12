@@ -20,7 +20,18 @@ transform child_right:
     zoom 0.8
     xalign -0.7
     yalign 0.95
-
+transform student_right:
+    zoom 0.8
+    xalign -0.7
+    yalign 0.95
+transform parent_right:
+    zoom 0.8
+    xalign -0.7
+    yalign 0.95
+transform elder_right:
+    zoom 0.8
+    xalign -0.7
+    yalign 0.95
 
 define config.layers = ["master", "Foreground", "transient", "Headshot", "headshot", "screens", "overlay" ]
 
@@ -37,15 +48,15 @@ label start:
 
     hide child onlayer Foreground
 
-    show student onlayer Foreground at child_right
+    show student onlayer Foreground at student_right
     "Now for The Student."
     hide student onlayer Foreground
 
-    show parent onlayer Foreground
+    show parent onlayer Foreground at parent_right
     "Now The Parent."
 
     hide parent onlayer Foreground
 
-    show elder onlayer Foreground
+    show elder onlayer Foreground at elder_right
     "And lastly, The Elder."
 return
