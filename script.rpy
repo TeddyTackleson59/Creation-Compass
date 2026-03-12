@@ -17,8 +17,9 @@ transform background:
     zoom 0.5
 
 transform child_right:
-    zoom 0.9
-    xalign 0.6
+    zoom 0.8
+    xalign 0.0
+    yalign 0.2
 
 
 define config.layers = ["master", "Foreground", "transient", "Headshot", "headshot", "screens", "overlay" ]
