@@ -9,7 +9,7 @@ image child = "images/The Child.png"
 image student = "images/The Student.png"
 image parent = "images/The Parent.png"
 image elder = "images/The Elder.png"
-image background1 = "image/background1.jpg"
+image background1 = "images/background1.jpg"
 
 define config.layeredimage_offer_screen = True
 
