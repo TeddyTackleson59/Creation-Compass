@@ -110,11 +110,11 @@ label start:
 
     menu confusion:
         "Who are you?":
-        jump ss_who
+            jump ss_who
         "What is this place":
-        jump ss_what
+            jump ss_what
         "Your dreams?"
-        jump ss_dreams
+            jump ss_dreams
         label ss_who:
 
             c "We are The Four!"
