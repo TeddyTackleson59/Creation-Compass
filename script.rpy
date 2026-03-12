@@ -18,7 +18,7 @@ transform background:
 
 transform child_right:
     zoom 0.8
-    xalign -0.4
+    xalign -0.2
     yalign 0.95
 
 
