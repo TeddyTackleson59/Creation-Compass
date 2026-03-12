@@ -38,25 +38,13 @@ define config.layers = ["master", "Foreground", "transient", "Headshot", "headsh
 
 
 label start:
+    "At first, there was nothing but swirling Darkness and Light and Clear."
+    "Then there was a spark, and there were The Four Directions, stretching out away from each other." 
+    "All around them were specks of Knowledge. These specks collected on The Four Directions, and fed them."
+    "As The Four Directions grew, they started to take shape. Four sleeping entities."
+    "As they slept, they started to dream. They dreamt of a space beyond their own, each one seeing unique glimpses of all other things."
+    "The Four awoke from their dreams, in the Darkness above the Light. Each one wandered the Darkness, and found another. The two pairs learned to speak, and so they shared what they had seen in their dreams."
+    "When the pairs came together, they finally learned their names. They were The Four, together, yet alone within the Darkness." 
+    "They had dreamt of something called a world, and wished for a world of their own. So The Four set to work creating their world."
 
-    "Here is The Child"
-    show background1 onlayer master at background
-    show child onlayer Foreground at child_right
-
-
-    "Can you see it?"
-
-    hide child onlayer Foreground
-
-    show student onlayer Foreground at student_right
-    "Now for The Student."
-    hide student onlayer Foreground
-
-    show parent onlayer Foreground at parent_right
-    "Now The Parent."
-
-    hide parent onlayer Foreground
-
-    show elder onlayer Foreground at elder_right
-    "And lastly, The Elder."
 return
