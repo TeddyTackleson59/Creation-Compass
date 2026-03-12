@@ -660,19 +660,19 @@ label start:
             "No.":
                 jump ss_more_no
             
-            label ss_more_yes:
+                label ss_more_yes:
 
-                p "Splendid!"
+                    p "Splendid!"
 
-                hide parent onlayer Foreground
-                show student onlayer Foreground at student_right
+                    hide parent onlayer Foreground
+                    show student onlayer Foreground at student_right
 
-                s "Interesting…"
+                    s "Interesting…"
 
-                hide student onlayer Foreground
-                show parent onlayer Foreground at parent_right
+                    hide student onlayer Foreground
+                    show parent onlayer Foreground at parent_right
 
-                p "Well regardless, it sounds like it will be a wonderful piece of work to draw to and from. Well done."
+                    p "Well regardless, it sounds like it will be a wonderful piece of work to draw to and from. Well done."
             label ss_more_no:
 
                 "The Parent furrows their expression."
