@@ -25,6 +25,20 @@ label start:
     "Here is The Child"
     show child onlayer Foreground
 
+
     "Can you see it?"
 
+    hide child onlayer Foreground
+
+    show student onlayer Foreground
+    "Now for The Student."
+    hide student onlayer Foreground
+
+    show parent onlayer Foreground
+    "Now The Parent."
+
+    hide parent onlayer Foreground
+
+    show elder onlayer Foreground
+    "And lastly, The Elder."
 return
