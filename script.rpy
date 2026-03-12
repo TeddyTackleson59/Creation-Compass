@@ -312,7 +312,7 @@ label start:
                             "Yes, I've worked on it.":
                                 jump ss_yes
                             "What are you doing?":
-                                jump ss_what
+                                jump ss_enough
 
                                 label ss_yes:
 
@@ -321,7 +321,7 @@ label start:
                                     c "..."
 
                                     c "What? That's not enough."
-                                label ss_what:
+                                label ss_enough:
 
 
                                     c "I'm coming up with new ideas!"
@@ -713,7 +713,7 @@ label start:
 
                 p "After you, worldbuilder."
                 hide parent onlayer Foreground
-                
+
                 "End of chapter"
 
 
