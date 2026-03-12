@@ -338,7 +338,9 @@ label start:
                             "Maybe you should slow down.":
                                 jump ss_slow
                             "...":
+                                jump ss_place1
 
+                    label ss_place1:
 
                         c "And there can be a bunch of different trees! Strong trees, twisty trees, hollow trees. And people will make bread and candy and cookies!"
                         c "There would need to be a lot of people making cookies for it to be a proper world, obviously."
