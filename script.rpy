@@ -113,7 +113,7 @@ label start:
             jump ss_who
         "What is this place":
             jump ss_what
-        "Your dreams?"
+        "Your dreams?":
             jump ss_dreams
         label ss_who:
 
