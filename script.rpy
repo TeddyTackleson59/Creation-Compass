@@ -168,7 +168,7 @@ label start:
 
                 "The Child gestures to the specks of light that dot the darkness."
 
-                ide child onlayer Foreground
+                hide child onlayer Foreground
                 show student onlayer Foreground at student_right
 
                 s "Those are actually specks of Knowledge. They group together and form bright clumps and clusters. Very helpful to have lying around." 
@@ -304,7 +304,7 @@ label start:
                                 label ss_yes:
 
                                     c "Great! How many things did you come up with?"
-                                    renpy.input("How many?")
+                                    renpy.input("How many?", length=32)
 
                                     c "What? That's not enough."
                                 label ss_what:
