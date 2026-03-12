@@ -155,5 +155,168 @@ label start:
                 hide child onlayer Foreground
                 jump confusion
 
+            label ss_what:
+
+                show student onlayer Foreground at student_right
+
+                s "It is a void of sorts. There is light, darkness, and space."
+
+                hide student onlayer Foreground
+                show child onlayer Foreground at child_right
+
+                c "There are stars!"
+
+                "The Child gestures to the specks of light that dot the darkness."
+
+                ide child onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "Those are actually specks of Knowledge. They group together and form bright clumps and clusters. Very helpful to have lying around." 
+            
+                s "And besides them, there is us. That is all that resides in this space. But that is what we're all trying to change."
+
+                hide student onlayer Foreground
+
+            label ss_dreams:
+
+                show parent onlayer Foreground at parent_right
+                p "Yes, we dreamt of a far away world. A world of many things, of people and voices and buildings."
+
+                hide parent onlayer Foreground
+                show child onlayer Foreground at child_right
+
+                c "That's where you come from! I just know it! We're always thinking about that world!"
+
+                hide child onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "And we know about it. We like the things from it."
+
+                hide student onlayer Foreground
+                show elder onlayer Foreground at elder_right
+
+                e "Some of the things."
+
+                hide elder onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "The dreams gave us the ideas to work on something of our own."
+                $ dreams = False
+                hide student onlayer Foreground
+                jump confusion
+
+    menu:
+        "What are you working on?":
+
+            show child onlayer Foreground at child_right
+
+            c "We liked your world so much, we want to make one too!"
+
+            hide child onlayer Foreground
+            show student onlayer Foreground at student_right
+
+            s "Yes, that's the idea. This void…it would just be a waste if we were the only objects that ever populated it. And a world seems like a pretty good choice."
+
+            hide student onlayer Foreground
+            show parent onlayer Foreground at parent_right
+
+            p "We're just doing a bit of brainstorming right now. It's important to think about the way our world could be."
+            p "Say, you seem like someone who would be interested in that. Care to join?"
+
+            hide parent onlayer Foreground
+            show child onlayer Foreground at child_right
+
+            c "Ooh, yes yes, pleeeeasee. You can make your very own list!"
+
+            "The Child looks at The Parent."
+
+            c "Tell them that they should join. It would be so fun!"
+
+            hide child onlayer Foreground
+            show parent onlayer Foreground at parent_right
+
+            p "Well dear, we want everyone to be able to-"
+
+            hide parent onlayer Foreground
+            show elder onlayer Foreground at elder_right
+
+            e "Then it's settled. You wouldn't want to say no to The Child, right new face? Time for you to pitch in."
+
+            hide elder onlayer Foreground
+            show student onlayer Foreground at student_right
+
+            s "Splendid. Then let's continue."
+            s "We've been working in our minds, but you should probably get a paper and pencil, or something else to write with."
+
+            hide student onlayer Foreground
+            show child onlayer Foreground at child_right
+
+            c "Yes! Then you have to make a list. Write down as many things as you can."
+
+            hide child onlayer Foreground
+            show student onlayer Foreground at student_right
+
+            s "No no, the goal isn't quantity, it's quality. You should think and write down only your best ideas."
+
+            hide student onlayer Foreground
+            show child onlayer Foreground at child_right
+
+            c "Well that's stupid. You're gonna end up with nothing written down, and then-"
+
+            p "Why don't we let them decide if an idea is worth writing down or not."
+            p "Listen dear, just make a list of things that you think would be a good foundation for a world. Things like tone, genre, time period, and level of technology, science, and magic. I know the people of your world like magic."
+            p "Then, once you've got some ideas down on your list, come and talk to us again."
+
+            hide parent onlayer Foreground
+            show child onlayer Foreground at child_right
+
+            c "This is going to be great!"
+
+            hide child onlayer Foreground
+
+            "The Elder rolls their eyes, and the group disperses to the four directions."
+
+            centered "..."
+
+            menu ss:
+                "Talk to The Child." if child:
+                    jump ss_child
+                "Talk to The Student" if student:
+                    jump ss_student
+                "Talk to The Parent and The Elder" if parent:
+                    jump ss_pe
+
+                    label ss_child:
+
+                        "The Child stands amidst bright clumps of Knowledge, floating around. They grab two twinkling specks and mash them together. They turn from the bright colors to look at you."
+
+                        show child onlayer Foreground at child_right
+                    
+
+                        c "Hi again! Did you make your list?"
+
+                        menu:
+                            "Yes, I've worked on it.":
+                                jump ss_yes
+                            "What are you doing?":
+                                jump ss_what
+
+                                label ss_yes:
+
+                                    c "Great! How many things did you come up with?"
+                                    renpy.input("How many?")
+
+                                    c "What? That's not enough."
+                                label ss_what:
+
+
+                                    c "I'm coming up with new ideas!"
+
+                                    "They grab one dull speck and shake it, causing it to glow brighter."
+
+                        c "We're going to need a lot more ideas if we're going to make something interesting."
+
+
+
 
 return
