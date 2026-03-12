@@ -13,7 +13,7 @@ image background1 = "images/background1.jpg"
 
 define config.layeredimage_offer_screen = True
 
-define transform test:
+transform test:
     zoom 0.5
 
 
