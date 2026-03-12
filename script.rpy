@@ -356,11 +356,10 @@ label start:
 
                                 label ss_slow:
 
-                                    c """
-                                    Well…I guess so. 
-                                    The rest of The Four said we were supposed to be figuring out the big stuff before the small stuff. I trust them…so I guess I'll do that too. 
-                                    But you should write some more stuff down on that list of yours! You can never have too many ideas…I think.
-                                    """
+                                    c "Well…I guess so."
+                                    c "The rest of The Four said we were supposed to be figuring out the big stuff before the small stuff. I trust them…so I guess I'll do that too." 
+                                    c "But you should write some more stuff down on that list of yours! You can never have too many ideas…I think."
+                                    
 
                                     "The Child turns away and goes back to fiddling with the motes of Knowledge."
                                     $ Child = False
