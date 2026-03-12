@@ -304,7 +304,7 @@ label start:
                                 label ss_yes:
 
                                     c "Great! How many things did you come up with?"
-                                    renpy.input("How many?", length=32)
+                                    number = renpy.input("How many?", length=32)
 
                                     c "What? That's not enough."
                                 label ss_what:
