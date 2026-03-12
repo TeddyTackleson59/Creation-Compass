@@ -22,15 +22,15 @@ transform child_right:
     yalign 1.0
 transform student_right:
     zoom 0.7
-    xalign -0.4
+    xalign -0.35
     yalign 1.0
 transform parent_right:
     zoom 0.9
-    xalign -0.7
+    xalign -0.75
     yalign 2.0
 transform elder_right:
     zoom 0.9
-    xalign -1.0
+    xalign -1.3
     yalign 1.0
 
 define config.layers = ["master", "Foreground", "transient", "Headshot", "headshot", "screens", "overlay" ]
