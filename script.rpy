@@ -19,15 +19,15 @@ transform background:
 transform child_right:
     zoom 0.8
     xalign -0.7
-    yalign 0.95
+    yalign 1.0
 transform student_right:
-    zoom 0.8
+    zoom 0.7
     xalign -0.7
-    yalign 0.95
+    yalign 1.0
 transform parent_right:
-    zoom 0.8
-    xalign -0.7
-    yalign 0.95
+    zoom 0.9
+    xalign -0.4
+    yalign 1.5
 transform elder_right:
     zoom 0.8
     xalign -0.7
