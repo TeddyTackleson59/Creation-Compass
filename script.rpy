@@ -600,7 +600,7 @@ label start:
                                         else:
                                             jump ss
 
-                    label ss_ending:
+                label ss_ending:
 
                         "You stand on your own, and think."
 
