@@ -293,6 +293,7 @@ label start:
 
                         centered "..."
                     label ss:
+                        "The Four stand."
                         menu:
                             "Talk to The Child." if Child:
                                 jump ss_child
