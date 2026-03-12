@@ -665,61 +665,62 @@ label start:
                             "No.":
                                 jump ss_more_no
                             
-                                label ss_more_yes:
+                                    label ss_more_yes:
 
-                                    p "Splendid!"
+                                        p "Splendid!"
 
-                                    hide parent onlayer Foreground
-                                    show student onlayer Foreground at student_right
+                                        hide parent onlayer Foreground
+                                        show student onlayer Foreground at student_right
 
-                                    s "Interesting…"
+                                        s "Interesting…"
 
-                                    hide student onlayer Foreground
+                                        hide student onlayer Foreground
+                                        show parent onlayer Foreground at parent_right
+
+                                        p "Well regardless, it sounds like it will be a wonderful piece of work to draw to and from. Well done."
+                                        
+                                    label ss_more_no:
+
+                                        "The Parent furrows their expression."
+
+                                        hide parent onlayer Foreground
+                                        show student onlayer Foreground at student_right
+
+                                        s "If you are having trouble, something I believe to be helpful is discussing your work with others."
+                                        s "If you can find someone in the space where you are to bounce ideas off of, they can often provide a unique insight that unlocks doors that you could not open otherwise. Try finding someone to talk to right now!"
+                                        hide student onlayer Foreground
+                                        centered "..."
+
                                     show parent onlayer Foreground at parent_right
 
-                                    p "Well regardless, it sounds like it will be a wonderful piece of work to draw to and from. Well done."
-                                label ss_more_no:
-
-                                    "The Parent furrows their expression."
+                                    p "Now, what shall we do next?"
 
                                     hide parent onlayer Foreground
                                     show student onlayer Foreground at student_right
 
-                                    s "If you are having trouble, something I believe to be helpful is discussing your work with others."
-                                    s "If you can find someone in the space where you are to bounce ideas off of, they can often provide a unique insight that unlocks doors that you could not open otherwise. Try finding someone to talk to right now!"
+                                    s "I think we should pause and let things settle before moving on. Make sure we're all really happy with our idea."
+
                                     hide student onlayer Foreground
-                                    centered "..."
+                                    show elder onlayer Foreground at elder_right
 
-                                show parent onlayer Foreground at parent_right
+                                    e "Well, don't take too long. We don't even have anything physically there yet."
 
-                                p "Now, what shall we do next?"
+                                    hide elder onlayer Foreground
+                                    show child onlayer Foreground at child_right
 
-                                hide parent onlayer Foreground
-                                show student onlayer Foreground at student_right
+                                    c "But that's next, right?! That's next!"
 
-                                s "I think we should pause and let things settle before moving on. Make sure we're all really happy with our idea."
+                                    hide child onlayer Foreground 
+                                    show parent onlayer Foreground at parent_right
 
-                                hide student onlayer Foreground
-                                show elder onlayer Foreground at elder_right
+                                    p "Yes. Let us embark on the next step of this journey then."
 
-                                e "Well, don't take too long. We don't even have anything physically there yet."
+                                    "The Parent gestures to you."
 
-                                hide elder onlayer Foreground
-                                show child onlayer Foreground at child_right
+                                    p "After you, worldbuilder."
+                                    hide parent onlayer Foreground
 
-                                c "But that's next, right?! That's next!"
-
-                                hide child onlayer Foreground 
-                                show parent onlayer Foreground at parent_right
-
-                                p "Yes. Let us embark on the next step of this journey then."
-
-                                "The Parent gestures to you."
-
-                                p "After you, worldbuilder."
-                                hide parent onlayer Foreground
-
-                                "End of chapter"
+                                    "End of chapter"
 
 
 
