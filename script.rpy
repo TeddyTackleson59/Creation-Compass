@@ -189,6 +189,7 @@ label start:
                 s "And besides them, there is us. That is all that resides in this space. But that is what we're all trying to change."
 
                 hide student onlayer Foreground
+                jump ss_next
 
             label ss_dreams:
 
@@ -218,503 +219,504 @@ label start:
                 hide student onlayer Foreground
                 jump confusion
 
-    menu:
-        "What are you working on?":
-
-            show child onlayer Foreground at child_right
-
-            c "We liked your world so much, we want to make one too!"
-
-            hide child onlayer Foreground
-            show student onlayer Foreground at student_right
-
-            s "Yes, that's the idea. This void…it would just be a waste if we were the only objects that ever populated it. And a world seems like a pretty good choice."
-
-            hide student onlayer Foreground
-            show parent onlayer Foreground at parent_right
-
-            p "We're just doing a bit of brainstorming right now. It's important to think about the way our world could be."
-            p "Say, you seem like someone who would be interested in that. Care to join?"
-
-            hide parent onlayer Foreground
-            show child onlayer Foreground at child_right
-
-            c "Ooh, yes yes, pleeeeasee. You can make your very own list!"
-
-            "The Child looks at The Parent."
-
-            c "Tell them that they should join. It would be so fun!"
-
-            hide child onlayer Foreground
-            show parent onlayer Foreground at parent_right
-
-            p "Well dear, we want everyone to be able to-"
-
-            hide parent onlayer Foreground
-            show elder onlayer Foreground at elder_right
-
-            e "Then it's settled. You wouldn't want to say no to The Child, right new face? Time for you to pitch in."
-
-            hide elder onlayer Foreground
-            show student onlayer Foreground at student_right
-
-            s "Splendid. Then let's continue."
-            s "We've been working in our minds, but you should probably get a paper and pencil, or something else to write with."
-
-            hide student onlayer Foreground
-            show child onlayer Foreground at child_right
-
-            c "Yes! Then you have to make a list. Write down as many things as you can."
-
-            hide child onlayer Foreground
-            show student onlayer Foreground at student_right
-
-            s "No no, the goal isn't quantity, it's quality. You should think and write down only your best ideas."
-
-            hide student onlayer Foreground
-            show child onlayer Foreground at child_right
-
-            c "Well that's stupid. You're gonna end up with nothing written down, and then-"
-
-            p "Why don't we let them decide if an idea is worth writing down or not."
-            p "Listen dear, just make a list of things that you think would be a good foundation for a world. Things like tone, genre, time period, and level of technology, science, and magic. I know the people of your world like magic."
-            p "Then, once you've got some ideas down on your list, come and talk to us again."
-
-            hide parent onlayer Foreground
-            show child onlayer Foreground at child_right
-
-            c "This is going to be great!"
-
-            hide child onlayer Foreground
-
-            "The Elder rolls their eyes, and the group disperses to the four directions."
-
-            centered "..."
-
-            menu ss:
-                "Talk to The Child." if child:
-                    jump ss_child
-                "Talk to The Student" if student:
-                    jump ss_student
-                "Talk to The Parent and The Elder" if parent:
-                    jump ss_pe
-
-                    label ss_child:
-
-                        "The Child stands amidst bright clumps of Knowledge, floating around. They grab two twinkling specks and mash them together. They turn from the bright colors to look at you."
+                label ss_next
+                menu:
+                    "What are you working on?":
 
                         show child onlayer Foreground at child_right
-                    
 
-                        c "Hi again! Did you make your list?"
+                        c "We liked your world so much, we want to make one too!"
 
-                        menu:
-                            "Yes, I've worked on it.":
-                                jump ss_yes
-                            "What are you doing?":
-                                jump ss_enough
-
-                                label ss_yes:
-
-                                    c "Great! Let me see how many you came up with."
-
-                                    c "..."
-
-                                    c "What? That's not enough."
-                                label ss_enough:
-
-
-                                    c "I'm coming up with new ideas!"
-
-                                    "They grab one dull speck and shake it, causing it to glow brighter."
-
-                        c "We're going to need a lot more ideas if we're going to make something interesting."
-
-
-                        c "I've already figured out a couple different kinds of animals that would be cool."
-                        c "We could have animals with 5 legs, and animals with big horns on their noses, and, and…have you ever heard of a Hyrax?"
-
-                        menu:
-                            "Maybe you should slow down.":
-                                jump ss_slow
-                            "...":
-                                jump ss_place1
-
-                    label ss_place1:
-
-                        c "And there can be a bunch of different trees! Strong trees, twisty trees, hollow trees. And people will make bread and candy and cookies!"
-                        c "There would need to be a lot of people making cookies for it to be a proper world, obviously."
-
-                        menu:
-                            "I thought you were supposed to be brainstorming more general details?":
-                                jump ss_slow
-                            "...":
-                                jump ss_place2
-                    label ss_place2:
-                        c "Oh there's so much to do! I don't know what to work on first! Maybe we should figure out which beings will fly and which will swim. Or maybe we can start naming all the cities that we're going to make. Actually, we should probably create some liquids to dunk the cookies in…"
-
-                        menu:
-                            "This seems like a lot of ideas":
-                                jump ss_slow
-
-                                label ss_slow:
-
-                                    c "Well…I guess so."
-                                    c "The rest of The Four said we were supposed to be figuring out the big stuff before the small stuff. I trust them…so I guess I'll do that too." 
-                                    c "But you should write some more stuff down on that list of yours! You can never have too many ideas…I think."
-                                    
-
-                                    "The Child turns away and goes back to fiddling with the motes of Knowledge."
-                                    $ Child = False
-                                    $ tracker += 1
-                                    hide child onlayer Foreground
-                                    centered "..."
-
-                                    if tracker >= 3:
-                                        jump ss_ending 
-                                    else:
-                                        jump ss
-                                
-
-                    label ss_student:
+                        hide child onlayer Foreground
                         show student onlayer Foreground at student_right
-                        "The Student sits in an especially dark space in the void. They seem focused on something inward."
 
-                        menu:
-                            "...":
-                                jump ss_wait
-                            "How's it going?":
-                                jump ss_hows
+                        s "Yes, that's the idea. This void…it would just be a waste if we were the only objects that ever populated it. And a world seems like a pretty good choice."
 
-                                label ss_wait:
-                                    s "Well, don't be shy. Come join me."
-
-                                    "You sit beside the entity."
-                                    jump ss_hows
-                                
-
-                                label ss_hows:
-                                    s "I am meditating. I hear that it is good for trying to be one's best self, despite what The Elder may say."
-                        menu:
-                            "What does The Elder have against meditation?":
-                                jump ss_against
-                            "What are you meditating on?":
-                                jump ss_on
-
-                                label ss_against:
-                                    s "If I am not mistaken, The Elder believes that everyone should strive to be their best self, but is rather particular about how they do it."
-                                    s "They find things that seem to progress slowly to be a waste of time. Rather impatient if you ask me."
-
-                                    "The Student smiles."
-
-                                    s "But then again, you must remember that we are all relatively young."
-
-                                label ss_on:
-                                    s "I am trying to sort through my ideas."
-
-                        s "I wish to select the best possible idea to move forward with, but that requires an analysis of how things might go later."
-                        menu:
-                            "What do you have so far?":
-                                jump ss_place3
-                    label ss_place3:            
-
-                        s "Well…nothing yet. But I've been thinking about it! If I pick a bad idea to start with, then this whole project will be a failure. Don't you agree?"
-                        menu:
-                            "Not really...":
-                                jump ss_place4
-                            "I suppose.":
-                                jump ss_place4
-
-                        label ss_place4:
-                            "The Student scoffs."
-
-                            "Really? What would you do then? Would you just pluck every idea out of the air as it drifts by you, like The Child?"
-                            menu:
-                                "I would go with the first idea I had":
-                                    jump ss_first
-                                "I would test a few of my ideas.":
-                                    jump ss_ideas
-                                "I would talk to someone else about my ideas.":
-                                    jump ss_ideas
-
-                                    label ss_first:
-                                        s "Well, you're obviously no academic."
-
-                                    label ss_ideas:
-
-                                        s "...I suppose that is definitely an option. I hadn't really considered that."
-
-                            s "Look, I still believe we can learn something from each other."
-                            s "If you're willing to give my method a try…then perhaps I will try yours as well."
-                            menu:
-                                "Deal.":
-                                    jump ss_place6
-                        label ss_place6:        
-                            s "Thank you. In that case, pick one of your ideas to expand upon. Then we can compare our ideas later."
-                            s "Until then, good luck."
-
-                            centered "..."
-
-                            $ Student = False
-                            $ tracker += 1
-                            hide student onlayer Foreground
-
-                            if tracker >= 3:
-                                jump ss_ending
-                            else:
-                                jump ss
-                        
-
-                    label ss_pe:
-
-                        show elder onlayer Foreground
-
-                        "The Elder stands in the darkness, swaying gently side to side."
-
-                        e "..."
-
-                        "After some silence, The Parent rushes over."
-
-                        hide elder onlayer Foreground
+                        hide student onlayer Foreground
                         show parent onlayer Foreground at parent_right
 
-                        p "Ah, hello dear. Apologies if I kept you from finding me. The other two were having a bit of an argument, but that's all cleared up now."
+                        p "We're just doing a bit of brainstorming right now. It's important to think about the way our world could be."
+                        p "Say, you seem like someone who would be interested in that. Care to join?"
+
+                        hide parent onlayer Foreground
+                        show child onlayer Foreground at child_right
+
+                        c "Ooh, yes yes, pleeeeasee. You can make your very own list!"
+
+                        "The Child looks at The Parent."
+
+                        c "Tell them that they should join. It would be so fun!"
+
+                        hide child onlayer Foreground
+                        show parent onlayer Foreground at parent_right
+
+                        p "Well dear, we want everyone to be able to-"
 
                         hide parent onlayer Foreground
                         show elder onlayer Foreground at elder_right
 
-                        e "Until it starts up again. We're always arguing about something."
-
-                        p "Not always! I mean, well, I suppose it's true that we've been having our…creative disputes."
-                        p "But now you're here, new face, and we have come up with an idea."
-                        p "What if you were to build your own world alongside us? We've only ever dreamt of one world, one way to be. But if you made a world of your own, we'd have two worlds, two datapoints to base our progress on."
-                        p "You could make it however you wished, with magic or mad science or anything. And it would be such a help to us."
-
-                        hide parent onlayer Foreground
-                        show elder onlayer Foreground at elder_right
-
-                        e "Now wait just a minute. We all agreed that we would create a world based off of the one we dreamt about. None of this science fiction or fantasy mumbo jumbo. Why do we need another world to do that?"
+                        e "Then it's settled. You wouldn't want to say no to The Child, right new face? Time for you to pitch in."
 
                         hide elder onlayer Foreground
-                        show parent onlayer Foreground at parent_right
+                        show student onlayer Foreground at student_right
 
-                        p "Well…um…"
+                        s "Splendid. Then let's continue."
+                        s "We've been working in our minds, but you should probably get a paper and pencil, or something else to write with."
 
-                        "The Parent takes The Elder's hands in theirs."
+                        hide student onlayer Foreground
+                        show child onlayer Foreground at child_right
 
-                        p "The others have been talking, and they have a desire to make beyond just what we know from the other world. They want to create things that are new and exciting."
+                        c "Yes! Then you have to make a list. Write down as many things as you can."
 
-                        "The Elder shakes off The Parent."
+                        hide child onlayer Foreground
+                        show student onlayer Foreground at student_right
 
-                        hide parent onlayer Foreground
-                        show elder onlayer Foreground at elder_right
+                        s "No no, the goal isn't quantity, it's quality. You should think and write down only your best ideas."
 
-                        e "But that's not what we agreed upon! You can't just go changing things up like that. It has to be the way we said it would be!"
+                        hide student onlayer Foreground
+                        show child onlayer Foreground at child_right
 
-                        hide elder onlayer Foreground
-                        show parent onlayer Foreground at parent_right
+                        c "Well that's stupid. You're gonna end up with nothing written down, and then-"
 
-                        p "I know what we originally had planned, but the others think-"
-
-                        hide parent onlayer Foreground
-                        show elder onlayer Foreground at elder_right
-
-                        e "And what do you think? What do you want?"
-
-                        hide elder onlayer Foreground
-                        show parent onlayer Foreground at parent_right
-
-                        p "I simply want everyone to be fulfilled."
+                        p "Why don't we let them decide if an idea is worth writing down or not."
+                        p "Listen dear, just make a list of things that you think would be a good foundation for a world. Things like tone, genre, time period, and level of technology, science, and magic. I know the people of your world like magic."
+                        p "Then, once you've got some ideas down on your list, come and talk to us again."
 
                         hide parent onlayer Foreground
-                        show elder onlayer Foreground at elder_right
+                        show child onlayer Foreground at child_right
 
-                        e "No, you don't. Because if you did, you wouldn't have brought this to me."
+                        c "This is going to be great!"
 
-                        hide elder onlayer Foreground
-                        show parent onlayer Foreground at parent_right
+                        hide child onlayer Foreground
 
-                        p "Dear, can't we make just one change?"
-
-                        hide parent onlayer Foreground
-                        show elder onlayer Foreground at elder_right
-
-                        e "No! No, no, no!"
-
-                        "The Elder starts storming off."
-
-                        e "Do what you want! It obviously doesn't involve me!"
-
-                        hide elder onlayer Foreground
-
-                        "The Elder vanishes from sight."
-
-                        show parent onlayer Foreground at parent_right
-
-                        p "Oh dear…"
-
-                        menu:
-                            "Are they going to be alright?":
-                                jump ss_alright
-                            "Are you alright?":
-                                jump ss_you
-
-                                label ss_alright:
-
-                                    "The Parent gives a gentle nod and a weak smile."
-
-                                    p "Yes. We will speak with them. They can find obstructions…incredibly bothersome."
-                                    p "They see the endpoint better than any of us, but become annoyed when we do not take the most direct path to that endpoint. I will assure them that we will listen to their voice. That should help calm them."
-
-
-                                label ss_you:
-
-                                    "The Parent sighs."
-
-                                    p "Yes, I am fine. I believe The Elder does not consider our points of view. We will need to speak with them some more, so that all may be known to one another."
-
-                                    "The Parent smiles."
-
-                                    p "But I do not mind. Conflict is a small price to pay for the love we share. I hope that this is something you know as well."
-
-                        "The Parent stares into your mind, their gaze indicating a request."
-
-                        p "Despite what transpired, I still believe that you would do us good by building alongside us. A world of your own is a treasure and a gift. It may be a frightening task, but we will support one another."
-                        p "Besides, you already have the ideas you've taken down there. Perhaps several of those would lay the foundation for your world. You should have at minimum a few central ideas of what your world will be like, as we will also have to do."
-                        menu:
-                            "I will do what I must to continue.":
-                                jump ss_place5
-                    label ss_place5:
-                        p "That's the spirit! Now, let us both move on to our tasks. I wish you the best of luck, and may we speak again."
-
-                        hide parent onlayer Foreground
+                        "The Elder rolls their eyes, and the group disperses to the four directions."
 
                         centered "..."
 
-                        $ Parent = False
-                        $ tracking += 1
-                        if tracking >= 3:
-                            jump ss_ending
-                        else:
-                            jump ss
+                        menu ss:
+                            "Talk to The Child." if child:
+                                jump ss_child
+                            "Talk to The Student" if student:
+                                jump ss_student
+                            "Talk to The Parent and The Elder" if parent:
+                                jump ss_pe
 
-    label ss_ending:
+                                label ss_child:
 
-        "You stand on your own, and think."
+                                    "The Child stands amidst bright clumps of Knowledge, floating around. They grab two twinkling specks and mash them together. They turn from the bright colors to look at you."
 
-        "…"
+                                    show child onlayer Foreground at child_right
+                                
 
-        "The Four approach you once more, a buzz of excitement surrounding them."
+                                    c "Hi again! Did you make your list?"
 
-        show student onlayer Foreground at student_right
+                                    menu:
+                                        "Yes, I've worked on it.":
+                                            jump ss_yes
+                                        "What are you doing?":
+                                            jump ss_enough
 
-        s "We have concluded with our brainstorming sessions."
+                                            label ss_yes:
 
-        hide student onlayer Foreground
-        show child onlayer Foreground at child_right
+                                                c "Great! Let me see how many you came up with."
 
-        c "It took foreeeeever."
+                                                c "..."
 
-        hide child onlayer Foreground
-        show parent onlayer Foreground at parent_right
+                                                c "What? That's not enough."
+                                            label ss_enough:
 
-        p "But we've had a chance to speak amongst ourselves, and we've come to a unanimous decision."
 
-        hide parent onlayer Foreground
-        show elder onlayer Foreground at elder_right
+                                                c "I'm coming up with new ideas!"
 
-        e "If you ignore the separation between indifference and enthusiasm."
+                                                "They grab one dull speck and shake it, causing it to glow brighter."
 
-        hide elder onlayer Foreground
-        show child onlayer Foreground at child_right
+                                    c "We're going to need a lot more ideas if we're going to make something interesting."
 
-        c "Our world will be a world of Fantasy and Adventure!!"
 
-        hide child onlayer Foreground
-        show student onlayer Foreground at student_right
+                                    c "I've already figured out a couple different kinds of animals that would be cool."
+                                    c "We could have animals with 5 legs, and animals with big horns on their noses, and, and…have you ever heard of a Hyrax?"
 
-        s "There will be plenty of new concepts to explore."
+                                    menu:
+                                        "Maybe you should slow down.":
+                                            jump ss_slow
+                                        "...":
+                                            jump ss_place1
 
-        hide student onlayer Foreground
-        show child onlayer Foreground at child_right
+                                label ss_place1:
 
-        c "And new things to play with!"
+                                    c "And there can be a bunch of different trees! Strong trees, twisty trees, hollow trees. And people will make bread and candy and cookies!"
+                                    c "There would need to be a lot of people making cookies for it to be a proper world, obviously."
 
-        hide child onlayer Foreground
-        show parent onlayer Foreground at parent_right
+                                    menu:
+                                        "I thought you were supposed to be brainstorming more general details?":
+                                            jump ss_slow
+                                        "...":
+                                            jump ss_place2
+                                label ss_place2:
+                                    c "Oh there's so much to do! I don't know what to work on first! Maybe we should figure out which beings will fly and which will swim. Or maybe we can start naming all the cities that we're going to make. Actually, we should probably create some liquids to dunk the cookies in…"
 
-        p "And new hearts to know."
+                                    menu:
+                                        "This seems like a lot of ideas":
+                                            jump ss_slow
 
-        hide parent onlayer Foreground
-        show elder onlayer Foreground at elder_right
+                                            label ss_slow:
 
-        e "..."
+                                                c "Well…I guess so."
+                                                c "The rest of The Four said we were supposed to be figuring out the big stuff before the small stuff. I trust them…so I guess I'll do that too." 
+                                                c "But you should write some more stuff down on that list of yours! You can never have too many ideas…I think."
+                                                
 
-        hide elder onlayer Foreground
-        show parent onlayer Foreground at parent_right
+                                                "The Child turns away and goes back to fiddling with the motes of Knowledge."
+                                                $ Child = False
+                                                $ tracker += 1
+                                                hide child onlayer Foreground
+                                                centered "..."
 
-        p "Well, that is what we have come up with. Did you come to terms with some of the elements of your own world?"
-        menu:
-            "Yes.":
-                jump ss_more_yes
-            "No.":
-                jump ss_more_no
-            
-                label ss_more_yes:
+                                                if tracker >= 3:
+                                                    jump ss_ending 
+                                                else:
+                                                    jump ss
+                                            
 
-                    p "Splendid!"
+                                label ss_student:
+                                    show student onlayer Foreground at student_right
+                                    "The Student sits in an especially dark space in the void. They seem focused on something inward."
 
-                    hide parent onlayer Foreground
+                                    menu:
+                                        "...":
+                                            jump ss_wait
+                                        "How's it going?":
+                                            jump ss_hows
+
+                                            label ss_wait:
+                                                s "Well, don't be shy. Come join me."
+
+                                                "You sit beside the entity."
+                                                jump ss_hows
+                                            
+
+                                            label ss_hows:
+                                                s "I am meditating. I hear that it is good for trying to be one's best self, despite what The Elder may say."
+                                    menu:
+                                        "What does The Elder have against meditation?":
+                                            jump ss_against
+                                        "What are you meditating on?":
+                                            jump ss_on
+
+                                            label ss_against:
+                                                s "If I am not mistaken, The Elder believes that everyone should strive to be their best self, but is rather particular about how they do it."
+                                                s "They find things that seem to progress slowly to be a waste of time. Rather impatient if you ask me."
+
+                                                "The Student smiles."
+
+                                                s "But then again, you must remember that we are all relatively young."
+
+                                            label ss_on:
+                                                s "I am trying to sort through my ideas."
+
+                                    s "I wish to select the best possible idea to move forward with, but that requires an analysis of how things might go later."
+                                    menu:
+                                        "What do you have so far?":
+                                            jump ss_place3
+                                label ss_place3:            
+
+                                    s "Well…nothing yet. But I've been thinking about it! If I pick a bad idea to start with, then this whole project will be a failure. Don't you agree?"
+                                    menu:
+                                        "Not really...":
+                                            jump ss_place4
+                                        "I suppose.":
+                                            jump ss_place4
+
+                                    label ss_place4:
+                                        "The Student scoffs."
+
+                                        "Really? What would you do then? Would you just pluck every idea out of the air as it drifts by you, like The Child?"
+                                        menu:
+                                            "I would go with the first idea I had":
+                                                jump ss_first
+                                            "I would test a few of my ideas.":
+                                                jump ss_ideas
+                                            "I would talk to someone else about my ideas.":
+                                                jump ss_ideas
+
+                                                label ss_first:
+                                                    s "Well, you're obviously no academic."
+
+                                                label ss_ideas:
+
+                                                    s "...I suppose that is definitely an option. I hadn't really considered that."
+
+                                        s "Look, I still believe we can learn something from each other."
+                                        s "If you're willing to give my method a try…then perhaps I will try yours as well."
+                                        menu:
+                                            "Deal.":
+                                                jump ss_place6
+                                    label ss_place6:        
+                                        s "Thank you. In that case, pick one of your ideas to expand upon. Then we can compare our ideas later."
+                                        s "Until then, good luck."
+
+                                        centered "..."
+
+                                        $ Student = False
+                                        $ tracker += 1
+                                        hide student onlayer Foreground
+
+                                        if tracker >= 3:
+                                            jump ss_ending
+                                        else:
+                                            jump ss
+                                    
+
+                                label ss_pe:
+
+                                    show elder onlayer Foreground
+
+                                    "The Elder stands in the darkness, swaying gently side to side."
+
+                                    e "..."
+
+                                    "After some silence, The Parent rushes over."
+
+                                    hide elder onlayer Foreground
+                                    show parent onlayer Foreground at parent_right
+
+                                    p "Ah, hello dear. Apologies if I kept you from finding me. The other two were having a bit of an argument, but that's all cleared up now."
+
+                                    hide parent onlayer Foreground
+                                    show elder onlayer Foreground at elder_right
+
+                                    e "Until it starts up again. We're always arguing about something."
+
+                                    p "Not always! I mean, well, I suppose it's true that we've been having our…creative disputes."
+                                    p "But now you're here, new face, and we have come up with an idea."
+                                    p "What if you were to build your own world alongside us? We've only ever dreamt of one world, one way to be. But if you made a world of your own, we'd have two worlds, two datapoints to base our progress on."
+                                    p "You could make it however you wished, with magic or mad science or anything. And it would be such a help to us."
+
+                                    hide parent onlayer Foreground
+                                    show elder onlayer Foreground at elder_right
+
+                                    e "Now wait just a minute. We all agreed that we would create a world based off of the one we dreamt about. None of this science fiction or fantasy mumbo jumbo. Why do we need another world to do that?"
+
+                                    hide elder onlayer Foreground
+                                    show parent onlayer Foreground at parent_right
+
+                                    p "Well…um…"
+
+                                    "The Parent takes The Elder's hands in theirs."
+
+                                    p "The others have been talking, and they have a desire to make beyond just what we know from the other world. They want to create things that are new and exciting."
+
+                                    "The Elder shakes off The Parent."
+
+                                    hide parent onlayer Foreground
+                                    show elder onlayer Foreground at elder_right
+
+                                    e "But that's not what we agreed upon! You can't just go changing things up like that. It has to be the way we said it would be!"
+
+                                    hide elder onlayer Foreground
+                                    show parent onlayer Foreground at parent_right
+
+                                    p "I know what we originally had planned, but the others think-"
+
+                                    hide parent onlayer Foreground
+                                    show elder onlayer Foreground at elder_right
+
+                                    e "And what do you think? What do you want?"
+
+                                    hide elder onlayer Foreground
+                                    show parent onlayer Foreground at parent_right
+
+                                    p "I simply want everyone to be fulfilled."
+
+                                    hide parent onlayer Foreground
+                                    show elder onlayer Foreground at elder_right
+
+                                    e "No, you don't. Because if you did, you wouldn't have brought this to me."
+
+                                    hide elder onlayer Foreground
+                                    show parent onlayer Foreground at parent_right
+
+                                    p "Dear, can't we make just one change?"
+
+                                    hide parent onlayer Foreground
+                                    show elder onlayer Foreground at elder_right
+
+                                    e "No! No, no, no!"
+
+                                    "The Elder starts storming off."
+
+                                    e "Do what you want! It obviously doesn't involve me!"
+
+                                    hide elder onlayer Foreground
+
+                                    "The Elder vanishes from sight."
+
+                                    show parent onlayer Foreground at parent_right
+
+                                    p "Oh dear…"
+
+                                    menu:
+                                        "Are they going to be alright?":
+                                            jump ss_alright
+                                        "Are you alright?":
+                                            jump ss_you
+
+                                            label ss_alright:
+
+                                                "The Parent gives a gentle nod and a weak smile."
+
+                                                p "Yes. We will speak with them. They can find obstructions…incredibly bothersome."
+                                                p "They see the endpoint better than any of us, but become annoyed when we do not take the most direct path to that endpoint. I will assure them that we will listen to their voice. That should help calm them."
+
+
+                                            label ss_you:
+
+                                                "The Parent sighs."
+
+                                                p "Yes, I am fine. I believe The Elder does not consider our points of view. We will need to speak with them some more, so that all may be known to one another."
+
+                                                "The Parent smiles."
+
+                                                p "But I do not mind. Conflict is a small price to pay for the love we share. I hope that this is something you know as well."
+
+                                    "The Parent stares into your mind, their gaze indicating a request."
+
+                                    p "Despite what transpired, I still believe that you would do us good by building alongside us. A world of your own is a treasure and a gift. It may be a frightening task, but we will support one another."
+                                    p "Besides, you already have the ideas you've taken down there. Perhaps several of those would lay the foundation for your world. You should have at minimum a few central ideas of what your world will be like, as we will also have to do."
+                                    menu:
+                                        "I will do what I must to continue.":
+                                            jump ss_place5
+                                label ss_place5:
+                                    p "That's the spirit! Now, let us both move on to our tasks. I wish you the best of luck, and may we speak again."
+
+                                    hide parent onlayer Foreground
+
+                                    centered "..."
+
+                                    $ Parent = False
+                                    $ tracking += 1
+                                    if tracking >= 3:
+                                        jump ss_ending
+                                    else:
+                                        jump ss
+
+                label ss_ending:
+
+                    "You stand on your own, and think."
+
+                    "…"
+
+                    "The Four approach you once more, a buzz of excitement surrounding them."
+
                     show student onlayer Foreground at student_right
 
-                    s "Interesting…"
+                    s "We have concluded with our brainstorming sessions."
 
                     hide student onlayer Foreground
+                    show child onlayer Foreground at child_right
+
+                    c "It took foreeeeever."
+
+                    hide child onlayer Foreground
                     show parent onlayer Foreground at parent_right
 
-                    p "Well regardless, it sounds like it will be a wonderful piece of work to draw to and from. Well done."
-                label ss_more_no:
-
-                    "The Parent furrows their expression."
+                    p "But we've had a chance to speak amongst ourselves, and we've come to a unanimous decision."
 
                     hide parent onlayer Foreground
+                    show elder onlayer Foreground at elder_right
+
+                    e "If you ignore the separation between indifference and enthusiasm."
+
+                    hide elder onlayer Foreground
+                    show child onlayer Foreground at child_right
+
+                    c "Our world will be a world of Fantasy and Adventure!!"
+
+                    hide child onlayer Foreground
                     show student onlayer Foreground at student_right
 
-                    s "If you are having trouble, something I believe to be helpful is discussing your work with others."
-                    s "If you can find someone in the space where you are to bounce ideas off of, they can often provide a unique insight that unlocks doors that you could not open otherwise. Try finding someone to talk to right now!"
+                    s "There will be plenty of new concepts to explore."
+
                     hide student onlayer Foreground
-                    centered "..."
+                    show child onlayer Foreground at child_right
 
-                show parent onlayer Foreground at parent_right
+                    c "And new things to play with!"
 
-                p "Now, what shall we do next?"
+                    hide child onlayer Foreground
+                    show parent onlayer Foreground at parent_right
 
-                hide parent onlayer Foreground
-                show student onlayer Foreground at student_right
+                    p "And new hearts to know."
 
-                s "I think we should pause and let things settle before moving on. Make sure we're all really happy with our idea."
+                    hide parent onlayer Foreground
+                    show elder onlayer Foreground at elder_right
 
-                hide student onlayer Foreground
-                show elder onlayer Foreground at elder_right
+                    e "..."
 
-                e "Well, don't take too long. We don't even have anything physically there yet."
+                    hide elder onlayer Foreground
+                    show parent onlayer Foreground at parent_right
 
-                hide elder onlayer Foreground
-                show child onlayer Foreground at child_right
+                    p "Well, that is what we have come up with. Did you come to terms with some of the elements of your own world?"
+                    menu:
+                        "Yes.":
+                            jump ss_more_yes
+                        "No.":
+                            jump ss_more_no
+                        
+                            label ss_more_yes:
 
-                c "But that's next, right?! That's next!"
+                                p "Splendid!"
 
-                hide child onlayer Foreground 
-                show parent onlayer Foreground at parent_right
+                                hide parent onlayer Foreground
+                                show student onlayer Foreground at student_right
 
-                p "Yes. Let us embark on the next step of this journey then."
+                                s "Interesting…"
 
-                "The Parent gestures to you."
+                                hide student onlayer Foreground
+                                show parent onlayer Foreground at parent_right
 
-                p "After you, worldbuilder."
-                hide parent onlayer Foreground
+                                p "Well regardless, it sounds like it will be a wonderful piece of work to draw to and from. Well done."
+                            label ss_more_no:
 
-                "End of chapter"
+                                "The Parent furrows their expression."
+
+                                hide parent onlayer Foreground
+                                show student onlayer Foreground at student_right
+
+                                s "If you are having trouble, something I believe to be helpful is discussing your work with others."
+                                s "If you can find someone in the space where you are to bounce ideas off of, they can often provide a unique insight that unlocks doors that you could not open otherwise. Try finding someone to talk to right now!"
+                                hide student onlayer Foreground
+                                centered "..."
+
+                            show parent onlayer Foreground at parent_right
+
+                            p "Now, what shall we do next?"
+
+                            hide parent onlayer Foreground
+                            show student onlayer Foreground at student_right
+
+                            s "I think we should pause and let things settle before moving on. Make sure we're all really happy with our idea."
+
+                            hide student onlayer Foreground
+                            show elder onlayer Foreground at elder_right
+
+                            e "Well, don't take too long. We don't even have anything physically there yet."
+
+                            hide elder onlayer Foreground
+                            show child onlayer Foreground at child_right
+
+                            c "But that's next, right?! That's next!"
+
+                            hide child onlayer Foreground 
+                            show parent onlayer Foreground at parent_right
+
+                            p "Yes. Let us embark on the next step of this journey then."
+
+                            "The Parent gestures to you."
+
+                            p "After you, worldbuilder."
+                            hide parent onlayer Foreground
+
+                            "End of chapter"
 
 
 
