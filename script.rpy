@@ -11,9 +11,18 @@ image parent = "images/The Parent.png"
 image elder = "images/The Elder.png"
 image background1 = "image/background1.jpg"
 
+define config.layeredimage_offer_screen = True
+
+
+
+
+define config.layers = ["master", "Foreground", "transient", "Headshot", "headshot", "screens", "overlay" ]
+
+
+
 label start:
 
     "Here is The Child"
-    show child
+    show child onlayer foreground
 
 return
