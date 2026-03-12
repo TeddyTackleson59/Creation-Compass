@@ -37,7 +37,7 @@ label start:
 
     hide child onlayer Foreground
 
-    show student onlayer Foreground
+    show student onlayer Foreground at child_right
     "Now for The Student."
     hide student onlayer Foreground
 
