@@ -219,7 +219,7 @@ label start:
                 hide student onlayer Foreground
                 jump confusion
 
-                label ss_next
+                label ss_next:
                 menu:
                     "What are you working on?":
 
