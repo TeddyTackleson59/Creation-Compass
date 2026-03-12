@@ -26,11 +26,11 @@ transform student_right:
     yalign 1.0
 transform parent_right:
     zoom 0.9
-    xalign -0.75
+    xalign -0.8
     yalign 2.0
 transform elder_right:
     zoom 0.9
-    xalign -1.3
+    xalign -1.8
     yalign 1.0
 
 define config.layers = ["master", "Foreground", "transient", "Headshot", "headshot", "screens", "overlay" ]
