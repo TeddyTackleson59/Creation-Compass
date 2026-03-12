@@ -23,6 +23,6 @@ define config.layers = ["master", "Foreground", "transient", "Headshot", "headsh
 label start:
 
     "Here is The Child"
-    show child onlayer foreground
+    show child onlayer Foreground
 
 return
