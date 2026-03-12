@@ -98,6 +98,33 @@ label start:
 
     e "The Elder. I wish you'd have gotten here sooner."
 
+    "The Child laughs."
+
+    p "Now, is that any way to greet this new face?"
+
+    "The Elder sighs."
+
+    e "I wish for you to find your place, both here and in your own space."
+
+    s "Which also brings us to a very interesting point. You're not from here. From the looks of it, you're of the world from our dreams."
+
+    menu confusion:
+        "Who are you?":
+        jump ss_who
+        "What is this place":
+        jump ss_what
+        "Your dreams?"
+        jump ss_dreams
+    label ss_who:
+
+        c "We are The Four!"
+
+        s "The Four Directions, to be precise. Living entities, both simple and complex."
+
+        p "We are some of the only things to exist in this space."
+
+        c "At least for now."
+        jump confusion
 
 
 return
