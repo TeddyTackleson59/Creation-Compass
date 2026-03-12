@@ -685,35 +685,36 @@ label start:
                     hide student onlayer Foreground
                     centered "..."
 
-            show parent onlayer Foreground at parent_right
+                show parent onlayer Foreground at parent_right
 
-            p "Now, what shall we do next?"
+                p "Now, what shall we do next?"
 
-            hide parent onlayer Foreground
-            show student onlayer Foreground at student_right
+                hide parent onlayer Foreground
+                show student onlayer Foreground at student_right
 
-            s "I think we should pause and let things settle before moving on. Make sure we're all really happy with our idea."
+                s "I think we should pause and let things settle before moving on. Make sure we're all really happy with our idea."
 
-            hide student onlayer Foreground
-            show elder onlayer Foreground at elder_right
+                hide student onlayer Foreground
+                show elder onlayer Foreground at elder_right
 
-            e "Well, don't take too long. We don't even have anything physically there yet."
+                e "Well, don't take too long. We don't even have anything physically there yet."
 
-            hide elder onlayer Foreground
-            show child onlayer Foreground at child_right
+                hide elder onlayer Foreground
+                show child onlayer Foreground at child_right
 
-            c "But that's next, right?! That's next!"
+                c "But that's next, right?! That's next!"
 
-            hide child onlayer Foreground 
-            show parent onlayer Foreground at parent_right
+                hide child onlayer Foreground 
+                show parent onlayer Foreground at parent_right
 
-            p "Yes. Let us embark on the next step of this journey then."
+                p "Yes. Let us embark on the next step of this journey then."
 
-            "The Parent gestures to you."
+                "The Parent gestures to you."
 
-            p "After you, worldbuilder."
-
-            "End of chapter"
+                p "After you, worldbuilder."
+                hide parent onlayer Foreground
+                
+                "End of chapter"
 
 
 
