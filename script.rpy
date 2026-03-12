@@ -487,6 +487,9 @@ label start:
 
                                         e "Until it starts up again. We're always arguing about something."
 
+                                        hide elder onlayer Foreground
+                                        show parent onlayer Foreground at parent_right
+
                                         p "Not always! I mean, well, I suppose it's true that we've been having our…creative disputes."
                                         p "But now you're here, new face, and we have come up with an idea."
                                         p "What if you were to build your own world alongside us? We've only ever dreamt of one world, one way to be. But if you made a world of your own, we'd have two worlds, two datapoints to base our progress on."
@@ -594,8 +597,8 @@ label start:
                                         centered "..."
 
                                         $ Parent = False
-                                        $ tracking += 1
-                                        if tracking >= 3:
+                                        $ tracker += 1
+                                        if tracker >= 3:
                                             jump ss_ending
                                         else:
                                             jump ss
