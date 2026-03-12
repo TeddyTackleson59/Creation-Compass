@@ -12,6 +12,9 @@ image parent = "images/The Parent.png"
 image elder = "images/The Elder.png"
 image background1 = "images/background1.jpg"
 
+define who = True
+define dreams = True
+
 define config.layeredimage_offer_screen = True
 
 transform background:
@@ -98,32 +101,58 @@ label start:
 
     e "The Elder. I wish you'd have gotten here sooner."
 
+    hide elder onlayer Foreground
+    show child onlayer Foreground at child_right
+
     "The Child laughs."
 
+    hide child onlayer Foreground
+    show parent onlayer Foreground at parent_right
+
     p "Now, is that any way to greet this new face?"
+
+    hide parent onlayer Foreground
+    show elder onlayer Foreground at elder_right
 
     "The Elder sighs."
 
     e "I wish for you to find your place, both here and in your own space."
 
+    hide elder onlayer Foreground
+    show student onlayer Foreground at student_right
+
     s "Which also brings us to a very interesting point. You're not from here. From the looks of it, you're of the world from our dreams."
 
+    hide student onlayer Foreground
     menu confusion:
-        "Who are you?":
+        "Who are you?" if who:
             jump ss_who
         "What is this place":
             jump ss_what
-        "Your dreams?":
+        "Your dreams?" if dreams:
             jump ss_dreams
             label ss_who:
 
+                show child onlayer Foreground at child_right
+
                 c "We are The Four!"
+
+                hide child onlayer Foreground
+                show student onlayer Foreground at student_right
 
                 s "The Four Directions, to be precise. Living entities, both simple and complex."
 
+                hide student onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
                 p "We are some of the only things to exist in this space."
 
+                hide parent onlayer Foreground
+                show child onlayer Foreground at child_right
+
                 c "At least for now."
+                $ who = False
+                hide child onlayer Foreground
                 jump confusion
 
 
