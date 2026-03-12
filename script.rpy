@@ -14,7 +14,7 @@ image background1 = "images/background1.jpg"
 define config.layeredimage_offer_screen = True
 
 transform test:
-    zoom 0.5
+    zoom 0.1
 
 
 define config.layers = ["master", "Foreground", "transient", "Headshot", "headshot", "screens", "overlay" ]
