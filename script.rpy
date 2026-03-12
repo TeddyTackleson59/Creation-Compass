@@ -292,13 +292,13 @@ label start:
                         "The Elder rolls their eyes, and the group disperses to the four directions."
 
                         centered "..."
-
-                        menu ss:
-                            "Talk to The Child." if child:
+                    label ss:
+                        menu:
+                            "Talk to The Child." if Child:
                                 jump ss_child
-                            "Talk to The Student" if student:
+                            "Talk to The Student" if Student:
                                 jump ss_student
-                            "Talk to The Parent and The Elder" if parent:
+                            "Talk to The Parent and The Elder" if Parent:
                                 jump ss_pe
 
                                 label ss_child:
