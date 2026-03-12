@@ -390,10 +390,11 @@ label start:
                                 s "Well, don't be shy. Come join me."
 
                                 "You sit beside the entity."
+                                jump ss_hows
                                 
 
-                                label ss_hows:
-                                    s "I am meditating. I hear that it is good for trying to be one's best self, despite what The Elder may say."
+                            label ss_hows:
+                                s "I am meditating. I hear that it is good for trying to be one's best self, despite what The Elder may say."
                         menu:
                             "What does The Elder have against meditation?":
                                 jump ss_against
@@ -447,7 +448,8 @@ label start:
                             s "If you're willing to give my method a try…then perhaps I will try yours as well."
                             menu:
                                 "Deal.":
-                                
+                                    jump ss_place6
+                        label ss_place6:        
                             s "Thank you. In that case, pick one of your ideas to expand upon. Then we can compare our ideas later."
                             s "Until then, good luck."
 
