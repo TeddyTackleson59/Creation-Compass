@@ -25,4 +25,6 @@ label start:
     "Here is The Child"
     show child onlayer Foreground
 
+    "Can you see it?"
+
 return
