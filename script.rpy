@@ -22,14 +22,14 @@ transform child_right:
     yalign 1.0
 transform student_right:
     zoom 0.7
-    xalign -0.7
+    xalign -0.5
     yalign 1.0
 transform parent_right:
     zoom 0.9
-    xalign -0.4
-    yalign 1.5
+    xalign -0.6
+    yalign 2.0
 transform elder_right:
-    zoom 0.8
+    zoom 1.0
     xalign -0.7
     yalign 0.95
 
