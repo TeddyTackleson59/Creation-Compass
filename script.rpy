@@ -13,7 +13,8 @@ image background1 = "images/background1.jpg"
 
 define config.layeredimage_offer_screen = True
 
-
+define transform zoom:
+    zoom 0.5
 
 
 define config.layers = ["master", "Foreground", "transient", "Headshot", "headshot", "screens", "overlay" ]
@@ -23,7 +24,7 @@ define config.layers = ["master", "Foreground", "transient", "Headshot", "headsh
 label start:
 
     "Here is The Child"
-    show background1 onlayer transient
+    show background1 onlayer transient at zoom
     show child onlayer Foreground
 
 
