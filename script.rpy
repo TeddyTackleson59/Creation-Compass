@@ -386,15 +386,15 @@ label start:
                             "How's it going?":
                                 jump ss_hows
 
-                            label ss_wait:
-                                s "Well, don't be shy. Come join me."
+                                label ss_wait:
+                                    s "Well, don't be shy. Come join me."
 
-                                "You sit beside the entity."
-                                jump ss_hows
+                                    "You sit beside the entity."
+                                    jump ss_hows
                                 
 
-                            label ss_hows:
-                                s "I am meditating. I hear that it is good for trying to be one's best self, despite what The Elder may say."
+                                label ss_hows:
+                                    s "I am meditating. I hear that it is good for trying to be one's best self, despite what The Elder may say."
                         menu:
                             "What does The Elder have against meditation?":
                                 jump ss_against
@@ -673,17 +673,17 @@ label start:
                     show parent onlayer Foreground at parent_right
 
                     p "Well regardless, it sounds like it will be a wonderful piece of work to draw to and from. Well done."
-            label ss_more_no:
+                label ss_more_no:
 
-                "The Parent furrows their expression."
+                    "The Parent furrows their expression."
 
-                hide parent onlayer Foreground
-                show student onlayer Foreground at student_right
+                    hide parent onlayer Foreground
+                    show student onlayer Foreground at student_right
 
-                s "If you are having trouble, something I believe to be helpful is discussing your work with others."
-                s "If you can find someone in the space where you are to bounce ideas off of, they can often provide a unique insight that unlocks doors that you could not open otherwise. Try finding someone to talk to right now!"
-                hide student onlayer Foreground
-                centered "..."
+                    s "If you are having trouble, something I believe to be helpful is discussing your work with others."
+                    s "If you can find someone in the space where you are to bounce ideas off of, they can often provide a unique insight that unlocks doors that you could not open otherwise. Try finding someone to talk to right now!"
+                    hide student onlayer Foreground
+                    centered "..."
 
             show parent onlayer Foreground at parent_right
 
