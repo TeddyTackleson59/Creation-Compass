@@ -115,16 +115,16 @@ label start:
         jump ss_what
         "Your dreams?"
         jump ss_dreams
-    label ss_who:
+        label ss_who:
 
-        c "We are The Four!"
+            c "We are The Four!"
 
-        s "The Four Directions, to be precise. Living entities, both simple and complex."
+            s "The Four Directions, to be precise. Living entities, both simple and complex."
 
-        p "We are some of the only things to exist in this space."
+            p "We are some of the only things to exist in this space."
 
-        c "At least for now."
-        jump confusion
+            c "At least for now."
+            jump confusion
 
 
 return
