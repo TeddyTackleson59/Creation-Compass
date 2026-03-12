@@ -349,7 +349,8 @@ label start:
                             "I thought you were supposed to be brainstorming more general details?":
                                 jump ss_slow
                             "...":
-
+                                jump ss_place2
+                    label ss_place2:
                         c "Oh there's so much to do! I don't know what to work on first! Maybe we should figure out which beings will fly and which will swim. Or maybe we can start naming all the cities that we're going to make. Actually, we should probably create some liquids to dunk the cookies in…"
 
                         menu:
@@ -413,15 +414,17 @@ label start:
                         s "I wish to select the best possible idea to move forward with, but that requires an analysis of how things might go later."
                         menu:
                             "What do you have so far?":
+                                jump ss_place3
+                    label ss_place3:            
 
                         s "Well…nothing yet. But I've been thinking about it! If I pick a bad idea to start with, then this whole project will be a failure. Don't you agree?"
                         menu:
                             "Not really...":
-                                
+                                jump ss_place4
                             "I suppose.":
-                                
+                                jump ss_place4
 
-
+                        label ss_place4:
                             "The Student scoffs."
 
                             "Really? What would you do then? Would you just pluck every idea out of the air as it drifts by you, like The Child?"
@@ -578,7 +581,8 @@ label start:
                         p "Besides, you already have the ideas you've taken down there. Perhaps several of those would lay the foundation for your world. You should have at minimum a few central ideas of what your world will be like, as we will also have to do."
                         menu:
                             "I will do what I must to continue.":
-
+                                jump ss_place5
+                    label ss_place5:
                         p "That's the spirit! Now, let us both move on to our tasks. I wish you the best of luck, and may we speak again."
 
                         hide parent onlayer Foreground
