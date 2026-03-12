@@ -341,7 +341,7 @@ label start:
 
 
                         c "And there can be a bunch of different trees! Strong trees, twisty trees, hollow trees. And people will make bread and candy and cookies!"
-                        c "There would need to be a lot of people making cookies for it to be a proper world, obviously.
+                        c "There would need to be a lot of people making cookies for it to be a proper world, obviously."
 
                         menu:
                             "I thought you were supposed to be brainstorming more general details?":
