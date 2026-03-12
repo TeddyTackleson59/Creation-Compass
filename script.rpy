@@ -47,4 +47,5 @@ label start:
     "When the pairs came together, they finally learned their names. They were The Four, together, yet alone within the Darkness." 
     "They had dreamt of something called a world, and wished for a world of their own. So The Four set to work creating their world."
 
+    centered "Chapter 1: Swirl & Snarl"
 return
