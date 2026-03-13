@@ -914,7 +914,7 @@ label gf_talk:
 
                             menu:
                                 "Go on.":
-                                    jummp gf_goon
+                                    jump gf_goon
 
                                     label gf_goon:
 
@@ -1015,153 +1015,151 @@ label gf_talk:
             label gf_parent:
                 $ Parent = False
                 $ if Child == True:
-                        "Before you reach your destination, you feel a presence at your side. You look down and see The Child, uncharacteristically dimmed."
+                    "Before you reach your destination, you feel a presence at your side. You look down and see The Child, uncharacteristically dimmed."
 
-                        show child onlayer Foreground at child_right
+                    show child onlayer Foreground at child_right
 
-                        c "...what if I can't do it?"
+                    c "...what if I can't do it?"
 
-                        menu:
-                            "Can't do what?":
-                                jump gf_cant
+                    menu:
+                        "Can't do what?":
+                            jump gf_cant
 
-                                label gf_cant:
+                            label gf_cant:
 
-                                    c "What if I can't find my gift?"
-                                    menu:
-                                        "Why would you say that?":
-                                            jump gf_why
+                                c "What if I can't find my gift?"
+                                menu:
+                                    "Why would you say that?":
+                                        jump gf_why
 
-                                            label gf_why:
+                                        label gf_why:
 
-                                                "The Child looks down."
+                                            "The Child looks down."
 
-                                                c "Well, The Student said this was my one gift. They already know what their gift is. But I don't know…"
-                                                c "What if I just can't figure it out?"
-                                                menu:
-                                                    "Have you thought about it?":
-                                                        jump gf_thought
+                                            c "Well, The Student said this was my one gift. They already know what their gift is. But I don't know…"
+                                            c "What if I just can't figure it out?"
+                                            menu:
+                                                "Have you thought about it?":
+                                                    jump gf_thought
 
-                                                        label gf_thought:
+                                                    label gf_thought:
+                                                        c "Yeah…I thought about it a bit. I know I have ideas. But I'm not sure if they'll be as good as everyone else's."
+                                                        c "I just don't know if I can do this right."
+                                                        menu:
+                                                            "You don't need to compare your ideas to others.":
+                                                                jump gf_compare
+                                                            "The first step to making something good is getting started.":
+                                                                jump gf_first
 
+                                                                label gf_compare:
 
-                                                            c "Yeah…I thought about it a bit. I know I have ideas. But I'm not sure if they'll be as good as everyone else's."
-                                                            c "I just don't know if I can do this right."
-                                                            menu:
-                                                                "You don't need to compare your ideas to others.":
-                                                                    jump gf_compare
-                                                                "The first step to making something good is getting started.":
-                                                                    jump gf_first
+                                                                    c "Ok…Ok. Maybe you could still ask the others about their gifts? Just so we know what they are. Just so I don't do the same one…"
+                                                                    jump gf_figure
 
-                                                                    label gf_compare:
+                                                                label gf_first:
 
-                                                                        c "Ok…Ok. Maybe you could still ask the others about their gifts? Just so we know what they are. Just so I don't do the same one…"
-                                                                        jump gf_figure
+                                                                    "The Child takes a breath."
 
-                                                                    label gf_first:
+                                                                    c "Ok…Ok. If you say I can do it, then I can do it. I'll get started. I can work on my ideas some more."
+                                                                    jump gf_figure
 
-                                                                        "The Child takes a breath."
+                                                                    label gf_figure:
+                                                                        menu:
+                                                                            "You can do this!":
+                                                                                jump gf_cando
 
-                                                                        c "Ok…Ok. If you say I can do it, then I can do it. I'll get started. I can work on my ideas some more."
-                                                                        jump gf_figure
+                                                                                label gf_cando:
 
-                                                                        label gf_figure:
-                                                                            menu:
-                                                                                "You can do this!":
-                                                                                    jump gf_cando
+                                                                                    c "All right. Yeah! You're right! I can do this! I'm gonna go and figure out all the stuff about my gift!"
+                                                                                    c "Thanks worldbuilder!"
+                                                                                    hide child onlayer Foreground
 
-                                                                                    label gf_cando:
+                                                                                    "The Child runs off, shining brightly again."
+                                                                                    $ Child = False
+                "The Parent is crouched down, talking to The Child."
 
-                                                                                        c "All right. Yeah! You're right! I can do this! I'm gonna go and figure out all the stuff about my gift!"
-                                                                                        c "Thanks worldbuilder!"
-                                                                                        hide child onlayer Foreground
+                show parent onlayer Foreground at parent_right
 
-                                                                                        "The Child runs off, shining brightly again."
-                                                                                        $ Child = False
-        "The Parent is crouched down, talking to The Child."
+                p "Well, here's the thing, little one. Whatever you decide to do, I will be there to support you. My gift will help sustain all of yours, if you'll let it. Understand?"
 
-        show parent onlayer Foreground at parent_right
+                hide parent onlayer Foreground
+                show child onlayer Foreground at child_right
 
-        p "Well, here's the thing, little one. Whatever you decide to do, I will be there to support you. My gift will help sustain all of yours, if you'll let it. Understand?"
+                c "I understand. I'm just thinking about it a bit."
 
-        hide parent onlayer Foreground
-        show child onlayer Foreground at child_right
+                hide child onlayer Foreground
 
-        c "I understand. I'm just thinking about it a bit."
+                "The Parent smiles sweetly."
 
-        hide child onlayer Foreground
+                show parent onlayer Foreground at parent_right
 
-        "The Parent smiles sweetly."
+                p "That's good, I'm glad to see you being a bit more reflective."
+                p "Perhaps you will find your gift in the skies, or possibly the light and dark, or in pain and joy."
 
-        show parent onlayer Foreground at parent_right
+                hide parent onlayer Foreground
+                show child onlayer Foreground at child_right
 
-        p "That's good, I'm glad to see you being a bit more reflective."
-        p "Perhaps you will find your gift in the skies, or possibly the light and dark, or in pain and joy."
+                c "Yeah! Those are all great ideas! Ok, I'll do those!"
 
-        hide parent onlayer Foreground
-        show child onlayer Foreground at child_right
+                hide child onlayer Foreground
+                show parent onlayer Foreground at parent_right
 
-        c "Yeah! Those are all great ideas! Ok, I'll do those!"
+                p "But, do you mean-"
 
-        hide child onlayer Foreground
-        show parent onlayer Foreground at parent_right
+                hide parent onlayer Foreground
 
-        p "But, do you mean-"
+                "Before The Parent can finish, The Child has run off." 
+                "The Parent chuckles to themselves and stands up. They turn to face you."
 
-        hide parent onlayer Foreground
+                show parent onlayer Foreground at parent_right
 
-        "Before The Parent can finish, The Child has run off." 
-        "The Parent chuckles to themselves and stands up. They turn to face you."
+                p "Oh hello dear. I didn't see you there. Everything going well, I hope?"
 
-        show parent onlayer Foreground at parent_right
+                menu:
+                    "Things are well.":
+                        jump gf_well
 
-        p "Oh hello dear. I didn't see you there. Everything going well, I hope?"
+                    "Things could be better.":
+                        jump gf_better
 
-        menu:
-            "Things are well.":
-                jump gf_well
-
-            "Things could be better.":
-                jump gf_better
-
-                label gf_well:
+                        label gf_well:
 
 
-                    p "That's lovely to hear. It's so nice to see everyone working hard, and equally lovely to see you speaking with them all."
-                    jump gf_p_gift
+                            p "That's lovely to hear. It's so nice to see everyone working hard, and equally lovely to see you speaking with them all."
+                            jump gf_p_gift
 
-                label gf_better:
+                        label gf_better:
 
-                    p "Oh, I'm sorry to hear that dear. I appreciate you still deciding to talk to everyone. You've been a big help."
-                    jump gf_p_gift
-                    
-                    label gf_p_gift:
+                            p "Oh, I'm sorry to hear that dear. I appreciate you still deciding to talk to everyone. You've been a big help."
+                            jump gf_p_gift
+                            
+                            label gf_p_gift:
 
-                        p "Ah, yes. It took me a bit, but I figured it out. You see, everyone else seems interested in building up their complex systems or concepts. But everyone needs ground to stand on. So that will be my gift."
-                        p "The ground, the water, the air. The materials that make up our world. This way, the others will have something to place their creations on."
-                        menu:
-                            "How thoughtful of you.":
-                                jump gf_thoughtful
+                                p "Ah, yes. It took me a bit, but I figured it out. You see, everyone else seems interested in building up their complex systems or concepts. But everyone needs ground to stand on. So that will be my gift."
+                                p "The ground, the water, the air. The materials that make up our world. This way, the others will have something to place their creations on."
+                                menu:
+                                    "How thoughtful of you.":
+                                        jump gf_thoughtful
 
-                                label gf_thoughtful:
+                                        label gf_thoughtful:
 
 
-                                    "The Parent nods and smiles."
+                                            "The Parent nods and smiles."
 
-                                    p "Well, it is a necessity. And no one else was thinking about it. So I am happy to step in and put my effort towards this. I hope that my gift will go on to nourish the things of this world, as well as those who created it."
-                                    p "And speaking of materials, perhaps you could use some of your own. I am not certain if you have located what you need yet, but when creating a world, one can use materials from all over."
-                                    p "If you have access to some, paper, pencil, tools, craft supplies, colored implements, or just anything that would help you create your world, create a realized version of it, then I suggest you find those. You might even get some ideas along the way."
+                                            p "Well, it is a necessity. And no one else was thinking about it. So I am happy to step in and put my effort towards this. I hope that my gift will go on to nourish the things of this world, as well as those who created it."
+                                            p "And speaking of materials, perhaps you could use some of your own. I am not certain if you have located what you need yet, but when creating a world, one can use materials from all over."
+                                            p "If you have access to some, paper, pencil, tools, craft supplies, colored implements, or just anything that would help you create your world, create a realized version of it, then I suggest you find those. You might even get some ideas along the way."
 
-                                    "The Parent gives a knowing wink."
+                                            "The Parent gives a knowing wink."
 
-                                    p "Now then, I wish to speak with The Student. I hope to talk again."
+                                            p "Now then, I wish to speak with The Student. I hope to talk again."
 
-                                    centered "…"
-                                    $ tracker += 1
-                                    if tracker >= 3:
-                                        jump gf_next
-                                    else:
-                                        jump gf_talk
+                                            centered "…"
+                                            $ tracker += 1
+                                            if tracker >= 3:
+                                                jump gf_next
+                                            else:
+                                                jump gf_talk
 
             label gf_elder:
                 $ Elder = False
@@ -1229,61 +1227,61 @@ label gf_talk:
 
                                                                                         "The Child runs off, shining brightly again."
                                                                                         $ Child = False
-        "The Elder sits still, completely unmoving. Their face is unreadable."
-        menu:
-            "...":
-                jump gf_e_1
+                "The Elder sits still, completely unmoving. Their face is unreadable."
+                menu:
+                    "...":
+                        jump gf_e_1
 
-                label gf_e_1:
-                    show elder onlayer Foreground at elder_right
-                    e "..."
-                    menu:  
-                        "What are you doing?":
-                            jump gf_e_2
+                        label gf_e_1:
+                            show elder onlayer Foreground at elder_right
+                            e "..."
+                            menu:  
+                                "What are you doing?":
+                                    jump gf_e_2
 
-                            label gf_e_2:
+                                    label gf_e_2:
 
-                                e "Sitting here with myself. Alone."
-                                menu:
-                                    "Do you have a gift?":
-                                        jump gf_e_3
+                                        e "Sitting here with myself. Alone."
+                                        menu:
+                                            "Do you have a gift?":
+                                                jump gf_e_3
 
-                                        label gf_e_3:
+                                                label gf_e_3:
 
-                                            e "No."
-                                            menu:
-                                                "Are you going to create a gift?":
-                                                    jump gf_e_4
+                                                    e "No."
+                                                    menu:
+                                                        "Are you going to create a gift?":
+                                                            jump gf_e_4
 
-                                                    label gf_e_4:
+                                                            label gf_e_4:
 
-                                                        e "No."
-                                                        menu:
-                                                            "Why not?":
-                                                                jump gf_e_5
+                                                                e "No."
+                                                                menu:
+                                                                    "Why not?":
+                                                                        jump gf_e_5
 
-                                                                label gf_e_5:
-                                                                    e "I don't have anything I want to add to this project."
-                                                                    menu:
-                                                                        "Do you want help?":
-                                                                            jump gf_e_6
+                                                                        label gf_e_5:
+                                                                            e "I don't have anything I want to add to this project."
+                                                                            menu:
+                                                                                "Do you want help?":
+                                                                                    jump gf_e_6
 
-                                                                            label gf_e_6:
+                                                                                    label gf_e_6:
 
-                                                                                e "No."
-                                                                                menu:
-                                                                                    "Goodbye.":
-                                                                                        jump gf_e_goodbye
+                                                                                        e "No."
+                                                                                        menu:
+                                                                                            "Goodbye.":
+                                                                                                jump gf_e_goodbye
 
-                                                                                        label gf_e_goodbye:
-                                                                                            e "Goodbye."
-                                                                                            hide elder onlayer Foreground
+                                                                                                label gf_e_goodbye:
+                                                                                                    e "Goodbye."
+                                                                                                    hide elder onlayer Foreground
 
-                                                                                            $ tracker += 1
-                                                                                            if tracker >= 3:
-                                                                                                jump gf_next
-                                                                                            else:
-                                                                                                jump gf_talk
+                                                                                                    $ tracker += 1
+                                                                                                    if tracker >= 3:
+                                                                                                        jump gf_next
+                                                                                                    else:
+                                                                                                        jump gf_talk
 label gf_next:
     "As you look around the space, you suddenly see different colored streaks of light shooting off into the Darkness from a ways away."
     menu:
