@@ -3180,130 +3180,130 @@ label nr_talk:
                                         else:
                                             jump nr_talk
 
-        label nr_student:
+            label nr_student:
 
-            menu:
+                menu:
 
-                "What are you writing?":
-                    jump nr_writing
+                    "What are you writing?":
+                        jump nr_writing
 
-                "Everything still quiet down in Stlethia?":
-                    jump nr_quiet
+                    "Everything still quiet down in Stlethia?":
+                        jump nr_quiet
 
-                    label nr_writing:
-                        show student onlayer Foreground at student_right
+                        label nr_writing:
+                            show student onlayer Foreground at student_right
 
-                        s "Oh, just doing a bit of journaling. I want to make sure I remember this moment."
+                            s "Oh, just doing a bit of journaling. I want to make sure I remember this moment."
 
-                        "The Student closes the book and smiles at you."
-                        jump nr_close
+                            "The Student closes the book and smiles at you."
+                            jump nr_close
 
-                    label nr_quiet:
-                        show student onlayer Foreground at student_right
+                        label nr_quiet:
+                            show student onlayer Foreground at student_right
 
-                        s "Mhm..the God of Eyes tells me everything is going well."
+                            s "Mhm..the God of Eyes tells me everything is going well."
 
-                        s "Besides, I feel we've probably earned a break by now."
+                            s "Besides, I feel we've probably earned a break by now."
 
-                        "The Student looks up at you from their book, smiling."
-                        jump nr_close
+                            "The Student looks up at you from their book, smiling."
+                            jump nr_close
 
-                        label nr_close:
+                            label nr_close:
 
-                            s "I realize that I should probably also say something to you, for all that you've done here."
+                                s "I realize that I should probably also say something to you, for all that you've done here."
 
-                            menu:
+                                menu:
 
-                                "What do you mean?":
-                                    jump nr_mean
+                                    "What do you mean?":
+                                        jump nr_mean
 
-                                    label nr_mean:
+                                        label nr_mean:
 
-                                        s "I mean all the good you've done for us. The good you've done for me."
+                                            s "I mean all the good you've done for us. The good you've done for me."
 
-                                        s "Had it not been for you, I wouldn't have ever gotten around to making anything. You gave me the push I needed to take the risk of trusting myself."
+                                            s "Had it not been for you, I wouldn't have ever gotten around to making anything. You gave me the push I needed to take the risk of trusting myself."
 
-                                        s "I've let go of perfection. And I'm all the happier for it."
+                                            s "I've let go of perfection. And I'm all the happier for it."
 
-                                        s "So…"
+                                            s "So…"
 
-                                        s "Thank you."
+                                            s "Thank you."
 
-                                        menu:
+                                            menu:
 
-                                            "Of course.":
-                                                jump nr_course
+                                                "Of course.":
+                                                    jump nr_course
 
-                                                label nr_course:
+                                                    label nr_course:
 
-                                                    "The Student opens their notebook again, and raises it towards you."
+                                                        "The Student opens their notebook again, and raises it towards you."
 
-                                                    s "Here's to just…trying your best."
-                                                    hide student onlayer Foreground
-                                                    $ Student = False
-                                                    $ tracker += 1
+                                                        s "Here's to just…trying your best."
+                                                        hide student onlayer Foreground
+                                                        $ Student = False
+                                                        $ tracker += 1
 
-                                                    if tracker >= 3:
-                                                        jump nr_elder
-                                                    else:
-                                                        jump nr_talk
+                                                        if tracker >= 3:
+                                                            jump nr_elder
+                                                        else:
+                                                            jump nr_talk
 
-        label nr_parent:
+            label nr_parent:
 
-            "The Parent moves not a finger, not an inch from their resting place."
+                "The Parent moves not a finger, not an inch from their resting place."
 
-            menu:
+                menu:
 
-                "Enjoying the break?":
-                    jump nr_enjoy
+                    "Enjoying the break?":
+                        jump nr_enjoy
 
-                    label nr_enjoy:
+                        label nr_enjoy:
 
-                        show parent onlayer Foreground at parent_right
+                            show parent onlayer Foreground at parent_right
 
-                        p "Mmm. Incredibly."
+                            p "Mmm. Incredibly."
 
-                        p "I had forgotten what it was like to not be doing anything."
+                            p "I had forgotten what it was like to not be doing anything."
 
-                        hide parent onlayer Foreground
-                        show elder onlayer Foreground at elder_right
+                            hide parent onlayer Foreground
+                            show elder onlayer Foreground at elder_right
 
-                        e "The hassle of running a world almost makes you miss the void from before we even existed, huh."
+                            e "The hassle of running a world almost makes you miss the void from before we even existed, huh."
 
-                        hide elder onlayer Foreground
+                            hide elder onlayer Foreground
 
-                        "The Parent chuckles, and opens one eye to look at you."
+                            "The Parent chuckles, and opens one eye to look at you."
 
-                        show parent onlayer Foreground at parent_right
+                            show parent onlayer Foreground at parent_right
 
-                        p "No amount of hassle could make me regret being right here, right now."
+                            p "No amount of hassle could make me regret being right here, right now."
 
-                        p "As much as I struggled, I now see the value of…what was it called?"
+                            p "As much as I struggled, I now see the value of…what was it called?"
 
-                        p "“Me time”?"
+                            p "“Me time”?"
 
-                        hide parent onlayer Foreground
+                            hide parent onlayer Foreground
 
-                        "Everyone cracks a laugh."
+                            "Everyone cracks a laugh."
 
-                        show parent onlayer Foreground at parent_right
+                            show parent onlayer Foreground at parent_right
 
-                        p "I hope that you will find the same peace, friend."
+                            p "I hope that you will find the same peace, friend."
 
-                        p "That you will listen to the voices within, as well as without."
+                            p "That you will listen to the voices within, as well as without."
 
-                        p "That you will value not doing as much as doing."
+                            p "That you will value not doing as much as doing."
 
-                        p "You have my thanks for teaching me this lesson."
+                            p "You have my thanks for teaching me this lesson."
 
-                        hide parent onlayer Foreground
-                        $ Parent = False
-                        $ tracker += 1
+                            hide parent onlayer Foreground
+                            $ Parent = False
+                            $ tracker += 1
 
-                        if tracker >= 3:
-                            jump nr_elder
-                        else:
-                            jump nr_talk
+                            if tracker >= 3:
+                                jump nr_elder
+                            else:
+                                jump nr_talk
 
         label nr_elder:
 
