@@ -908,6 +908,7 @@ label gf_talk:
                                                                                         hide child onlayer Foreground
 
                                                                                         "The Child runs off, shining brightly again."
+                                                                                        $ Child = False
                                                                                         if Student == False:
                                                                                             jump gf_student
                                                                                         elif Parent == False:
