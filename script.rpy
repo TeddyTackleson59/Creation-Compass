@@ -2586,9 +2586,9 @@ label rs_talk:
                 menu:
 
                     "Everything alright?":
-                        jump rs_alright
+                        jump rs_allright
 
-                        label rs_alright:
+                        label rs_allright:
 
                             c "Well, if you must know…I'm stuck on something."
 
