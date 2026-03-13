@@ -18,6 +18,7 @@ define Child = True
 define Student = True
 define Parent = True
 define Elder = True
+define fixer = Character("[number]")
 
 default tracker = 0
 
@@ -320,7 +321,7 @@ label start:
 
                                                     c "Great! Let me see how many you came up with."
 
-                                                    c "..."
+                                                    number = renpy.input("How many?", length=32)
 
                                                     c "What? That's not enough."
                                                 label ss_enough:
