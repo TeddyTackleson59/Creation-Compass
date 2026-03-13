@@ -3305,294 +3305,294 @@ label nr_talk:
                             else:
                                 jump nr_talk
 
-        label nr_elder:
+            label nr_elder:
 
-            "In the midst of the resting, The Elder gets up and shuffles a little ways off from the group."
+                "In the midst of the resting, The Elder gets up and shuffles a little ways off from the group."
 
-            menu:
+                menu:
 
-                "Talk to The Elder.":
-                    jump nr_goe
+                    "Talk to The Elder.":
+                        jump nr_goe
 
-                    label nr_goe:
+                        label nr_goe:
 
-                        "You stand as well, and follow The Elder to the place where they come to rest."
+                            "You stand as well, and follow The Elder to the place where they come to rest."
 
-                        "They take a mote, and expand it larger and larger. Eventually it forms a window that looks out onto the world, Stlethia, from high above. It looks near-identical to the map, just different colors."
+                            "They take a mote, and expand it larger and larger. Eventually it forms a window that looks out onto the world, Stlethia, from high above. It looks near-identical to the map, just different colors."
 
-                        "They stare at the world in silence."
+                            "They stare at the world in silence."
 
-                        show elder onlayer Foreground at elder_right
+                            show elder onlayer Foreground at elder_right
 
-                        e "…"
+                            e "…"
 
-                        e "We did it."
+                            e "We did it."
 
-                        e "We made it to an end."
+                            e "We made it to an end."
 
 
-                        menu:
+                            menu:
 
-                            "An end?":
-                                jump nr_anend
+                                "An end?":
+                                    jump nr_anend
 
-                                label nr_anend:
+                                    label nr_anend:
 
-                                    e "Well this certainly isn't the end. Who knows how long this is going to go on for?"
+                                        e "Well this certainly isn't the end. Who knows how long this is going to go on for?"
 
-                                    e "But all in all, I would say that we did it. We made a world."
+                                        e "But all in all, I would say that we did it. We made a world."
 
-                                    e "And it's so different from how I thought it would be."
+                                        e "And it's so different from how I thought it would be."
 
 
-                                    menu:
+                                        menu:
 
-                                        "Is that a bad thing?":
-                                            jump nr_bad
+                                            "Is that a bad thing?":
+                                                jump nr_bad
 
-                                        "Different can be exciting.":
-                                            jump nr_exciting
+                                            "Different can be exciting.":
+                                                jump nr_exciting
 
-                                            label nr_bad:
+                                                label nr_bad:
 
-                                                e "I suppose that is the question…"
-                                                jump nr_different
+                                                    e "I suppose that is the question…"
+                                                    jump nr_different
 
-                                            label nr_exciting:
+                                                label nr_exciting:
 
-                                                e "So I’ve heard."
-                                                jump nr_different
+                                                    e "So I’ve heard."
+                                                    jump nr_different
 
-                                                label nr_different:
+                                                    label nr_different:
 
-                                                    e "…"
+                                                        e "…"
 
-                                                    e "I was happy with the original plan. I thought we had a good reason for wanting to copy the dream world. A lot of good reasons, actually."
+                                                        e "I was happy with the original plan. I thought we had a good reason for wanting to copy the dream world. A lot of good reasons, actually."
 
-                                                    e "And then as we went on…"
+                                                        e "And then as we went on…"
 
-                                                    e "I don’t know if those good reasons are still present in our work."
+                                                        e "I don’t know if those good reasons are still present in our work."
 
 
-                                                    menu:
+                                                        menu:
 
-                                                        "Does that matter?":
-                                                            jump nr_present
+                                                            "Does that matter?":
+                                                                jump nr_present
 
-                                                        "So what is present in your work?":
-                                                            jump nr_present
+                                                            "So what is present in your work?":
+                                                                jump nr_present
 
-                                                            label nr_present:
+                                                                label nr_present:
 
-                                                                e "..."
+                                                                    e "..."
 
-                                                                "The Elder thinks on that for a while."
-                                                        
-                                                                e "You know, that was one of the things I was trying to pay attention to."
+                                                                    "The Elder thinks on that for a while."
+                                                            
+                                                                    e "You know, that was one of the things I was trying to pay attention to."
 
-                                                                e "As the project went on, and they started drifting away towards the end point that we had originally envisioned…"
+                                                                    e "As the project went on, and they started drifting away towards the end point that we had originally envisioned…"
 
-                                                                e "I started seeing glimpses of the new endpoint they were creating."
+                                                                    e "I started seeing glimpses of the new endpoint they were creating."
 
-                                                                e "That we were creating."
+                                                                    e "That we were creating."
 
-                                                                e "…"
+                                                                    e "…"
 
-                                                                e "But this isn't the thing we set out to make anymore! I don't even know what it is now! What it means!"
+                                                                    e "But this isn't the thing we set out to make anymore! I don't even know what it is now! What it means!"
 
 
-                                                                "The Elder experiences momentary frustration, calming themselves down with a few breaths."
+                                                                    "The Elder experiences momentary frustration, calming themselves down with a few breaths."
 
-                                                                menu:
+                                                                    menu:
 
-                                                                    "Well, what do you know about it?":
-                                                                        jump nr_know
+                                                                        "Well, what do you know about it?":
+                                                                            jump nr_know
 
-                                                                    "Does it even matter if you know exactly what it is?":
-                                                                        jump nr_matter
+                                                                        "Does it even matter if you know exactly what it is?":
+                                                                            jump nr_matter
 
-                                                                    "It's a world.":
-                                                                        jump nr_world
+                                                                        "It's a world.":
+                                                                            jump nr_world
 
-                                                                        label nr_know:
+                                                                            label nr_know:
 
-                                                                            e "I know that it's messy. I know that it's got four continents. I know that all manner of people and other creatures live in it."
-                                                                            e "And I thought their lives would be too complicated by all this fantasticality for them to find their inner meaning."
-                                                                            jump nr_point
+                                                                                e "I know that it's messy. I know that it's got four continents. I know that all manner of people and other creatures live in it."
+                                                                                e "And I thought their lives would be too complicated by all this fantasticality for them to find their inner meaning."
+                                                                                jump nr_point
 
-                                                                        label nr_matter:
+                                                                            label nr_matter:
 
-                                                                            "The Elder shrugs."
+                                                                                "The Elder shrugs."
 
-                                                                            e "I guess…"
+                                                                                e "I guess…"
 
-                                                                            e "I just feel like there's got to be a part of this that does matter. Or else why did we go to all the trouble of making it?"
+                                                                                e "I just feel like there's got to be a part of this that does matter. Or else why did we go to all the trouble of making it?"
 
-                                                                            jump nr_point
+                                                                                jump nr_point
 
-                                                                        label nr_world:
+                                                                            label nr_world:
 
-                                                                            "The Elder looks unamused."
+                                                                                "The Elder looks unamused."
 
-                                                                            e "Obviously."
+                                                                                e "Obviously."
 
-                                                                            e "…"
+                                                                                e "…"
 
-                                                                            e "But even then…why did we make a world. What was the purpose?"
+                                                                                e "But even then…why did we make a world. What was the purpose?"
 
-                                                                            jump nr_point
+                                                                                jump nr_point
 
-                                                                            label nr_point:
+                                                                                label nr_point:
 
-                                                                                e "I mean, that's the whole point of this whole thing, right? To figure out the meaning in all of it? In all of life?"
+                                                                                    e "I mean, that's the whole point of this whole thing, right? To figure out the meaning in all of it? In all of life?"
 
-                                                                                e "That's why we're here. That's what I thought we'd be closer to doing."
+                                                                                    e "That's why we're here. That's what I thought we'd be closer to doing."
 
-                                                                                e "But now I don't even know what we've done, or why we've done it."
+                                                                                    e "But now I don't even know what we've done, or why we've done it."
 
-                                                                                e "Could I live with that? Could I be at peace with this project, this world just…existing?"
+                                                                                    e "Could I live with that? Could I be at peace with this project, this world just…existing?"
 
 
-                                                                                menu:
+                                                                                    menu:
 
-                                                                                    "I believe you can.":
-                                                                                        jump nr_believe
+                                                                                        "I believe you can.":
+                                                                                            jump nr_believe
 
-                                                                                    "If I have to, so do you.":
-                                                                                        jump nr_chuckle
+                                                                                        "If I have to, so do you.":
+                                                                                            jump nr_chuckle
 
-                                                                                        label nr_chuckle:
+                                                                                            label nr_chuckle:
 
-                                                                                            "The Elder chuckles, a small sound that slowly grows into roaring laughter."
+                                                                                                "The Elder chuckles, a small sound that slowly grows into roaring laughter."
 
-                                                                                            e "Well then we're both stuck like this. What funny wonders we inflict upon ourselves."
-                                                                                            jump nr_see
+                                                                                                e "Well then we're both stuck like this. What funny wonders we inflict upon ourselves."
+                                                                                                jump nr_see
 
-                                                                                        label nr_believe:
+                                                                                            label nr_believe:
 
-                                                                                            e "…"
-                                                                                            jump nr_see
+                                                                                                e "…"
+                                                                                                jump nr_see
 
-                                                                                            label nr_see:
+                                                                                                label nr_see:
 
-                                                                                                e "I see now."
+                                                                                                    e "I see now."
 
-                                                                                                e "It doesn't seem like I have any other choice."
+                                                                                                    e "It doesn't seem like I have any other choice."
 
-                                                                                                e "I will sit with this project, sit amidst a meaning that I may not be able to see. Perhaps I will never see it. But I will have to…trust that it is there."
+                                                                                                    e "I will sit with this project, sit amidst a meaning that I may not be able to see. Perhaps I will never see it. But I will have to…trust that it is there."
 
-                                                                                                e "I will do this."
+                                                                                                    e "I will do this."
 
-                                                                                                e "I will let the world just be."
+                                                                                                    e "I will let the world just be."
 
 
-                                                                                                "The window that shows the world slowly closes."
+                                                                                                    "The window that shows the world slowly closes."
 
-                                                                                                e "Thank you for talking to me. You are wise, worldbuilder. Even if you do not think it."
+                                                                                                    e "Thank you for talking to me. You are wise, worldbuilder. Even if you do not think it."
 
-                                                                                                "The Elder slowly turns around."
+                                                                                                    "The Elder slowly turns around."
 
-                                                                                                e "Now, let's head back. I feel that I will finally be able to relax."
+                                                                                                    e "Now, let's head back. I feel that I will finally be able to relax."
 
-                                                                                                hide elder onlayer Foreground
+                                                                                                    hide elder onlayer Foreground
 
-                                                                                                "The two of you walk back to the rest of the group. Everyone greets one another happily."
+                                                                                                    "The two of you walk back to the rest of the group. Everyone greets one another happily."
 
-                                                                                                "As time runs short, The Four show you all the things of their world they take pride in."
+                                                                                                    "As time runs short, The Four show you all the things of their world they take pride in."
 
-                                                                                                show child onlayer Foreground at child_right
+                                                                                                    show child onlayer Foreground at child_right
 
-                                                                                                c "Oh yeah, wait!"
+                                                                                                    c "Oh yeah, wait!"
 
-                                                                                                c "You've still got your world to work on. Unless you finished it."
+                                                                                                    c "You've still got your world to work on. Unless you finished it."
 
-                                                                                                hide child onlayer Foreground
-                                                                                                show student onlayer Foreground at student_right
+                                                                                                    hide child onlayer Foreground
+                                                                                                    show student onlayer Foreground at student_right
 
-                                                                                                s "Well, a world is never truly finished, is it?"
+                                                                                                    s "Well, a world is never truly finished, is it?"
 
-                                                                                                s "But I do hope our friend has a world that feels…at least complete enough to feel whole."
+                                                                                                    s "But I do hope our friend has a world that feels…at least complete enough to feel whole."
 
-                                                                                                hide student onlayer Foreground
-                                                                                                show parent onlayer Foreground at parent_right
+                                                                                                    hide student onlayer Foreground
+                                                                                                    show parent onlayer Foreground at parent_right
 
-                                                                                                p "We do so appreciate you being willing to participate with us dear. Oh, and you should probably come up with a name, if you haven't yet."
+                                                                                                    p "We do so appreciate you being willing to participate with us dear. Oh, and you should probably come up with a name, if you haven't yet."
 
-                                                                                                hide parent onlayer Foreground
-                                                                                                show child onlayer Foreground at child_right
+                                                                                                    hide parent onlayer Foreground
+                                                                                                    show child onlayer Foreground at child_right
 
-                                                                                                c "Ooh, yes! A name! What's the name!?"
+                                                                                                    c "Ooh, yes! A name! What's the name!?"
 
-                                                                                                hide child onlayer Foreground
+                                                                                                    hide child onlayer Foreground
 
-                                                                                                $ number = renpy.input("What is the name of your world?", length=32)
+                                                                                                    $ number = renpy.input("What is the name of your world?", length=32)
 
-                                                                                                "A murmur of agreement runs through the group."
+                                                                                                    "A murmur of agreement runs through the group."
 
-                                                                                                show elder onlayer Foreground at elder_right
+                                                                                                    show elder onlayer Foreground at elder_right
 
-                                                                                                e "Well then, add a few finishing touches to your world, and then…"
+                                                                                                    e "Well then, add a few finishing touches to your world, and then…"
 
-                                                                                                e "Would you do us a favor, friend?"
+                                                                                                    e "Would you do us a favor, friend?"
 
-                                                                                                menu:
+                                                                                                    menu:
 
-                                                                                                    "Sure.":
-                                                                                                        jump nr_favor
+                                                                                                        "Sure.":
+                                                                                                            jump nr_favor
 
-                                                                                                    "Depends…":
-                                                                                                        jump nr_favor
+                                                                                                        "Depends…":
+                                                                                                            jump nr_favor
 
-                                                                                                        label nr_favor:
+                                                                                                            label nr_favor:
 
-                                                                                                            e "If there's one thing we've learned from you, it's that projects like these are better when you share them with others."
+                                                                                                                e "If there's one thing we've learned from you, it's that projects like these are better when you share them with others."
 
-                                                                                                            hide elder onlayer Foreground
-                                                                                                            show student onlayer Foreground at student_right
+                                                                                                                hide elder onlayer Foreground
+                                                                                                                show student onlayer Foreground at student_right
 
-                                                                                                            s "So we want you to share your world with someone else. Even just one person."
+                                                                                                                s "So we want you to share your world with someone else. Even just one person."
 
-                                                                                                            hide student onlayer Foreground
-                                                                                                            show child onlayer Foreground at child_right
+                                                                                                                hide student onlayer Foreground
+                                                                                                                show child onlayer Foreground at child_right
 
-                                                                                                            c "Go and tell them about it! See what they think!"
+                                                                                                                c "Go and tell them about it! See what they think!"
 
-                                                                                                            hide child onlayer Foreground
-                                                                                                            show parent onlayer Foreground at parent_right
+                                                                                                                hide child onlayer Foreground
+                                                                                                                show parent onlayer Foreground at parent_right
 
-                                                                                                            p "And maybe mention our world too, while you're at it."
+                                                                                                                p "And maybe mention our world too, while you're at it."
 
-                                                                                                            hide parent onlayer Foreground
+                                                                                                                hide parent onlayer Foreground
 
-                                                                                                            "The Four look at you with that same mixture of pride and gratitude. They're grateful for you, and hope they've helped you as much as you've helped them."
+                                                                                                                "The Four look at you with that same mixture of pride and gratitude. They're grateful for you, and hope they've helped you as much as you've helped them."
 
-                                                                                                            show elder onlayer Foreground at elder_right
+                                                                                                                show elder onlayer Foreground at elder_right
 
-                                                                                                            e "But before that, it's time for us to part. Enjoy your time back in the dream world, kid."
+                                                                                                                e "But before that, it's time for us to part. Enjoy your time back in the dream world, kid."
 
-                                                                                                            hide elder onlayer Foreground
-                                                                                                            show student onlayer Foreground at student_right
+                                                                                                                hide elder onlayer Foreground
+                                                                                                                show student onlayer Foreground at student_right
 
-                                                                                                            s "Put some of those helpful practices to use. Goodbye worldbuilder."
+                                                                                                                s "Put some of those helpful practices to use. Goodbye worldbuilder."
 
-                                                                                                            hide student onlayer Foreground
-                                                                                                            show child onlayer Foreground at child_right
+                                                                                                                hide student onlayer Foreground
+                                                                                                                show child onlayer Foreground at child_right
 
-                                                                                                            c "Bye bye!!"
+                                                                                                                c "Bye bye!!"
 
-                                                                                                            hide child onlayer Foreground
-                                                                                                            show parent onlayer Foreground at parent_right
+                                                                                                                hide child onlayer Foreground
+                                                                                                                show parent onlayer Foreground at parent_right
 
-                                                                                                            p "It was truly an honor to host you. Until we meet again, friend."
+                                                                                                                p "It was truly an honor to host you. Until we meet again, friend."
 
-                                                                                                            hide parent onlayer Foreground
+                                                                                                                hide parent onlayer Foreground
 
-                                                                                                            "The Light swells bigger and bigger, until nothing is left."
-                                                                                                            hide background1 onlayer master
+                                                                                                                "The Light swells bigger and bigger, until nothing is left."
+                                                                                                                hide background1 onlayer master
 
-                                                                                                            scene white
+                                                                                                                scene white
 
-                                                                                                            centered "..."
+                                                                                                                centered "..."
 label e:
     centered "Chapter 6: The Endling"
     centered "In which the finishing touch is not the last"
