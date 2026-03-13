@@ -1989,7 +1989,7 @@ label cm_talk:
                                                                                                         menu:
                                                                                                             "Will you ever know?":
                                                                                                                 jump cm_ever
-                                                                                                            "Is there even a right way?"
+                                                                                                            "Is there even a right way?":
                                                                                                                 jump cm_ever
 
                                                                                                                 label cm_ever:
