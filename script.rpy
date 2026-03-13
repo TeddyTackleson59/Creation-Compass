@@ -2669,7 +2669,7 @@ label rs_talk:
 
                                                         "The Child hands the clay horse to The Student, who takes it and starts fiddling with it."
 
-                                                        "The Child lies on their stomach and watches The Student. Their focus slowly drifts to an eye-shaped tablet on the ground next to them. Words are whirling by on the tablet.
+                                                        "The Child lies on their stomach and watches The Student. Their focus slowly drifts to an eye-shaped tablet on the ground next to them. Words are whirling by on the tablet."
 
                                                         c "What's that?"
 
@@ -3131,54 +3131,54 @@ label nr_talk:
         "Talk to The Parent." if Parent:
             jump nr_parent
 
-        label nr_child:
+            label nr_child:
 
-            "The Child speaks up."
-            show child onlayer Foreground at child_right
+                "The Child speaks up."
+                show child onlayer Foreground at child_right
 
-            c "Hey, I dunno if you're gonna stick around for much longer… But I wanted to say thanks."
+                c "Hey, I dunno if you're gonna stick around for much longer… But I wanted to say thanks."
 
-            c "Before, there was a lot of stuff I didn't know how to do. And…well, there's still a lot I don't know how to do, but it's a lot less than before."
+                c "Before, there was a lot of stuff I didn't know how to do. And…well, there's still a lot I don't know how to do, but it's a lot less than before."
 
-            c "I mean like, you helped me learn a lot."
+                c "I mean like, you helped me learn a lot."
 
-            c "So thanks."
+                c "So thanks."
 
 
-            "The Child beams at you, shedding their multicolored light."
+                "The Child beams at you, shedding their multicolored light."
 
-            menu:
+                menu:
 
-                "Happy to help.":
-                    jump nr_help
+                    "Happy to help.":
+                        jump nr_help
 
-                "I learned a lot from you too.":
-                    jump nr_help
+                    "I learned a lot from you too.":
+                        jump nr_help
 
-                    label nr_help:
+                        label nr_help:
 
-                        "The Child grins."
+                            "The Child grins."
 
-                        c "Next time I'll plan things out before diving right into something."
+                            c "Next time I'll plan things out before diving right into something."
 
-                        c "But maybe we'll still let imagination run wild once in a while, right?"
+                            c "But maybe we'll still let imagination run wild once in a while, right?"
 
-                        menu:
+                            menu:
 
-                            "Right.":
-                                jump nr_right
+                                "Right.":
+                                    jump nr_right
 
-                                label nr_right:
+                                    label nr_right:
 
-                                    "The Child sighs happily, contently settling into their seat."
-                                    hide child onlayer Foreground
-                                    $ Child = False
-                                    $ tracker += 1
+                                        "The Child sighs happily, contently settling into their seat."
+                                        hide child onlayer Foreground
+                                        $ Child = False
+                                        $ tracker += 1
 
-                                    if tracker >= 3:
-                                        jump nr_elder
-                                    else:
-                                        jump nr_talk
+                                        if tracker >= 3:
+                                            jump nr_elder
+                                        else:
+                                            jump nr_talk
 
         label nr_student:
 
