@@ -896,7 +896,6 @@ label gf_talk:
                                                                                         "The Child runs off, shining brightly again."
                                                                                         $ Child = False
         "You come upon The Student, who is running back and forth over and over again."
-
         menu:
             "What are you doing?":
                 jump gf_doing
@@ -1342,7 +1341,7 @@ label gf_next:
                                                                             c "I didn't?"
                                                                             menu:
                                                                                 "You just tried to do it a different way. And sometimes that way works, and sometimes you listen to others when they tell you something needs to change.":
-                                                                                    jump gf_different:
+                                                                                    jump gf_different
 
                                                                                     label gf_different:
                                                                                         "The light surrounding The Child starts to come back down to its usual level."
@@ -1354,7 +1353,7 @@ label gf_next:
 
                                                                 c "...both?"
                                                                 menu:
-                                                                    "Yes. Sometimes you do it your way even when others tell you not to, and sometimes you listen to them when they tell you to try something else."
+                                                                    "Yes. Sometimes you do it your way even when others tell you not to, and sometimes you listen to them when they tell you to try something else.":
                                                                         jump gf_yourway
 
                                                                         label gf_yourway:
