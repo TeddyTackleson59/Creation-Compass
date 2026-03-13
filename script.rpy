@@ -1524,7 +1524,7 @@ label gf_finish:
                 $ Student = True
                 $ Parent = True
                 $ Elder = True
-                $ Tracker = 0
+                $ tracker = 0
 
 label cm:
     centered "Chapter 3: Concious Movement"
@@ -2368,7 +2368,1229 @@ label cm_next:
                                                                     "The Elder tries to hide a grin."
 
                                                                     "Tens of thousands of small sparkles of light drift towards the map. Each one will go on to become their own creature, living, breathing, and ready to greet a new world."
+                                                                    $ Child = True
+                                                                    $ Student = True
+                                                                    $ Parent = True
+                                                                    $ Elder = True
+                                                                    $ tracker = 0
                                                                     jump rs
+label rs:
+    hide background1 onlayer master
+    centered "Chatper 4: Running, Soaring"
+    centered "In which Love learns temperance"
+    show background1 onlayer master
+    "In the time since the population of their world, The Four have continued to create all manner of new and exciting things."
+    
+    "The space you've been occupying is now littered with half-finished projects. The map is brighter than ever, complete with four large statues of each of The Four that were given to the people by the gods."
 
-                                
+    "The Student interrupts the workings of the others, calling out to them."
+
+    show student onlayer Foreground at student_right
+
+    s "The God of Eyes brings news! The people of our world have given it a name!"
+
+    hide student on Foreground
+
+    "Excitment quickly fills the space, as the others drop what they are doing and come to gather around The Student."
+
+    show child onlayer Foreground at child_right
+
+    c "Ooh! Ooh! What is it?! Tell me tell me tell me tell me!"
+
+    hide child onlayer Foreground
+    show elder onlayer Foreground at elder_right
+
+    e "Hush now. We'll never know if you keep yammering."
+
+    hide elder onlayer Foreground
+
+    "The bustle quiets down."
+
+    show student onlayer Foreground at student_right
+
+    s "In naming the land, it seems that the people have taken inspiration from the letters of our names."
+
+    s "As such, the name they have chosen for the world is…"
+
+    s "Stlethia!"
+
+    hide student onlayer Foreground
+
+
+    "The noises of intrigue murmur up through the group."
+
+    show elder onlayer Foreground at elder_right
+
+    e "Why that?"
+
+    hide elder onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "I believe it was using a couple letters from each of our names. Apparently they did the same thing for naming the four continents."
+
+    s "The Child has Dl'c,"
+
+    s "I have D'uent,"
+
+    s "The Parent has D'lu,"
+
+    s "and The Elder has Del."
+
+    hide student onlayer Foreground
+
+
+    "The others nod along. The Parent looks confused, then holds up a finger."
+
+    show parent onlayer Foreground at parent_right
+
+    p "Those sounds are not within my name."
+
+    hide parent onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "Ah, that is true…"
+
+    s "I have also learned that…it seems the people have started calling you The Adult."
+
+    hide student onlayer Foreground
+
+    "The Parent draws a sharp intake of breath."
+
+    show parent onlayer Foreground at parent_right
+
+    p "I see…is that so..?"
+
+    menu:
+        "Is everything alright?":
+            jump rs_alright
+
+            label rs_alright:
+
+                p "Quite. Truly, what does it matter what the people call me? I am happy to provide my gifts to them all the same."
+
+                p "Besides, do we even know how many have adopted this…new name for me?"
+
+                hide parent onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "It appears they've committed it to writing. A lot of writing."
+                
+                hide student onlayer Foreground
+
+                "The surrounding area grows colder, as The Parent sucks in their breath again, then exhales slowly."
+
+                show parent onlayer Foreground at parent_right
+
+                p "Well in that case, I may just go down and change the records they have written."
+
+                hide parent onlayer Foreground
+                show child onlayer Foreground at child_right
+
+                c "All of them?"
+
+                hide child onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
+                p "All of them. They needn't trouble themselves. I can do all of it myself."
+
+                hide parent onlayer Foreground
+                show elder onlayer Foreground at elder_right
+
+                e "If you say so."
+
+                hide elder onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
+                "The Parent stares at The Elder with a smile just a tad too wide."
+
+                p "I do, thank you dear. If anyone needs me, I'll be elsewhere for a small while. I have some matters to tend to."
+
+                hide parent onlayer Foreground
+
+                "Without waiting for a reply, The Parent strides off."
+
+                show student onlayer Foreground at student_right
+
+                s "…"
+
+                s "Well, they have the right idea, I suppose. Despite us having created this world, it still requires maintenance and input. We'll need to keep our eyes out for another while longer."
+
+                s "Does everyone feel comfortable keeping watch over their own continent?"
+
+                hide student onlayer Foreground
+                show child onlayer Foreground at child_right
+
+                c "Yep!"
+
+                hide child onlayer Foreground
+                show elder onlayer Foreground at elder_right
+
+                e "Sure."
+
+                hide elder onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "All right then."
+
+                hide student onlayer Foreground
+
+                "The Child runs up to you specifically."
+
+                show child onlayer Foreground at child_right
+
+                c "You should also pay attention to that stuff. Do you even know what's happening in your world? If you don't know, you should know."
+
+                "The Child nods sagely, while The Elder rolls their eyes."
+
+                hide child onlayer Foreground
+                show elder onlayer Foreground at elder_right
+
+                e "Just figure out some things about the society and climate events and whatnot. You'll be fine."
+                hide elder onlayer Foreground
+
+                menu:
+                    "I understand":
+                        jump rs_understand
+
+                        label rs_understand:
+                            show child onlayer Foreground at child_right
+                            c "Great! We can hang out while we watch and figure it out."
+
+                            hide child onlayer Foreground
+                            show elder onlayer Foreground at elder_right
+
+                            e "Speak for yourself. I've got my own stuff to take care of."
+
+                            hide elder onlayer Foreground
+
+                            "The Elder walks off, leaving The Child, The Student, and yourself to watch and work over your worlds."
+
+                            centered "..."
+label rs_talk:
+    menu:
+
+        "Talk to The Child." if Child:
+            jump rs_child
+
+        "Talk to The Elder." if Elder:
+            jump rs_elder
+
+            label rs_child:
+
+                "While you sit and work, The Child has been emitting various noises of waning focus."
+
+                show child onlayer Foreground at child_right
+
+                c "hmm…nuhhh…ummm…"
+
+                menu:
+
+                    "Everything alright?":
+                        jump rs_alright
+
+                        label rs_alright:
+
+                            c "Well, if you must know…I'm stuck on something."
+
+                            "The Child wheels around, and shows you a small clay figure that they're sculpting."
+
+                            c "I've been trying to make this new animal, but I think it needs something else…"
+
+                            "The Child is holding a miniature clay horse."
+
+                            c "What do you think I should add?"
+
+                            menu:
+
+                                "What about a horn?":
+                                    jump rs_suggest
+
+                                "Maybe some wings?":
+                                    jump rs_suggest
+
+                                "...a spiked tail?":
+                                    jump rs_suggest
+
+                                    label rs_suggest:
+
+                                        c "Mhm, mhm. That's a great idea. Except…I've never done that before."
+
+                                        c "I'll just ask someone else to do it."
+
+                                        menu:
+
+                                            "You don't want to try it by yourself first?":
+                                                jump rs_ask_one
+
+                                            "All right, who are you going to ask?":
+                                                jump rs_ask_two
+
+                                                label rs_ask_one:
+                                                    c "Nah, I'm good."
+                                                    jump rs_ask_final
+
+                                                label rs_ask_two:
+                                                    c "Well..."
+                                                    jump rs_ask_final
+
+                                                    label rs_ask_final:
+
+                                                        "The Child grins and stands up. They walk over to The Student and tap them on the shoulder."
+
+                                                        hide child onlayer Foreground
+                                                        show student onlayer Foreground at student_right
+
+                                                        s "Mhuh?"
+
+                                                        hide student onlayer Foreground
+                                                        show child onlayer Foreground at child_right
+
+                                                        c "Whatcha doooin?"
+
+                                                        hide child onlayer Foreground
+                                                        show student onlayer Foreground at student_right
+
+                                                        s "Umm…well-"
+
+                                                        hide student onlayer Foreground
+                                                        show child onlayer Foreground at child_right
+
+                                                        c "Can you help me with something?"
+
+                                                        hide child onlayer Foreground
+                                                        show student onlayer Foreground at student_right
+
+                                                        s "Uh, sure. What do you need?"
+
+                                                        hide student onlayer Foreground
+                                                        show child onlayer Foreground at child_right
+
+                                                        c "Can you make this horse?"
+
+                                                        "The Child hands the clay horse to The Student, who takes it and starts fiddling with it."
+
+                                                        "The Child lies on their stomach and watches The Student. Their focus slowly drifts to an eye-shaped tablet on the ground next to them. Words are whirling by on the tablet.
+
+                                                        c "What's that?"
+
+                                                        hide child onlayer Foreground
+                                                        show student onlayer Foreground at student_right
+
+                                                        s "That? Oh, it's just a thing I'm dealing with. Don't worry about it."
+
+                                                        hide student onlayer Foreground
+                                                        show child onlayer Foreground at child_right
+
+                                                        "The Child rolls over onto their back and stares at The Student."
+
+                                                        c "Liiiittle bit worried about it. What's going on?"
+
+                                                        menu:
+
+                                                            "Don't bother The Student when they're helping you.":
+                                                                jump rs_no_bother
+
+                                                            "There's no need to hide things from each other.":
+                                                                jump rs_yes_bother
+
+                                                                label rs_no_bother:
+                                                                    hide child onlayer Foreground
+                                                                    show student onlayer Foreground at student_right
+
+                                                                    "The Student sighs."
+
+                                                                    s "Thank you. But perhaps I should at least tell you about this."
+                                                                    jump rs_crime
+
+                                                                label rs_yes_bother:
+
+                                                                    c "Yeah, c'mon. You trust me, right?"
+
+                                                                    hide child onlayer Foreground
+                                                                    show student onlayer Foreground at student_right
+
+                                                                    s "Fine, I'll tell you."
+                                                                    jump rs_crime
+
+                                                                    label rs_crime:
+
+                                                                        "The Student puts the little horse down, and looks at the two of you."
+
+                                                                        s "Apparently the people in our world have started committing crimes in my name. Since I largely am Craft, and these people view their unjust actions as their “craft”, they associate me more and more with crime."
+
+                                                                        s "I don't really know how to feel about that."
+
+                                                                        s "I mean, b-bad. I feel bad. That's a bad thing, right?"
+
+                                                                        hide student onlayer Foreground
+                                                                        show child onlayer Foreground at child_right
+
+                                                                        c "Yup."
+
+                                                                        hide child onlayer Foreground
+                                                                        show student onlayer Foreground at student_right
+
+                                                                        s "Exactly! But I just don't know what to do about it…I have no idea what to do here."
+
+                                                                        menu:
+
+                                                                            "Do you need to ask for help?":
+                                                                                jump rs_help
+
+                                                                                label rs_help:
+
+                                                                                    s "I don't know…"
+
+                                                                                    s "I don't even know what questions to ask."
+
+                                                                                    s "I mean, I can't even make this horse right."
+
+                                                                                    "The Student hands the clay horse back to The Child, which has been nervously squeezed into a shape that one could say definitely looks like a horse.
+
+                                                                                    s "I was just going to…"
+
+                                                                                    s "…"
+
+                                                                                    s "I don't know what I was going to do."
+
+                                                                                    hide student onlayer Foreground
+                                                                                    show child onlayer Foreground at child_right
+
+                                                                                    c "Well in that case, it looks like we need more help!"
+
+                                                                                    "The Child stands up and grabs The Student's hand, then starts running off, pulling The Student along behind them."
+
+                                                                                    c "Let's go find The Parent!"
+
+                                                                                    hide child onlayer Foreground
+
+                                                                                    menu:
+
+                                                                                        "Wait a second!":
+                                                                                            jump rs_wait
+
+                                                                                            label rs_wait:
+
+                                                                                                "Before you can call out, the two have already run off."
+
+                                                                                                "You get up and race to follow them, finding them to have already gotten impossibly far away in such a short amount of time."
+
+                                                                                                "You lose sight of them, but keep running in that same direction. By the time you catch sight of them again, they're both talking to The Parent, who stands in the middle of a whirling field of floating papers."
+
+                                                                                                show child onlayer Foreground at child_right
+
+                                                                                                c "-and we tried to make this horse, but neither of us are really that good at sculpting, but I know you are, and-"
+
+                                                                                                hide child onlayer Foreground
+                                                                                                show student onlayer Foreground at student_right
+
+                                                                                                s "-they just keep stealing each other's things and calling it an artform, and I don't know how to make it stop-"
+
+                                                                                                hide student onlayer Foreground
+                                                                                                show parent onlayer Foreground at parent_right
+
+                                                                                                p "Ah, yes, well-"
+
+                                                                                                "The Parent takes what should be a deep, grounding breath. The air, however, grows frigid, and they look no more calmed than before it happened."
+
+                                                                                                hide parent onlayer Foreground
+                                                                                                show child onlayer Foreground at child_right
+
+                                                                                                c "I just need a little bit of help-"
+
+                                                                                                hide child onlayer Foreground
+                                                                                                show student onlayer Foreground at student_right
+
+                                                                                                s "-we need a little bit of help-"
+
+                                                                                                hide student onlayer Foreground
+                                                                                                show parent onlayer Foreground at parent_right
+
+                                                                                                p "Both of you, please-"
+
+                                                                                                hide parent onlayer Foreground
+                                                                                                show child onlayer Foreground at child_right
+
+                                                                                                c "-cuz I don't know how to get this started and-"
+
+                                                                                                hide child onlayer Foreground
+                                                                                                show student onlayer Foreground at student_right
+
+                                                                                                s "-and I don't even know what exactly I need help doing-"
+
+                                                                                                hide student onlayer Foreground
+                                                                                                show parent onlayer Foreground at parent_right
+
+                                                                                                p "Please just-"
+
+                                                                                                "The Parent's face grows redder and redder. They look like they might explode at any moment, as the other two continue to talk at them."
+
+                                                                                                p "I-"
+
+                                                                                                p "just-"
+
+                                                                                                p "ALL RIGHT, THAT'S ENOUGH!!"
+
+
+                                                                                                menu:
+
+                                                                                                    "Intervene.":
+                                                                                                        jump rs_intervenes
+
+                                                                                                    "Don't intervene.":
+                                                                                                        jump rs_no_intervene
+
+                                                                                                        label rs_intervenes:
+
+                                                                                                            hide parent onlayer Foreground
+
+                                                                                                            "You quickly step in between The Parent and the other two. The Child and The Student seem to finally understand the message, and back off to a respectable distance away."
+
+                                                                                                            "You turn back to The Parent, who has their face in their hands."
+
+                                                                                                            "A few minutes pass, with neither of you saying anything."
+                                                                                                            jump rs_sorry
+
+                                                                                                        label rs_no_intervene:
+
+                                                                                                            "You stay back and let this bottle finally flow free."
+
+                                                                                                            p "YOU TWO NEED TO BACK OFF, AND TRY TO DO THIS ON YOUR OWN BEFORE ASKING ME."
+
+                                                                                                            p "I AM IN THE MIDDLE OF SOMETHING THAT IS QUITE DISTRESSING, AND I CAN ONLY DO SO MUCH AT ONCE, YOU UNDERSTAND?"
+
+                                                                                                            hide parent onlayer Foreground
+
+                                                                                                            "The Child and The Student both gulp and nod. They back up until they are fairly far away from the two of you."
+
+                                                                                                            "The Parent turns away from you and puts their head in their hands."
+                                                                                                            jump rs_sorry
+
+                                                                                                            label rs_sorry:
+                                                                                                                show parent onlayer Foreground
+
+                                                                                                                p "I'm sorry."
+
+                                                                                                                menu:
+
+                                                                                                                    "It's ok.":
+                                                                                                                        jump rs_ok
+
+                                                                                                                    "For what?":
+                                                                                                                        jump rs_what
+
+                                                                                                                        label rs_ok:
+
+                                                                                                                            p "No, it's not ok."
+                                                                                                                            jump rs_regret
+
+                                                                                                                        label rs_what:
+
+                                                                                                                            p "..."
+                                                                                                                            jump rs_regret
+
+                                                                                                                            label rs_regret:
+
+                                                                                                                                p "I should never have yelled at them like that. That's not who I am."
+
+                                                                                                                                p "I'm just so…so…"
+
+                                                                                                                                menu:
+
+                                                                                                                                    "Tired?":
+                                                                                                                                        jump rs_tired
+
+                                                                                                                                    "Stretched thin?":
+                                                                                                                                        jump rs_tired
+
+                                                                                                                                        label rs_tired:
+
+                                                                                                                                            p "Yes. Exactly. I…"
+
+                                                                                                                                            "The Parent sighs, their breath warming the space around them."
+
+                                                                                                                                            p "I feel that this is who I am supposed to be. I'm supposed to be the one who helps others, who keeps the peace, who brings everyone together. Who looks after everyone. I never expected it to weigh on me like this."
+
+                                                                                                                                            menu:
+
+                                                                                                                                                "Everyone struggles. Even the strongest of The Four.":
+                                                                                                                                                    jump rs_strong
+
+                                                                                                                                                    label rs_strong:
+
+                                                                                                                                                        "The Parent nods and chuckles."
+
+                                                                                                                                                        p "I never thought of myself that way. We all have our own unique strengths. This one is mine. Or at least, I thought it was."
+
+                                                                                                                                                        menu:
+
+                                                                                                                                                            "No one can be strong all the time. That's why you have each other.":
+                                                                                                                                                                jump rs_other
+
+                                                                                                                                                                label rs_other:
+
+                                                                                                                                                                    "The Parent smiles at you with a mixture of gratitude and pride.
+
+                                                                                                                                                                    p "Yes, very wise. When one cannot be strong, another can take its place until they have replenished themselves."
+
+                                                                                                                                                                    p "I merely worry that the others will not be able to hold on long enough. As long as I can."
+
+                                                                                                                                                                    p "But I remember how you told The Child to trust themselves, and The Student to trust the process. I suppose I must learn to trust in the ability of those I love."
+
+                                                                                                                                                                    p "…"
+
+                                                                                                                                                                    p "Do you think this too can be done?"
+
+                                                                                                                                                                    menu:
+
+                                                                                                                                                                        "Yes.":
+                                                                                                                                                                            jump rs_comfort
+
+                                                                                                                                                                            label rs_comfort:
+
+                                                                                                                                                                                "With a silent nod, The Parent looks to where The Child and The Student stand, a distance away."
+
+                                                                                                                                                                                p "I must apologize to the young ones. Would you come with me?"
+
+                                                                                                                                                                                "The two of you walk to the pair of entities, standing there nervously. They both look down at the floor upon your approach."
+
+                                                                                                                                                                                "The Parent kneels down."
+
+                                                                                                                                                                                p "I am sorry to both of you, my dears. I do not blame you for what you did. I only hope you will extend the same courtesy to me, and that we can continue on from here with a better understanding and appreciation for one another."
+
+                                                                                                                                                                                "The Parent looks back at you, then back to the others."
+
+                                                                                                                                                                                p "And with more trust."
+
+                                                                                                                                                                                "The two look up at The Parent sheepishly."
+
+                                                                                                                                                                                hide parent onlayer Foreground
+                                                                                                                                                                                show child onlayer Foreground at child_right
+
+                                                                                                                                                                                c "Nah…you were right."
+
+                                                                                                                                                                                hide child onlayer Foreground
+                                                                                                                                                                                show student onlayer Foreground at student_right
+
+                                                                                                                                                                                s "We shouldn't have been so quick to bother you when you were already struggling with your own problem."
+
+                                                                                                                                                                                hide student onlayer Foreground
+                                                                                                                                                                                show child onlayer Foreground at child_right
+
+                                                                                                                                                                                c "We should've tried to do it on our own."
+
+                                                                                                                                                                                hide child onlayer Foreground
+                                                                                                                                                                                show student onlayer Foreground at student_right
+
+                                                                                                                                                                                s "Instead of assuming we'd fail if we didn't come to you."
+
+                                                                                                                                                                                hide student onlayer Foreground
+
+                                                                                                                                                                                "The Parent chuckles. They place a hand on the head of either entity."
+
+                                                                                                                                                                                show parent onlayer Foreground at parent_right
+
+                                                                                                                                                                                p "For the record, neither of you are a bother to me. I love both of you so much. We will simply do a better job of communicating our bandwidth in the future, alright?"
+
+                                                                                                                                                                                hide parent onlayer Foreground
+                                                                                                                                                                                
+
+                                                                                                                                                                                "The two nod in agreement, both cracking small grins."
+
+                                                                                                                                                                                show parent onlayer Foreground at parent_right
+
+                                                                                                                                                                                p "Now, who wants to come help me rewrite a few hundred religious texts? I'll even take a look at your clay horse."
+
+                                                                                                                                                                                hide parent onlayer Foreground
+                                                                                                                                                                                show child onlayer Foreground at child_right
+
+                                                                                                                                                                                c "Yayyyy!"
+
+                                                                                                                                                                                hide child onlayer Foreground
+
+                                                                                                                                                                                "The three walk off towards the swirling mass of papers. The Parent looks over their shoulder back at you, and gives you a wink."
+
+                                                                                                                                                                                $ Child = False
+                                                                                                                                                                                $ tracker += 1
+
+                                                                                                                                                                                if tracker >= 2:
+                                                                                                                                                                                    jump rs_final
+                                                                                                                                                                                else:
+                                                                                                                                                                                    jump rs_talk
+
+
+            label rs_elder:
+
+                "You find The Elder standing, staring at the big map of Stlethia. Their expression, as always, is unreadable."
+
+                "They let out a sigh."
+
+                show elder onlayer Foreground at elder_right
+
+                e "Look at all of this. Look at this crazy world."
+
+                menu:
+
+                    "It's beautiful, huh?":
+                        jump rs_beautiful
+
+                    "Crazy?":
+                        jump rs_crazy
+
+                        label rs_beautiful:
+
+                            e "Huh?"
+
+                            e "I mean, sure, but that's not all."
+                            jump rs_crevil
+
+                        label rs_crazy:
+                            e "Hah, that's one way to put it."
+                            jump rs_crevil
+
+                            label rs_crevil:
+
+                                e "Just look at everyone stressing out. All because of this world with all of its irregular creatures and magic and shit. I never wanted any of that."
+
+                                e "We could've had a regular world, based off of your world. Not like the one you're making, but the one you came from. That one works just fine. But noooooo, we had to make ours special."
+
+
+                                menu:
+
+                                    "If you dislike this world so much, then why did you help make it?":
+                                        jump rs_dislike
+
+                                        label rs_dislike:
+
+                                            e "Well…you know…"
+
+                                            "The Elder gestures over towards the rest of the group."
+
+                                            e "It's what they wanted to do."
+
+                                            menu:
+
+                                                "I thought you said you didn't care.":
+                                                    jump rs_care
+
+                                                    label rs_care:
+
+                                                        e "Well hey now…"
+
+                                                        e "Look, I do care. I care about them, alright? I may not agree with them, but it matters to them, so I go along with it."
+
+                                                        e "I just hope they know what they're doing. That it'll be worth it to them when whatever this is culminates. We'll see if they thought it through enough."
+
+                                                        menu:
+
+                                                            "I guess we will.":
+                                                                jump rs_will
+
+                                                                label rs_will:
+
+                                                                    "The Elder remains in silence for another moment, staring at the map. They then turn to you."
+
+                                                                    e "Now get back over there. They need you just as much as they need me."
+
+                                                                    hide elder onlayer Foreground
+
+                                                                    "Turned loose, you walk back to where the rest of The Four are."
+
+                                                                    if tracker >= 2:
+                                                                        jump rs_final
+                                                                    else:
+                                                                        jump rs_talk
+label rs_final:
+    $ Child = True
+    $ Student = True
+    $ Parent = True
+    $ Elder = True
+    $ tracker = 0
+    hide background1 onlayer master
+    jump nr
+
+label nr:
+    centered "Chapter 5: The Needle Rests"
+    centered "In which Fate yeilds reflection"
+    show background1 onlayer master
+    "The world of Stlethia, a shining landscape teeming with life and magic. It's strange that something so vast can seem so small, as you look at the map of the world."
+
+    "Stlethia is at peace for the moment, so you and The Four have taken that moment to take a break from making and just watch. All of you reclining in a line, watching the map."
+
+    "The Child looks at all the lines symbolizing various things on the map move around, while The Student casually writes things down in a journal. The Parent has their eyes closed, an arm around each person next to them. Even The Elder seems to be enjoying the moment."
+
+label nr_talk:
+    menu:
+
+        "Talk to The Child." if Child:
+            jump nr_child
+
+        "Talk to The Student." if Student:
+            jump nr_student
+
+        "Talk to The Parent." if Parent:
+            jump nr_parent
+
+        label nr_child:
+
+            "The Child speaks up."
+            show child onlayer Foreground at child_right
+
+            c "Hey, I dunno if you're gonna stick around for much longer… But I wanted to say thanks."
+
+            c "Before, there was a lot of stuff I didn't know how to do. And…well, there's still a lot I don't know how to do, but it's a lot less than before."
+
+            c "I mean like, you helped me learn a lot."
+
+            c "So thanks."
+
+
+            "The Child beams at you, shedding their multicolored light."
+
+            menu:
+
+                "Happy to help.":
+                    jump nr_help
+
+                "I learned a lot from you too.":
+                    jump nr_help
+
+                    label nr_help:
+
+                        "The Child grins."
+
+                        c "Next time I'll plan things out before diving right into something."
+
+                        c "But maybe we'll still let imagination run wild once in a while, right?"
+
+                        menu:
+
+                            "Right.":
+                                jump nr_right
+
+                                label nr_right:
+
+                                    "The Child sighs happily, contently settling into their seat."
+                                    hide child onlayer Foreground
+                                    $ Child = False
+                                    $ tracker += 1
+
+                                    if tracker >= 3:
+                                        jump nr_elder
+                                    else:
+                                        jump nr_talk
+
+        label nr_student:
+
+            menu:
+
+                "What are you writing?":
+                    jump nr_writing
+
+                "Everything still quiet down in Stlethia?":
+                    jump nr_quiet
+
+                    label nr_writing:
+                        show student onlayer Foreground at student_right
+
+                        s "Oh, just doing a bit of journaling. I want to make sure I remember this moment."
+
+                        "The Student closes the book and smiles at you."
+                        jump nr_close
+
+                    label nr_quiet:
+                        show student onlayer Foreground at student_right
+
+                        s "Mhm..the God of Eyes tells me everything is going well."
+
+                        s "Besides, I feel we've probably earned a break by now."
+
+                        "The Student looks up at you from their book, smiling."
+                        jump nr_close
+
+                        label nr_close:
+
+                            s "I realize that I should probably also say something to you, for all that you've done here."
+
+                            menu:
+
+                                "What do you mean?":
+                                    jump nr_mean
+
+                                    label nr_mean:
+
+                                        s "I mean all the good you've done for us. The good you've done for me."
+
+                                        s "Had it not been for you, I wouldn't have ever gotten around to making anything. You gave me the push I needed to take the risk of trusting myself."
+
+                                        s "I've let go of perfection. And I'm all the happier for it."
+
+                                        s "So…"
+
+                                        s "Thank you."
+
+                                        menu:
+
+                                            "Of course.":
+                                                jump nr_course
+
+                                                label nr_course:
+
+                                                    "The Student opens their notebook again, and raises it towards you."
+
+                                                    s "Here's to just…trying your best."
+                                                    hide student onlayer Foreground
+                                                    $ Student = False
+                                                    $ tracker += 1
+
+                                                    if tracker >= 3:
+                                                        jump nr_elder
+                                                    else:
+                                                        jump nr_talk
+
+        label nr_parent:
+
+            "The Parent moves not a finger, not an inch from their resting place."
+
+            menu:
+
+                "Enjoying the break?":
+                    jump nr_enjoy
+
+                    label nr_enjoy:
+
+                        show parent onlayer Foreground at parent_right
+
+                        p "Mmm. Incredibly."
+
+                        p "I had forgotten what it was like to not be doing anything."
+
+                        hide parent onlayer Foreground
+                        show elder onlayer Foreground at elder_right
+
+                        e "The hassle of running a world almost makes you miss the void from before we even existed, huh."
+
+                        hide elder onlayer Foreground
+
+                        "The Parent chuckles, and opens one eye to look at you."
+
+                        show parent onlayer Foreground at parent_right
+
+                        p "No amount of hassle could make me regret being right here, right now."
+
+                        p "As much as I struggled, I now see the value of…what was it called?"
+
+                        p "“Me time”?"
+
+                        hide parent onlayer Foreground
+
+                        "Everyone cracks a laugh."
+
+                        show parent onlayer Foreground at parent_right
+
+                        p "I hope that you will find the same peace, friend."
+
+                        p "That you will listen to the voices within, as well as without."
+
+                        p "That you will value not doing as much as doing."
+
+                        p "You have my thanks for teaching me this lesson."
+
+                        hide parent onlayer Foreground
+                        $ Parent = False
+                        $ tracker += 1
+
+                        if tracker >= 3:
+                            jump nr_elder
+                        else:
+                            jump nr_talk
+
+        label nr_elder:
+
+            "In the midst of the resting, The Elder gets up and shuffles a little ways off from the group."
+
+            menu:
+
+                "Talk to The Elder.":
+                    jump nr_goe
+
+                    label nr_goe:
+
+                        "You stand as well, and follow The Elder to the place where they come to rest."
+
+                        "They take a mote, and expand it larger and larger. Eventually it forms a window that looks out onto the world, Stlethia, from high above. It looks near-identical to the map, just different colors."
+
+                        "They stare at the world in silence."
+
+                        show elder onlayer Foreground at elder_right
+
+                        e "…"
+
+                        e "We did it."
+
+                        e "We made it to an end."
+
+
+                        menu:
+
+                            "An end?":
+                                jump nr_anend
+
+                                label nr_anend:
+
+                                    e "Well this certainly isn't the end. Who knows how long this is going to go on for?"
+
+                                    e "But all in all, I would say that we did it. We made a world."
+
+                                    e "And it's so different from how I thought it would be."
+
+
+                                    menu:
+
+                                        "Is that a bad thing?":
+                                            jump nr_bad
+
+                                        "Different can be exciting.":
+                                            jump nr_exciting
+
+                                            label nr_bad:
+
+                                                e "I suppose that is the question…"
+                                                jump nr_different
+
+                                            label nr_exciting:
+
+                                                e "So I’ve heard."
+                                                jump nr_different
+
+                                                label nr_different:
+
+                                                    e "…"
+
+                                                    e "I was happy with the original plan. I thought we had a good reason for wanting to copy the dream world. A lot of good reasons, actually."
+
+                                                    e "And then as we went on…"
+
+                                                    e "I don’t know if those good reasons are still present in our work."
+
+
+                                                    menu:
+
+                                                        "Does that matter?":
+                                                            jump nr_present
+
+                                                        "So what is present in your work?":
+                                                            jump nr_present
+
+                                                            label nr_present:
+
+                                                                e "..."
+
+                                                                "The Elder thinks on that for a while."
+                                                        
+                                                                e "You know, that was one of the things I was trying to pay attention to."
+
+                                                                e "As the project went on, and they started drifting away towards the end point that we had originally envisioned…"
+
+                                                                e "I started seeing glimpses of the new endpoint they were creating."
+
+                                                                e "That we were creating."
+
+                                                                e "…"
+
+                                                                e "But this isn't the thing we set out to make anymore! I don't even know what it is now! What it means!"
+
+
+                                                                "The Elder experiences momentary frustration, calming themselves down with a few breaths."
+
+                                                                menu:
+
+                                                                    "Well, what do you know about it?":
+                                                                        jump nr_know
+
+                                                                    "Does it even matter if you know exactly what it is?":
+                                                                        jump nr_matter
+
+                                                                    "It's a world.":
+                                                                        jump nr_world
+
+                                                                        label nr_know:
+
+                                                                            e "I know that it's messy. I know that it's got four continents. I know that all manner of people and other creatures live in it."
+                                                                            e "And I thought their lives would be too complicated by all this fantasticality for them to find their inner meaning."
+                                                                            jump nr_point
+
+                                                                        label nr_matter:
+
+                                                                            "The Elder shrugs."
+
+                                                                            e "I guess…"
+
+                                                                            e "I just feel like there's got to be a part of this that does matter. Or else why did we go to all the trouble of making it?"
+
+                                                                            jump nr_point
+
+                                                                        label nr_world:
+
+                                                                            "The Elder looks unamused."
+
+                                                                            e "Obviously."
+
+                                                                            e "…"
+
+                                                                            e "But even then…why did we make a world. What was the purpose?"
+
+                                                                            jump nr_point
+
+                                                                            label nr_point:
+
+                                                                                e "I mean, that's the whole point of this whole thing, right? To figure out the meaning in all of it? In all of life?"
+
+                                                                                e "That's why we're here. That's what I thought we'd be closer to doing."
+
+                                                                                e "But now I don't even know what we've done, or why we've done it."
+
+                                                                                e "Could I live with that? Could I be at peace with this project, this world just…existing?"
+
+
+                                                                                menu:
+
+                                                                                    "I believe you can.":
+                                                                                        jump nr_believe
+
+                                                                                    "If I have to, so do you.":
+                                                                                        jump nr_chuckle
+
+                                                                                        label nr_chuckle:
+
+                                                                                            "The Elder chuckles, a small sound that slowly grows into roaring laughter."
+
+                                                                                            e "Well then we're both stuck like this. What funny wonders we inflict upon ourselves."
+                                                                                            jump nr_see
+
+                                                                                        label nr_believe:
+
+                                                                                            e "…"
+                                                                                            jump nr_see
+
+                                                                                            label nr_see:
+
+                                                                                                e "I see now."
+
+                                                                                                e "It doesn't seem like I have any other choice."
+
+                                                                                                e "I will sit with this project, sit amidst a meaning that I may not be able to see. Perhaps I will never see it. But I will have to…trust that it is there."
+
+                                                                                                e "I will do this."
+
+                                                                                                e "I will let the world just be."
+
+
+                                                                                                "The window that shows the world slowly closes."
+
+                                                                                                e "Thank you for talking to me. You are wise, worldbuilder. Even if you do not think it."
+
+                                                                                                "The Elder slowly turns around."
+
+                                                                                                e "Now, let's head back. I feel that I will finally be able to relax."
+
+                                                                                                hide elder onlayer Foreground
+
+                                                                                                "The two of you walk back to the rest of the group. Everyone greets one another happily."
+
+                                                                                                "As time runs short, The Four show you all the things of their world they take pride in."
+
+                                                                                                show child onlayer Foreground at child_right
+
+                                                                                                c "Oh yeah, wait!"
+
+                                                                                                c "You've still got your world to work on. Unless you finished it."
+
+                                                                                                hide child onlayer Foreground
+                                                                                                show student onlayer Foreground at student_right
+
+                                                                                                s "Well, a world is never truly finished, is it?"
+
+                                                                                                s "But I do hope our friend has a world that feels…at least complete enough to feel whole."
+
+                                                                                                hide student onlayer Foreground
+                                                                                                show parent onlayer Foreground at parent_right
+
+                                                                                                p "We do so appreciate you being willing to participate with us dear. Oh, and you should probably come up with a name, if you haven't yet."
+
+                                                                                                hide parent onlayer Foreground
+                                                                                                show child onlayer Foreground at child_right
+
+                                                                                                c "Ooh, yes! A name! What's the name!?"
+
+                                                                                                hide child onlayer Foreground
+
+                                                                                                $ number = renpy.input("What is the name of your world?", length=32)
+
+                                                                                                "A murmur of agreement runs through the group."
+
+                                                                                                show elder onlayer Foreground at elder_right
+
+                                                                                                e "Well then, add a few finishing touches to your world, and then…"
+
+                                                                                                e "Would you do us a favor, friend?"
+
+                                                                                                menu:
+
+                                                                                                    "Sure.":
+                                                                                                        jump nr_favor
+
+                                                                                                    "Depends…":
+                                                                                                        jump nr_favor
+
+                                                                                                        label nr_favor:
+
+                                                                                                            e "If there's one thing we've learned from you, it's that projects like these are better when you share them with others."
+
+                                                                                                            hide elder onlayer Foreground
+                                                                                                            show student onlayer Foreground at student_right
+
+                                                                                                            s "So we want you to share your world with someone else. Even just one person."
+
+                                                                                                            hide student onlayer Foreground
+                                                                                                            show child onlayer Foreground at child_right
+
+                                                                                                            c "Go and tell them about it! See what they think!"
+
+                                                                                                            hide child onlayer Foreground
+                                                                                                            show parent onlayer Foreground at parent_right
+
+                                                                                                            p "And maybe mention our world too, while you're at it."
+
+                                                                                                            hide parent onlayer Foreground
+
+                                                                                                            "The Four look at you with that same mixture of pride and gratitude. They're grateful for you, and hope they've helped you as much as you've helped them."
+
+                                                                                                            show elder onlayer Foreground at elder_right
+
+                                                                                                            e "But before that, it's time for us to part. Enjoy your time back in the dream world, kid."
+
+                                                                                                            hide elder onlayer Foreground
+                                                                                                            show student onlayer Foreground at student_right
+
+                                                                                                            s "Put some of those helpful practices to use. Goodbye worldbuilder."
+
+                                                                                                            hide student onlayer Foreground
+                                                                                                            show child onlayer Foreground at child_right
+
+                                                                                                            c "Bye bye!!"
+
+                                                                                                            hide child onlayer Foreground
+                                                                                                            show parent onlayer Foreground at parent_right
+
+                                                                                                            p "It was truly an honor to host you. Until we meet again, friend."
+
+                                                                                                            hide parent onlayer Foreground
+
+                                                                                                            "The Light swells bigger and bigger, until nothing is left."
+
+                                                                                                            "..."
+                                                                                                            [end]
+
+                                                                                
 return
