@@ -2335,7 +2335,6 @@ label cm_next:
                                                                     "The Student looks at you, then takes a deep breath."
 
                                                                     s """
-
                                                                     First, there are the Knowledge Keepers. They store information in their skin, and pass it on to future generations.
 
                                                                     They will be able to slowly accrue more and more knowledge, and better themselves with it.
