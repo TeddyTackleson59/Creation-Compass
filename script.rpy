@@ -279,6 +279,9 @@ label start:
 
                         c "Well that's stupid. You're gonna end up with nothing written down, and then-"
 
+                        hide child onlayer Foreground
+                        show parent onlayer Foreground at parent_right
+
                         p "Why don't we let them decide if an idea is worth writing down or not."
                         p "Listen dear, just make a list of things that you think would be a good foundation for a world. Things like tone, genre, time period, and level of technology, science, and magic. I know the people of your world like magic."
                         p "Then, once you've got some ideas down on your list, come and talk to us again."
@@ -455,12 +458,12 @@ label start:
                                         label ss_place6:        
                                             s "Thank you. In that case, pick one of your ideas to expand upon. Then we can compare our ideas later."
                                             s "Until then, good luck."
-
+                                            hide student onlayer Foreground
                                             centered "..."
 
                                             $ Student = False
                                             $ tracker += 1
-                                            hide student onlayer Foreground
+
 
                                             if tracker >= 3:
                                                 jump ss_ending
@@ -571,6 +574,7 @@ label start:
 
                                                     p "Yes. We will speak with them. They can find obstructions…incredibly bothersome."
                                                     p "They see the endpoint better than any of us, but become annoyed when we do not take the most direct path to that endpoint. I will assure them that we will listen to their voice. That should help calm them."
+                                                    jump ss_fix
 
 
                                                 label ss_you:
@@ -582,27 +586,30 @@ label start:
                                                     "The Parent smiles."
 
                                                     p "But I do not mind. Conflict is a small price to pay for the love we share. I hope that this is something you know as well."
+                                                    jump ss_fix
 
-                                        "The Parent stares into your mind, their gaze indicating a request."
+                                                    label ss_fix:
 
-                                        p "Despite what transpired, I still believe that you would do us good by building alongside us. A world of your own is a treasure and a gift. It may be a frightening task, but we will support one another."
-                                        p "Besides, you already have the ideas you've taken down there. Perhaps several of those would lay the foundation for your world. You should have at minimum a few central ideas of what your world will be like, as we will also have to do."
-                                        menu:
-                                            "I will do what I must to continue.":
-                                                jump ss_place5
-                                    label ss_place5:
-                                        p "That's the spirit! Now, let us both move on to our tasks. I wish you the best of luck, and may we speak again."
+                                                        "The Parent stares into your mind, their gaze indicating a request."
 
-                                        hide parent onlayer Foreground
+                                                        p "Despite what transpired, I still believe that you would do us good by building alongside us. A world of your own is a treasure and a gift. It may be a frightening task, but we will support one another."
+                                                        p "Besides, you already have the ideas you've taken down there. Perhaps several of those would lay the foundation for your world. You should have at minimum a few central ideas of what your world will be like, as we will also have to do."
+                                                        menu:
+                                                            "I will do what I must to continue.":
+                                                                jump ss_place5
+                                                    label ss_place5:
+                                                        p "That's the spirit! Now, let us both move on to our tasks. I wish you the best of luck, and may we speak again."
 
-                                        centered "..."
+                                                        hide parent onlayer Foreground
 
-                                        $ Parent = False
-                                        $ tracker += 1
-                                        if tracker >= 3:
-                                            jump ss_ending
-                                        else:
-                                            jump ss
+                                                        centered "..."
+
+                                                        $ Parent = False
+                                                        $ tracker += 1
+                                                        if tracker >= 3:
+                                                            jump ss_ending
+                                                        else:
+                                                            jump ss
 
                 label ss_ending:
 
@@ -671,6 +678,14 @@ label start:
                                     p "Splendid!"
 
                                     hide parent onlayer Foreground
+                                    show child onlayer Foreground at child_right
+
+                                    c "Ooh, tell us, tell us!"
+
+                                    hide child onlayer Foreground
+
+                                    $ number = renpy.input("What did you make?", length=128)
+
                                     show student onlayer Foreground at student_right
 
                                     s "Interesting…"
@@ -679,53 +694,56 @@ label start:
                                     show parent onlayer Foreground at parent_right
 
                                     p "Well regardless, it sounds like it will be a wonderful piece of work to draw to and from. Well done."
+                                    jump ss_fixer
                                         
-                                    label ss_more_no:
+                                label ss_more_no:
 
-                                        "The Parent furrows their expression."
+                                    "The Parent furrows their expression."
+
+                                    hide parent onlayer Foreground
+                                    show student onlayer Foreground at student_right
+
+                                    s "If you are having trouble, something I believe to be helpful is discussing your work with others."
+                                    s "If you can find someone in the space where you are to bounce ideas off of, they can often provide a unique insight that unlocks doors that you could not open otherwise. Try finding someone to talk to right now!"
+                                    hide student onlayer Foreground
+                                    centered "..."
+                                    jump ss_fixer
+
+                                    label ss_fixer:
+                                        show parent onlayer Foreground at parent_right
+
+                                        p "Now, what shall we do next?"
 
                                         hide parent onlayer Foreground
                                         show student onlayer Foreground at student_right
 
-                                        s "If you are having trouble, something I believe to be helpful is discussing your work with others."
-                                        s "If you can find someone in the space where you are to bounce ideas off of, they can often provide a unique insight that unlocks doors that you could not open otherwise. Try finding someone to talk to right now!"
+                                        s "I think we should pause and let things settle before moving on. Make sure we're all really happy with our idea."
+
                                         hide student onlayer Foreground
-                                        centered "..."
+                                        show elder onlayer Foreground at elder_right
 
-                                show parent onlayer Foreground at parent_right
+                                        e "Well, don't take too long. We don't even have anything physically there yet."
 
-                                p "Now, what shall we do next?"
+                                        hide elder onlayer Foreground
+                                        show child onlayer Foreground at child_right
 
-                                hide parent onlayer Foreground
-                                show student onlayer Foreground at student_right
+                                        c "But that's next, right?! That's next!"
 
-                                s "I think we should pause and let things settle before moving on. Make sure we're all really happy with our idea."
+                                        hide child onlayer Foreground 
+                                        show parent onlayer Foreground at parent_right
 
-                                hide student onlayer Foreground
-                                show elder onlayer Foreground at elder_right
+                                        p "Yes. Let us embark on the next step of this journey then."
 
-                                e "Well, don't take too long. We don't even have anything physically there yet."
+                                        "The Parent gestures to you."
 
-                                hide elder onlayer Foreground
-                                show child onlayer Foreground at child_right
-
-                                c "But that's next, right?! That's next!"
-
-                                hide child onlayer Foreground 
-                                show parent onlayer Foreground at parent_right
-
-                                p "Yes. Let us embark on the next step of this journey then."
-
-                                "The Parent gestures to you."
-
-                                p "After you, worldbuilder."
-                                hide parent onlayer Foreground
-                                hide background1 onlayer master
-                                $ Child = True
-                                $ Student = True
-                                $ Parent = True
-                                $ Elder = True
-                                $ Tracker = 0
+                                        p "After you, worldbuilder."
+                                        hide parent onlayer Foreground
+                                        hide background1 onlayer master
+                                        $ Child = True
+                                        $ Student = True
+                                        $ Parent = True
+                                        $ Elder = True
+                                        $ tracker = 0
 
 label gf:
 
@@ -747,7 +765,7 @@ label gf:
     e "Finally."
 
     hide elder onlayer Foreground
-    show student onlayer Foreground
+    show student onlayer Foreground at student_right
 
     s "Now, in order to give us some direction in this endeavor, I have come up with a plan of action." 
     s "I believe that we should all focus on just one thing to give this world, at least at first."
