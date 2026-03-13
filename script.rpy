@@ -739,7 +739,7 @@ label gf:
     s "All right everyone, I know we're all excited to have reached this moment. We've done much talking, much brainstorming, and now we are to start filling the space around us."
     hide student onlayer Foreground
 
-    "The Parent and The Child give applause.
+    "The Parent and The Child give applause."
 
     show elder onlayer Foreground at elder_right
 
