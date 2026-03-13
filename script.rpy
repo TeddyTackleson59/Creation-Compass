@@ -719,8 +719,201 @@ label start:
 
                                 p "After you, worldbuilder."
                                 hide parent onlayer Foreground
+                                hide background1 onlayer master
+                                $ Child = True
+                                $ Student = True
+                                $ Parent = True
+                                $ Elder = True
+                                $ Tracker = 0
 
-                                "End of chapter"
+label gf:
+
+    centered "Chapter 2: Gifts of The Four"
+    centered "In which Wonder finds its gift"
+    show background1 onlayer master at background
+    "In the Darkness, in the Light, the motes of Knowledge have come together. They are large and ripe with potential, like the first of the stars."
+    "You sit and admire them for all they offer. The space feels different. As though it has been primed to hold something."
+    "The Four seem eager to find what that something will be. They speak to you and among themselves, until The Student speaks up."
+
+    show student onlayer Foreground at student_right
+    s "All right everyone, I know we're all excited to have reached this moment. We've done much talking, much brainstorming, and now we are to start filling the space around us."
+    hide student onlayer Foreground
+
+    "The Parent and The Child give applause.
+
+    show elder onlayer Foreground at elder_right
+
+    e "Finally."
+
+    hide elder onlayer Foreground
+    show student onlayer Foreground
+
+    s "Now, in order to give us some direction in this endeavor, I have come up with a plan of action." 
+    s "I believe that we should all focus on just one thing to give this world, at least at first."
+    s "There is so much we can do, but if we each start from this one thing and work our way out from it, we can better determine how each part will affect each other part of our world. Does that make sense?"
+
+    hide student onlayer Foreground
+    show child onlayer Foreground at child_right
+
+    c "Umm…"
+
+    hide child onlayer Foreground
+    show parent onlayer Foreground at parent_right
+
+    p "I believe so. We are each to develop our own gift for this world?"
+
+    hide parent onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "Yes exactly! A gift from each of us."
+
+    hide student onlayer Foreground
+    show parent onlayer Foreground at parent_right    
+
+    p "That sounds lovely."
+
+    hide parent onlayer Foreground
+    show child onlayer Foreground at child_right    
+
+    c "So, what can we do? For the gift? What are we allowed to make?"
+
+    hide child onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "You can make your gift anything at all. It could be specific, but I feel that something a bit more general would be a better idea."
+
+    hide student onlayer Foreground
+    show child onlayer Foreground at child_right
+
+    "The Child lights up, then suddenly frowns."
+
+    c "Ok…so it can be anything, but it needs to be just one thing?"
+
+    hide child onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "Yes. I already have an idea for my gift."
+
+    hide student onlayer Foreground
+
+    "The Elder shuffles off, leaving the rest of you to talk amongst yourselves."
+
+    show parent onlayer Foreground at parent_right
+
+    p "Ah. I should also move on. But I trust that you will think of a gift of your own, worldbuilder?"
+    hide parent onlayer Foreground
+    menu:
+        "I suppose":
+            jump gf_either
+        "I'm good":
+            jump gf_either
+
+            label gf_either:
+
+                show student onlayer Foreground at student_right
+
+                s "At any rate, I need a bit more time to develop my gift. Feel free to pop by, worldbuilder."
+                hide student onlayer Foreground
+                "The Student and The Parent disperse."
+
+                centered "…"
+label gf_talk:
+
+    menu:
+        "Talk to The Student":
+            jump gf_student
+
+        "Talk to The Parent":
+            jump gf_parent
+
+        "Talk to The Elder":
+            jump gf_elder
+
+            label gf_student:
+                $ Student = False
+                if Child = True:
+                    jump gf_child1
+
+            label gf_parent:
+                $ Parent = False
+                if Child = True:
+                    jump gf_child1
+            label gf_elder:
+                $ Elder = False
+                if Child = True:
+                    jump gf_child1            
+
+                    label gf_child1:
+
+
+                        "Before you reach your destination, you feel a presence at your side. You look down and see The Child, uncharacteristically dimmed."
+
+                        show child onlayer Foreground at child_right
+
+                        c "...what if I can't do it?"
+
+                        menu:
+                            "Can't do what?":
+                                jump gf_cant
+
+                                label gf_cant:
+
+                                    c "What if I can't find my gift?"
+                                    menu:
+                                        "Why would you say that?":
+                                            jump gf_why
+
+                                            label gf_why:
+
+                                                "The Child looks down."
+
+                                                c "Well, The Student said this was my one gift. They already know what their gift is. But I don't know…"
+                                                c "What if I just can't figure it out?"
+                                                menu:
+                                                    "Have you thought about it?":
+                                                        jump gf_thought
+
+                                                        label gf_thought:
+
+
+                                                            c "Yeah…I thought about it a bit. I know I have ideas. But I'm not sure if they'll be as good as everyone else's."
+                                                            c "I just don't know if I can do this right."
+                                                            menu:
+                                                                "You don't need to compare your ideas to others.":
+                                                                    jump gf_compare
+                                                                "The first step to making something good is getting started.":
+                                                                    jump gf_first
+
+                                                                    label gf_compare:
+
+                                                                        c "Ok…Ok. Maybe you could still ask the others about their gifts? Just so we know what they are. Just so I don't do the same one…"
+                                                                        jump gf_figure
+
+                                                                    label gf_first:
+
+                                                                        "The Child takes a breath."
+
+                                                                        c "Ok…Ok. If you say I can do it, then I can do it. I'll get started. I can work on my ideas some more."
+                                                                        jump gf_figure
+
+                                                                        label gf_figure:
+                                                                            menu:
+                                                                                "You can do this!":
+                                                                                    jump gf_cando
+
+                                                                                    label gf_cando:
+
+                                                                                        c "All right. Yeah! You're right! I can do this! I'm gonna go and figure out all the stuff about my gift!"
+                                                                                        c "Thanks worldbuilder!"
+                                                                                        hide child onlayer Foreground
+
+                                                                                        "The Child runs off, shining brightly again."
+                                                                                        if Student = False:
+                                                                                            jump gf_student
+                                                                                        else if Parent = False:
+                                                                                            jump gf_parent
+                                                                                        else:
+                                                                                            jump gf_elder
 
 
 
