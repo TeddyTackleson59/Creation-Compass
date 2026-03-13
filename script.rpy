@@ -2745,7 +2745,7 @@ label rs_talk:
 
                                                                                     s "I mean, I can't even make this horse right."
 
-                                                                                    "The Student hands the clay horse back to The Child, which has been nervously squeezed into a shape that one could say definitely looks like a horse.
+                                                                                    "The Student hands the clay horse back to The Child, which has been nervously squeezed into a shape that one could say definitely looks like a horse."
 
                                                                                     s "I was just going to…"
 
