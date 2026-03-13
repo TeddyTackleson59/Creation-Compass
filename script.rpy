@@ -821,13 +821,13 @@ label gf:
 label gf_talk:
 
     menu:
-        "Talk to The Student":
+        "Talk to The Student" if Student:
             jump gf_student
 
-        "Talk to The Parent":
+        "Talk to The Parent" if Parent:
             jump gf_parent
 
-        "Talk to The Elder":
+        "Talk to The Elder" if Elder:
             jump gf_elder
 
             label gf_student:
@@ -1517,6 +1517,7 @@ label gf_finish:
                 hide student onlayer Foreground
 
                 "The Four all soar off in different directions, leaving you alone with the world of your own."
+                hide background1 onlayer master
 
                 centered "…"
                 $ Child = True
@@ -1525,6 +1526,868 @@ label gf_finish:
                 $ Elder = True
                 $ Tracker = 0
 
+label cm:
+    centered "Chapter 3: Concious Movement"
+    centered "In which Craft releases its grasp"
 
-                    
+    show background1 onlayer master
+
+    "The Four have been hard at work. The space below is now populated with what resembles a map, sprawling away in all directions."
+    "Four distinct land masses are arranged on the map, their landscapes of mountains, forests, and rivers having just been sculpted and shaped. Having rested, The Student stands to face the rest of the group."
+
+    show student onlayer Foreground at student_right
+
+    s "All right everyone! We've done excellent work thus far. We have the physical world all in place."
+
+    hide student onlayer Foreground
+    show parent onlayer Foreground at parent_right
+
+    p "I particularly like what everyone has done with their continent. The Elder's looks especially lovely."
+
+    hide parent onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "But now we must press forward. The next subject to tackle is…"
+
+    hide student onlayer Foreground
+    show chil onlayer Foreground at child_right
+
+    "The Child jumps up and down with their hand raised."
+
+    c "Ooh, I know! I know what's next!"
+
+    hide child onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "...Yes?"
+
+    hide student onlayer Foreground
+    show chil onlayer Foreground at child_right
+
+    c "We need people! The world is lonely, so we need to put people there!"
+    hide child onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "Well, I suppose, but I think that creating denizens will be a rather complicated process of collaboration and-"
+
+    hide student onlayer Foreground
+    show chil onlayer Foreground at child_right
+
+    c "Nah, it'll be easy! I've got a bunch of ideas right here."
+
+    "The Child reaches into their pocket and pulls out a handful of bright motes, then throws them up into the air, where they float around gently."
+
+    hide child onlayer Foreground
+    show elder onlayer Foreground at elder_right
+
+    e "Tch. So messy."
+
+    hide elder onlayer Foreground
+    show child onlayer Foreground at child_right
+
+    c "Look at all these animals and people! And they can all be totally magical!"
+
+    hide child onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "Don't be ridiculous. Any magical capabilities of these denizens must be considered in context with each other." 
+    s "We'll have to make a table to compare each single creature with its ecosystem cohabitants. The larger the creature the larger the ecosystem range, of course."
+    s "Any changes made to them should be passed through each of us, and the table. We wouldn't want any-"
+
+    hide student onlayer Foreground
+    show elder onlayer Foreground at elder_right
+
+    e "If we do all of that, we'll never actually create any creatures."
+
+    hide elder onlayer Foreground
+    show child onlayer Foreground at child_right
+
+    c "Yeah! Look, we can think about all that…context stuff while we're creating them."
+
+    hide child onlayer Foreground
+
+    "The Child runs off giggling towards the map. The Parent starts after them, but turns back to look at The Student."
+
+    show parent onlayer Foreground at parent_right
+
+    p "Those were some lovely points you made, dear. Why don't you work on figuring that out, and then come tell us about it. Ok?"
+
+    hide parent onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "But-"
+
+    hide student onlayer Foreground
+
+    "The Parent goes running after The Child, calling out."
+
+    p "Wait dear! You don't want to trample those freshly laid mountains!"
+
+    show student onlayer Foreground at student_right
+
+    "The Student stands in place, stammering slightly."
+
+    s "Wha…but…but…"
+
+    "The Elder watches The Student for a moment, then plucks a mote of Knowledge out of the air and walks off as well."
+
+    "The Student watches them go. They start to speak out, but then retract and sigh."
+    hide student onlayer Foreground
+    menu:
+        "...":
+            jump cm_wow
+        "Wow.":
+            jump cm_wow
+
+            label cm_wow:
+                show student onlayer Foreground at student_right
+                s "...You know, I'm starting to regret this whole gift of time thing."
+                menu:
+                    "Why?":
+                        jump cm_why
+
+                        label cm_why:
+
+                            s "It's tough, being stuck on a set timeline now. Now that we're measuring time, there always seems to be less of it than there was before. It's stressful."
+
+                            s "And if we get this wrong, there's no going back. Once we put creatures with independent thoughts in the world, we don't get to make decisions for them anymore."
+                            s "That's why it's so important to give them the best start that we can. Set them up to make the right decisions, to live lives full of purpose and fulfillment. The others seemed to pay no mind to that conundrum."
+                            menu:
+                                "Don't you think you're being a bit controlling?":
+                                    jump cm_control
+
+                                "If it's important to you, then you should ask them about it again.":
+                                    jump cm_important
+
+                                    label cm_control:
+
+                                        "The Student shakes their head."
+
+                                        s "No, no. You don't understand! I've gifted time to this world. The creatures we create will grow and change."
+                                        s "If we don't think this through, think ahead to account for what could happen, it could very well ruin this world forever!"
+                                        menu:
+                                            "...":
+                                                jump cm_fix
+
+                                                label cm_fix:
+
+                                                    "The Student stands straight."
+
+                                                    s "I am going to speak to the others. I wish to hear their individual thoughts on the matter."
+                                                    jump cm_off
+
+                                    label cm_important:
+
+                                        s "You think so?"
+                                        menu:
+                                            "Maybe they've already come up with some ideas to make this process easier.":
+                                                jump cm_easier
+
+                                                label cm_easier:
+
+                                                    s "All right! I will go speak to them on the matter once more, individually this time. I hope that you're right."
+                                                    jump cm_off
+
+                                                    label cm_off:
+                                                        hide student onlayer Foreground
+                                                        "The Student walks off." 
+label cm_talk:
+    menu:
+        "Talk to The Child" if Child:
+            jump cm_child
+        "Talk to The Student and The Parent" if Student:
+            jump cm_sp
+        "Talk to The Elder" if Elder:
+            jump cm_elder
+
+            label cm_child:
+
+                "The Child runs up to you, beaming bright as always."
+
+                show child onlayer Foreground at child_right
+
+                c "Hey! Hey, hey hey! I wanna show you something!"
+
+                menu:
+                    "Ok, lead the way.":
+                        jump cm_lead
+
+                        label cm_lead:
+
+                            "The Child leads you over to a section of the map. They point to the top left continent."
+
+                            c "That's my part. It's got tons of trees and lakes, and lotsa great places for animals to live. So you know what I'm going to put there?"
+
+                            "The Child grins at you."
+                            menu:
+                                "What will you put there?":
+                                    jump cm_what
+
+                                    label cm_what:
+
+                                        c "Dogs. So many dogs. And not just any dogs. Dogs with flowers growing on them! And trees too! All kinds of plants."
+                                        c "And the dogs will be all different sizes! There will be little dogs, and reeeallly big dogs. It'll be great!"
+                                        menu:
+                                            "I'm not really a dog person...":
+                                                jump cm_nodog
+                                            "That sounds great. I love dogs.":
+                                                jump cm_dog
+
+                                                label cm_nodog:
+
+                                                    "The Child frowns a bit."
+
+                                                    c "Aww…well that's ok. There'll be stuff here that isn't dogs too!"
+                                                    menu:
+                                                        "Like what?":
+                                                            jump cm_explain
+
+                                                label cm_dog:
+
+                                                    "The Child beams."
+
+                                                    c "Right?! And the dogs and the people can be friends! It'll be the best thing ever!"
+                                                    menu:
+                                                        "What people?":
+                                                            jump cm_explain
+
+                                                            label cm_explain:
+
+                                                                c "Right, the people. I made this one person, like, a big person. The Student said it was a god, so I guess I made the God of Light."
+                                                                c "And then the God of Light made a bunch of other smaller people out of magic, so I guess those are the children of light?"
+                                                                c "Anyways, they're really good at magic, and they'll be walking around the world soon. And in the meantime, I'll be working on a bunch of other guys!"
+                                                                menu:
+                                                                    "Impressive. You've been doing a lot.":
+                                                                        jump cm_impress
+
+                                                                        label cm_impress:
+
+                                                                            c "Thaanks! Have you been doing this stuff too? I can't wait to see your creatures!"
+                                                                            menu:
+                                                                                "I've been working on it.":
+                                                                                    jump cm_working
+                                                                                "I haven't gotten around to it yet.":
+                                                                                    jump cm_around
+
+                                                                                    label cm_working:
+
+                                                                                        c "Awesome! What do you have?"
+                                                                                        $ number = renpy.input("What creatures have you made?", length=128)
+
+                                                                                        c "Wowwww. I wish I had thought of that."
+                                                                                        jump cm_fun
+                                                                                    label cm_around:
+                                                                                        c "Well don't wait too long, ok? If you don't keep making your world, then we won't be able to talk to you anymore."
+                                                                                        jump cm_fun
+
+                                                                                        label cm_fun:
+
+                                                                                            c "This has been a lot of fun. I'm glad you showed up."
+                                                                                            menu:
+                                                                                                "Me too.":
+                                                                                                    jump cm_metoo
+
+                                                                                                    label cm_metoo:
+
+                                                                                                        "You and The Child sit quietly next to each other, coinhabiting a workspace."
+                                                                                                        hide child onlayer Foreground
+
+                                                                                                        centered "…"
+                                                                                                        $ Child = False
+                                                                                                        $ tracker += 1
+                                                                                                        if tracker >= 3:
+                                                                                                            jump cm_next
+                                                                                                        else:
+                                                                                                            jump cm_talk
+            label cm_sp:
+
+                "You approach The Student and The Parent. The two are mid-conversation."
+
+                show parent onlayer Foreground at parent_right
+
+                p "...and I was thinking Stoneborn would be a suitable name for their race."
+
+                hide parent onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "But hold on, just confirming that you're sure they won't come into conflict with the others' creations?"
+
+                hide student onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
+                p "Well, The Elder is still working on their denizens. I am not entirely finished myself. So I can't be sure that whatever is made next won't come into conflict."
+
+                hide parent onlayer Foreground
+
+                "The Student paces nervously back and forth."
+
+                show student onlayer Foreground at student_right
+
+                s "This is no good…All of these groups interacting with each other…It feels like it's only a matter of time until something bad happens…"
+
+                hide student onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
+                p "For all it's worth dear, I agree."
+
+                hide parent onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "Really?"
+
+                hide student onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
+                p "Absolutely. I have been hard at work to instill all my creations with a respect for others and the world around them. There's so much to be in balance with."
+
+                hide parent onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "The people, the creatures…"
+
+                hide student onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
+                p "The environment."
+
+                hide parent onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                s "What?"
+
+                hide student onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
+                p "Well, for these creatures to exist happily for all time, they must be at balance with their environment."
+                p "They must be able to lead sustainable lives. One must take diet, size, rate of aging, and life cycle all into consideration."
+
+                hide parent onlayer Foreground
+                show student onlayer Foreground at student_right
+
+                "The Student stops dead in their tracks. They look like they feel sick."
+
+                s "I didn't even think about sustainability…"
+
+                hide student onlayer Foreground
+                show parent onlayer Foreground at parent_right
+
+                p "It's quite important dear. And you must answer not only the question of your creatures' abilities to sustain themselves, but also if they will be in harmony with their surroundings."
+                p "Will they destroy them without even noticing? And if they do so, are such things moral?"
+
+                hide parent onlayer Foreground
+
+                "The Student holds their head. A strained whining noise emits from them."
+
+                menu:
+                    "...":
+                        jump cm_watch
+                    "Ok, I think they've had enough.":
+                        jump cm_stop
+
+                        label cm_watch:
+                            show parent onlayer Foreground at parent_right
+
+                            p "Presently, I am merely focusing on the sustainability of my Stoneborn, but eventually I hope to analyze them for what they represent in context with the dream world, as well as the world our friend has created."
+                            p "And speaking of our friend, here they are now."
+
+                            "The Parent turns to gesture to you."
+
+                            hide parent onlayer Foreground
+                            show student onlayer Foreground at student_right
+
+                            s "Help me…"
+
+                            menu:
+                                "Perhaps The Student would like to come talk with me?":
+                                    jump cm_save
+
+                        label cm_stop:
+                            show parent onlayer Foreground at parent_right
+
+
+                            p "Oh my! My apologies dear, how long have you been standing there? Here, come and join in our conversation."
+                            menu:
+                                "Perhaps The Student would like to come talk with me?":
+                                    jump cm_save
+
+                                    label cm_save:
+
+                                        p "Certainly! Would you like that dear?"
+
+                                        hide parent onlayer Foreground
+                                        show student onlayer Foreground at student_right
+
+                                        "The Student quickly straightens up and hurries towards you."
+
+                                        s "Wonderfulconversationthankyoubye!"
+
+                                        "The Student walks past you, indicating for you to follow them. The Parent waves to you both as you leave. You catch up to The Student, who is walking fast."
+                                        hide student onlayer Foreground
+                                        menu:
+                                            "How are you doing?":
+                                                jump cm_how
+                                            "That sounded really stressful.":
+                                                jump cm_stress
+
+                                                label cm_how:
+                                                    show student onlayer Foreground at student_right
+
+                                                    s "Well between the thousands of different potential problems that could arise between tens of thousands of entities in our world, I would say I'm doing pretty bad."
+                                                    jump cm_sad
+
+                                                label cm_stress:
+
+                                                    "The Student quickens their pace."
+                                                    show student onlayer Foreground at student_right
+
+                                                    s "Mhm! Yep! It sure was!"
+                                                    jump cm_sad
+
+                                                    label cm_sad:
+                                                        "The Student sighs, and comes to a stop."
+
+                                                        s "How could I not have considered the sustainability of it all? The environment? And all those other things The Parent mentioned?"
+
+                                                        s "...I just don't know how I'm ever going to be able to do this."
+                                                        menu:
+                                                            "Why not?":
+                                                                jump cm_whynot
+
+                                                                label cm_whynot:
+
+                                                                    "The Student looks at you, bewildered."
+
+                                                                    s "What?"
+                                                                    menu:
+                                                                        "You're really good at making stuff, so why wouldn't you be able to do this?":
+                                                                            jump cm_good
+
+                                                                            label cm_good:
+
+                                                                                s "Well…I…I just don't have the time to make it right!"
+                                                                                menu:
+                                                                                    "So are you not going to do this project?":
+                                                                                        jump cm_fail
+
+                                                                                        label cm_fail:
+
+                                                                                            s "What? No, of course I'm going to…"
+
+                                                                                            "The Student turns inward. You hear their thoughts as though they were your own."
+
+                                                                                            s "Huh…"
+
+                                                                                            s "I don't want to stop working on the project. I want to keep going. I need to keep going."
+                                                                                            s "This world has been the best thing I've ever done. The only thing I've ever done. The first thing I've ever done. So…so…"
+                                                                                            menu:
+                                                                                                "So you have to do something.":
+                                                                                                    jump cm_something
+
+                                                                                                        s "I have to do something. But I don't know the right way to start…"
+                                                                                                        menu:
+                                                                                                            "Will you ever know?":
+                                                                                                                jump cm_ever
+                                                                                                            "Is there even a right way?"
+                                                                                                                jump cm_ever
+
+                                                                                                                label cm_ever:
+
+                                                                                                                    s "I…I don't know. I guess not. If I have to do it the right way, but I can't find the right way, then…"
+
+                                                                                                                    "The Student's mind becomes a buzz of multilayered voices, all bouncing off one another. The sound magnifies to a roaring storm of opinions and ideas. All of a sudden, the storm subsides."
+
+                                                                                                                    s "I need to think. I need just a bit more time. I have to figure out what this means for me."
+
+                                                                                                                    s "There needs to be a reason for all of this. Even if it's a small one. A reason why I choose things to be the way that they will. Does that make sense?"
+
+                                                                                                                    s "We all have a reason for doing what we do. The others do. Even you do. What was your reason? Why did you make your world and the denizens in it the way that you did?"
+
+                                                                                                                    s "I just need more time."
+
+                                                                                                                    "The Student nods to you."
+
+                                                                                                                    s "Thank you for your understanding. And for all your help."
+
+                                                                                                                    hide student onlayer Foreground
+
+                                                                                                                    centered "…"
+
+                                                                                                                    $ Student = False
+                                                                                                                    $ tracker += 1
+
+                                                                                                                    if tracker >= 3:
+                                                                                                                        jump cm_next
+                                                                                                                    else:
+                                                                                                                        jump cm_talk
+            label cm_elder:
+
+                "The Elder sits quietly by themselves. Their usual demeanor of indifference has been replaced by one of focus. They stretch a mote of Knowledge out, forming a thin sheet of light."
+                menu:
+                    "Stare from a distance.":
+                        jump cm_stare
+
+                    "Approach respectfully.":
+                        jump cm_approach
+
+                        label cm_stare:
+                            "You stay where you are and watch quietly. The Elder seems to be speaking to themselves, under their breath."
+                            "Eventually, you are caught in the corner of their eye. They move towards you."
+                            show elder onlayer Foreground at elder_right
+                            jump cm_upset
+                        label cm_approach:
+
+                            "You carefully approach The Elder and their work. You hear them muttering something under their breath. The words escape you, save for the last two."
+
+                            show elder onlayer Foreground at elder_right
+
+                            e "...the end."
+
+                            "The Elder turns to look at you."
+                            jump cm_upset
+
+                            label cm_upset:
+
+                                e "The Student seemed a bit upset. You talked to them?"
+                                menu:
+                                    "Yes.":
+                                        cm_yes
+
+                                        label cm_yes:
+
+                                            "The Elder nods."
+
+                                            e "Like I said, it's always one thing or another around here."
+                                            e "Poor kid, hands too full, head too heavy. A stressed out collaborator is no good for anyone. And that gift of theirs…"
+                                            menu:
+                                                "What's wrong with their gift?":
+                                                    cm_wrong
+
+                                                    label cm_wrong:
+                                                        e "Nothing's wrong with it. Just…if it was me, I would've paired them with a different gift is all. To be honest, I probably know how to handle time far better than they do."
+                                                        e "They get all caught up in its flow, but I'm the one who's at its end. I'll be there to catch anyone who reaches the end of their journey."
+                                                        menu:
+                                                            "Maybe you two could...switch?":
+                                                                jump cm_switch
+
+                                                                    "The Elder shrugs."
+
+                                                                    e "They made their choice. If I wanted it, I should've acted sooner, before they chose it for themselves. Besides, I think I've finally found something."
+                                                                    menu:
+                                                                        "Your gift?":
+                                                                            jump cm_e_gift
+
+                                                                            label cm_e_gift:
+
+                                                                                e "Yep. Everyone's getting into making this world, so I guess I better get on board or I'm going to be the one holding everyone back."
+                                                                                e "I figured that the creatures of this world could use a little guidance. The creators of it too. Just like The Student said."
+
+                                                                                "The Elder stretches the sheet out even more, and starts tracing a pattern in it."
+
+                                                                                e "My gift will be the gift of stories. There will be tales of all kinds of creatures, tales that will help them become who they're supposed to be."
+                                                                                e "In a way, the dreams we had were tales too. They were stories that helped us figure out what we wanted to do with this place. Sort of. Now there will be reminders of that dream throughout all of this world."
+
+                                                                                "The Elder looks down at the inscribed sheet. The first story. They smile with satisfaction, as if forgetting all else. Then they catch you out of the corner of their eye again, and quickly regain their reserved exterior."
+
+                                                                                e "At any rate, I hope you've been working on some creatures to populate your own world. You don't want to fall behind either."
+
+                                                                                menu:
+                                                                                    "Will do.":
+                                                                                        jump cm_will
+
+                                                                                    "Sure...":
+                                                                                        jump cm_will
+
+                                                                                        label cm_will:
+
+                                                                                            e "Hey, make sure you’re taking it seriously. The Student was trying to slow things down, but they were right about one thing. There needs to be intention behind the living things in your world. They're the important part of it. If you haven't made cities, you should probably do that too."
+                                                                                            e "Now stop bothering me, I need to work."
+                                                                                            hide elder onlayer Foreground
+
+                                                                                            "The Elder turns away."
+
+                                                                                            centered "…"
+
+                                                                                            $ Elder = False
+                                                                                            $ tracker += 1
+
+                                                                                            if tracker >= 3:
+                                                                                                jump cm_next
+                                                                                            else:
+                                                                                                jump cm_talk
+label cm_next:
+
+    "The Parent, The Child, and The Elder all speak with one another. They are comparing their creations. The Child spots you and beckons you over."
+
+    show child onlayer Foreground at child_right
+
+    c "C'mere, c'mere!"
+
+    hide child onlayer Foreground
+    show parent onlayer Foreground at parent_right
+
+    p "Let us tell each other of all that we've made thus far."
+    hide parent onlayer Foreground
+    menu:
+        "But we're missing someone.":
+            jump cm_missing
+
+            label cm_missing:
+
+                "The Child looks around and counts the number of entities. The Elder nods, yet does not move from their place. The Parent looks concerned."
+
+                show parent onlayer Foreground at parent_right
+
+                p "This is true! Where is The Student?"
+
+                hide parent onlayer Foreground
+                show elder onlayer Foreground at elder_right
+
+                "The Elder waves at you."
+
+                e "You should go look for them. Tell them it's time."
+
+                hide elder onlayer Foreground
+
+                "The space around is expansive. The recent additions create obstacles that obscure your search."
+
+                "After some time, you find The Student. They sit isolated, a weeping cloud of emotions hanging over them. They hide their face from you."
+
+                menu:
+
+                    "Sit with them quietly":
+                        jump console_one
+
+                    "What's going on?":
+                        jump console_two
+
+                        label console_one:
+
+                            "The Student accepts your presence. Their cloud rages and writhes. Eventually, they speak."
+                            jump console_three
+
+                        label console_two:
+
+                            s "..."
+                            jump console_three
+
+                            label console_three:
+                                show student onlayer Foreground at student_right
+                                s "It's just…so hard…to…
+
+                                s "to let go…"
+
+                                s "to let go of what I want…
+
+                                "The Student looks at you"
+
+                                s """
+                                There were so many things I wanted to do…
+
+                                There was a way I wanted this to go…
+
+                                I know that if I had just been able to do it that way, it would have been so good
+
+                                It would have been SO GOOD
+                                """
+
+                                "The cloud above explodes outward with a thundering cry"
+
+                                s "But I can’t do that. I can’t make it how I wanted. I just have to…"
+
+                                menu:
+
+                                    "...let go?":
+                                        jump cm_letgo
+
+                                    "...trust the process?":
+                                        jump cm_letgo
+
+                                        label cm_letgo:
+
+                                            s """
+
+                                            Yeah…
+
+                                            Is that what you learned to do?
+                                            """
+
+                                            menu:
+
+                                                "I did":
+                                                    jump cm_resolution_one
+
+                                                "I'm trying to...":
+                                                    jump cm_resolution_two
+
+                                                    label cm_resolution_one:
+
+                                                        "The Student nods"
+
+                                                        s """
+
+                                                        I see.
+
+                                                        Well, if you did it…
+
+                                                        Perhaps I can too.
+                                                        """
+                                                        menu:
+                                                            "Perhaps":
+                                                                jump cm_ending
+
+                                                    label cm_resolution_two:
+
+                                                        "The Student looks down"
+
+                                                        s """
+
+                                                        I see…
+
+                                                        …
+
+                                                        Then I suppose it’s something we both need to learn.
+
+                                                        Together?
+                                                        """
+
+                                                        menu:
+
+                                                            "Together":
+                                                                jump cm_ending
+
+                                                                    label cm_ending:
+
+                                                                        "The Student stands. Their cloud has mostly dissipated, and they look towards the direction you came from"
+
+                                                                        s "The others are waiting, yes?"
+
+                                                                        "You nod"
+
+                                                                        s "It is time. I better be…I am ready."
+                                                                        hide student onlayer Foreground
+
+                                                                        "The two of you walk back to the rest of the group. They greet you both with welcoming camaraderie."
+
+                                                                        show parent onlayer Foreground at parent_right
+
+                                                                        p "Lovely to have both of you back with us. Now, shall we all go around and say what we've created?"
+
+                                                                        hide parent onlayer Foreground
+                                                                        show student onlayer Foreground at student_right
+
+                                                                        "The Student glances at you, and nods."
+
+                                                                        hide student onlayer Foreground
+                                                                        show child onlayer Foreground at child_right
+
+                                                                        c """
+
+                                                                        I made the God of light, and magical people that are the Children of the Light, and some plant dogs named Puplants!
+
+                                                                        They helped me come up with the name.
+                                                                        """
+
+                                                                        hide child onlayer Foreground
+                                                                        show parent onlayer Foreground at parent_right
+
+                                                                        "The Parent laughs."
+
+                                                                        p """
+
+                                                                        I have founded the society of underground giants known as the Stoneborn. They will help hold up the ground beneath the feet of others.
+
+                                                                        I have also created the God of the Hearth, so that all may know a welcoming home.
+
+                                                                        Lastly, we have the Travelers, beings that can step out of the world in one place, and back into it in another.
+                                                                        """
+
+                                                                        hide parent onlayer Foreground
+                                                                        show elder onlayer Foreground at elder_right
+
+                                                                        e """
+
+                                                                        We got The Driven. They all know how to be mighty warriors of one kind or another.
+
+                                                                        Then we got Kurrents. They're like…ummm…ghosts. They travel all over, floating along the paths of people or things until they come to their end.
+
+                                                                        Does that make sense?
+                                                                        """
+
+                                                                        "The others shrug."
+
+                                                                        e """
+                                                                        Well, whatever.
+
+                                                                        The last thing I made was the God of Skies and Storms. There, that's all of them.
+
+                                                                        """
+
+                                                                        "They all look at The Student."
+
+                                                                        e "And you?"
+
+                                                                        hide elder onlayer Foreground
+                                                                        show student onlayer Foreground at student_right
+
+                                                                        "The Student looks at you, then takes a deep breath."
+
+                                                                        s """
+
+                                                                        First, there are the Knowledge Keepers. They store information in their skin, and pass it on to future generations.
+
+                                                                        They will be able to slowly accrue more and more knowledge, and better themselves with it.
+
+                                                                        Then there are the Changelings. At first they appear to be mundane animals, but if their environment turns unsuitable, they can slowly change to adapt to their surroundings. 
+
+                                                                        They won't be able to do this often, so they will be faced with making tough decisions.
+
+                                                                        Just like me.
+
+                                                                        But if there's one thing I've learned, it's that making tough decisions can hopefully make us stronger.
+                                                                        """
+
+                                                                        "The Student smiles gently. Their flame burns just a bit brighter."
+
+                                                                        s """
+
+                                                                        And then there's the God of Eyes. The keeper of truths. Another entity that is closer to the goings on in the world than we might be, and can better determine what needs to happen.
+
+                                                                        At least, if we need to step in.
+
+                                                                        …So…that's all of mine.
+                                                                        """
+
+                                                                        hide student onlayer Foreground
+                                                                        show parent onlayer Foreground at parent_right
+
+                                                                        "The Parent nods, smiling."
+
+                                                                        p "And what did you make, friend?"
+
+                                                                        hide parent onlayer Foreground
+
+                                                                        $ number = renpy.input("What did you make?", length=124)
+
+                                                                        show child onlayer Foreground at child_right
+
+                                                                        c "Grrreeat!! Everyone did such a good job! It’s time to offishally give our world life!"
+
+                                                                        hide child onlayer Foreground
+                                                                        show parent onlayer Foreground at parent_right
+
+                                                                        p "Indeed!"
+
+                                                                        hide parent onlayer Foreground
+                                                                        show student onlayer Foreground at student_right
+
+                                                                        s "Woo hoo!"
+
+                                                                        hide student onlayer Foreground
+
+                                                                        "The Elder tries to hide a grin."
+
+                                                                        "Tens of thousands of small sparkles of light drift towards the map. Each one will go on to become their own creature, living, breathing, and ready to greet a new world."
+                                                                        jump rs
+
+                                
 return
