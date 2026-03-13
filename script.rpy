@@ -832,20 +832,6 @@ label gf_talk:
             label gf_student:
                 $ Student = False
                 if Child == True:
-                    jump gf_child1
-
-            label gf_parent:
-                $ Parent = False
-                if Child == True:
-                    jump gf_child1
-            label gf_elder:
-                $ Elder = False
-                if Child == True:
-                    jump gf_child1            
-
-                    label gf_child1:
-
-
                         "Before you reach your destination, you feel a presence at your side. You look down and see The Child, uncharacteristically dimmed."
 
                         show child onlayer Foreground at child_right
@@ -909,13 +895,12 @@ label gf_talk:
 
                                                                                         "The Child runs off, shining brightly again."
                                                                                         $ Child = False
-                                                                                        if Student == False:
-                                                                                            jump gf_student
-                                                                                        elif Parent == False:
-                                                                                            jump gf_parent
-                                                                                        else:
-                                                                                            jump gf_elder
 
+            label gf_parent:
+                $ Parent = False
+            label gf_elder:
+                $ Elder = False
+          
 
-
+                    
 return
