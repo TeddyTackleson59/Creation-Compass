@@ -2180,7 +2180,7 @@ label cm_next:
 
                                 s "to let go…"
 
-                                s "to let go of what I want…
+                                s "to let go of what I want…"
 
                                 "The Student looks at you"
 
