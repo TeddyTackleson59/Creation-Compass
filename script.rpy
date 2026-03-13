@@ -2184,15 +2184,13 @@ label cm_next:
 
                                 "The Student looks at you"
 
-                                s """
-                                There were so many things I wanted to do…
+                                s "There were so many things I wanted to do…"
 
-                                There was a way I wanted this to go…
+                                s "There was a way I wanted this to go…"
 
-                                I know that if I had just been able to do it that way, it would have been so good
+                                s "I know that if I had just been able to do it that way, it would have been so good"
 
-                                It would have been SO GOOD
-                                """
+                                s "It would have been SO GOOD"
 
                                 "The cloud above explodes outward with a thundering cry"
 
@@ -2208,12 +2206,9 @@ label cm_next:
 
                                         label cm_letgo:
 
-                                            s """
+                                            s "Yeah…"
 
-                                            Yeah…
-
-                                            Is that what you learned to do?
-                                            """
+                                            s "Is that what you learned to do?"
 
                                             menu:
 
@@ -2227,14 +2222,11 @@ label cm_next:
 
                                                         "The Student nods"
 
-                                                        s """
+                                                        s "I see."
 
-                                                        I see.
+                                                        s "Well, if you did it…"
 
-                                                        Well, if you did it…
-
-                                                        Perhaps I can too.
-                                                        """
+                                                        s "Perhaps I can too."
                                                         menu:
                                                             "Perhaps":
                                                                 jump cm_ending
@@ -2243,16 +2235,14 @@ label cm_next:
 
                                                         "The Student looks down"
 
-                                                        s """
+                                                        s "I see…"
 
-                                                        I see…
+                                                        s "…"
 
-                                                        …
+                                                        s "Then I suppose it's something we both need to learn."
 
-                                                        Then I suppose it's something we both need to learn.
+                                                        s "Together?"
 
-                                                        Together?
-                                                        """
 
                                                         menu:
                                                             "Together":
@@ -2283,47 +2273,38 @@ label cm_next:
                                                                     hide student onlayer Foreground
                                                                     show child onlayer Foreground at child_right
 
-                                                                    c """
+                                                                    c "I made the God of light, and magical people that are the Children of the Light, and some plant dogs named Puplants!"
 
-                                                                    I made the God of light, and magical people that are the Children of the Light, and some plant dogs named Puplants!
-
-                                                                    They helped me come up with the name.
-                                                                    """
+                                                                    c "They helped me come up with the name."
+                                                                    
 
                                                                     hide child onlayer Foreground
                                                                     show parent onlayer Foreground at parent_right
 
                                                                     "The Parent laughs."
 
-                                                                    p """
+                                                                    p "I have founded the society of underground giants known as the Stoneborn. They will help hold up the ground beneath the feet of others."
 
-                                                                    I have founded the society of underground giants known as the Stoneborn. They will help hold up the ground beneath the feet of others.
+                                                                    p "I have also created the God of the Hearth, so that all may know a welcoming home."
 
-                                                                    I have also created the God of the Hearth, so that all may know a welcoming home.
-
-                                                                    Lastly, we have the Travelers, beings that can step out of the world in one place, and back into it in another.
-                                                                    """
+                                                                    p "Lastly, we have the Travelers, beings that can step out of the world in one place, and back into it in another."
+   
 
                                                                     hide parent onlayer Foreground
                                                                     show elder onlayer Foreground at elder_right
 
-                                                                    e """
+                                                                    e "We got The Driven. They all know how to be mighty warriors of one kind or another."
 
-                                                                    We got The Driven. They all know how to be mighty warriors of one kind or another.
+                                                                    e "Then we got Kurrents. They're like…ummm…ghosts. They travel all over, floating along the paths of people or things until they come to their end."
 
-                                                                    Then we got Kurrents. They're like…ummm…ghosts. They travel all over, floating along the paths of people or things until they come to their end.
+                                                                    e "Does that make sense?"
 
-                                                                    Does that make sense?
-                                                                    """
 
                                                                     "The others shrug."
 
-                                                                    e """
-                                                                    Well, whatever.
+                                                                    e "Well, whatever."
 
-                                                                    The last thing I made was the God of Skies and Storms. There, that's all of them.
-
-                                                                    """
+                                                                    e "The last thing I made was the God of Skies and Storms. There, that's all of them."
 
                                                                     "They all look at The Student."
 
@@ -2334,19 +2315,18 @@ label cm_next:
 
                                                                     "The Student looks at you, then takes a deep breath."
 
-                                                                    s """
-                                                                    First, there are the Knowledge Keepers. They store information in their skin, and pass it on to future generations.
+                                                                    s "First, there are the Knowledge Keepers. They store information in their skin, and pass it on to future generations."
 
-                                                                    They will be able to slowly accrue more and more knowledge, and better themselves with it.
+                                                                    s "They will be able to slowly accrue more and more knowledge, and better themselves with it."
 
-                                                                    Then there are the Changelings. At first they appear to be mundane animals, but if their environment turns unsuitable, they can slowly change to adapt to their surroundings. 
+                                                                    s "Then there are the Changelings. At first they appear to be mundane animals, but if their environment turns unsuitable, they can slowly change to adapt to their surroundings."
 
-                                                                    They won't be able to do this often, so they will be faced with making tough decisions.
+                                                                    s "They won't be able to do this often, so they will be faced with making tough decisions."
 
-                                                                    Just like me.
+                                                                    s "Just like me."
 
-                                                                    But if there's one thing I've learned, it's that making tough decisions can hopefully make us stronger.
-                                                                    """
+                                                                    s "But if there's one thing I've learned, it's that making tough decisions can hopefully make us stronger."
+
 
                                                                     "The Student smiles gently. Their flame burns just a bit brighter."
 
@@ -2386,12 +2366,6 @@ label cm_next:
                                                                     hide student onlayer Foreground
 
                                                                     "The Elder tries to hide a grin."
-
-                                                                    """
-                                                                    Hey
-                                                                    hi
-                                                                    how are you?
-                                                                    
 
                                                                     "Tens of thousands of small sparkles of light drift towards the map. Each one will go on to become their own creature, living, breathing, and ready to greet a new world."
                                                                     jump rs
