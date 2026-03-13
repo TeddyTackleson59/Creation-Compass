@@ -18,7 +18,7 @@ define Child = True
 define Student = True
 define Parent = True
 define Elder = True
-define fixer = Character("[number]")
+define number = Character("shrug")
 
 default tracker = 0
 
