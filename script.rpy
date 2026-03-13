@@ -2391,7 +2391,7 @@ label cm_next:
                                                                     Hey
                                                                     hi
                                                                     how are you?
-                                                                    """
+                                                                    
 
                                                                     "Tens of thousands of small sparkles of light drift towards the map. Each one will go on to become their own creature, living, breathing, and ready to greet a new world."
                                                                     jump rs
