@@ -894,125 +894,122 @@ label gf_talk:
                                                                                         hide child onlayer Foreground
 
                                                                                         "The Child runs off, shining brightly again."
-                                                                                        $ Child = False
-        jump gf_fix
+                                                                                        $ Child = False                                                                             
+                "You come upon The Student, who is running back and forth over and over again."
+                menu:
+                    "What are you doing?":
+                        jump gf_doing
 
-        label gf_fix:                                                                                
-            "You come upon The Student, who is running back and forth over and over again."
-            menu:
-                "What are you doing?":
-                    jump gf_doing
+                        label gf_doing:
 
-                    label gf_doing:
+                            show student onlayer Foreground at student_right
 
-                        show student onlayer Foreground at student_right
+                            "The Student stops for a second, out of breath."
 
-                        "The Student stops for a second, out of breath."
+                            s "I'm…testing…my theory…"
 
-                        s "I'm…testing…my theory…"
+                            "The Student straightens up, taking a few deep breaths."
 
-                        "The Student straightens up, taking a few deep breaths."
+                            s "It's actually related to my gift, in case you were wondering."
 
-                        s "It's actually related to my gift, in case you were wondering."
+                            menu:
+                                "Go on.":
+                                    jummp gf_goon
 
-                        menu:
-                            "Go on.":
-                                jummp gf_goon
+                                    label gf_goon:
 
-                                label gf_goon:
+                                        "The Student grins proudly."
 
-                                    "The Student grins proudly."
+                                        s "Well, as I'm sure you noticed, I was over there."
 
-                                    s "Well, as I'm sure you noticed, I was over there."
+                                        "The Student points to the spot where they were running back and forth."
 
-                                    "The Student points to the spot where they were running back and forth."
+                                        s "But now I'm here."
 
-                                    s "But now I'm here."
+                                        menu:
+                                            "Should I be surprised?":
+                                                jump gf_time
 
-                                    menu:
-                                        "Should I be surprised?":
-                                            jump gf_time
+                                            "So what does that mean?":
+                                                jump gf_time
 
-                                        "So what does that mean?":
-                                            jump gf_time
+                                                label gf_time:
 
-                                            label gf_time:
+                                                    s "Well, for you of course, I'm sure that being there and then here seems normal. But do you know how long it took me to get from there to here? How long exactly?"
 
-                                                s "Well, for you of course, I'm sure that being there and then here seems normal. But do you know how long it took me to get from there to here? How long exactly?"
+                                                    "The Student moves from one spot to another, and as you consider their question, you realize you don't know how long it took them."
+                                                    "You try to count the seconds, but find yourself coming up with a different number each time. It could've taken five seconds, or months, or somewhere in between."
 
-                                                "The Student moves from one spot to another, and as you consider their question, you realize you don't know how long it took them."
-                                                "You try to count the seconds, but find yourself coming up with a different number each time. It could've taken five seconds, or months, or somewhere in between."
+                                                    menu:
+                                                        "I don't...":
+                                                            jump gf_dont
 
-                                                menu:
-                                                    "I don't...":
-                                                        jump gf_dont
-
-                                                        label gf_dont:
+                                                            label gf_dont:
 
 
-                                                            s "Exactly! Things just happen here, and they either happen before or after each other, but that's as specific as you can get."
-                                                            s "Your world, the dream world, has time. That's how we know about before, and after, and now, and later, ooh I'm a big fan of later. Time only sort of exists here, but what if we had proper time? A proper way to keep track of things?"
-                                                            menu:
-                                                                "I think that would be pretty neat.":
-                                                                    jump gf_neat
+                                                                s "Exactly! Things just happen here, and they either happen before or after each other, but that's as specific as you can get."
+                                                                s "Your world, the dream world, has time. That's how we know about before, and after, and now, and later, ooh I'm a big fan of later. Time only sort of exists here, but what if we had proper time? A proper way to keep track of things?"
+                                                                menu:
+                                                                    "I think that would be pretty neat.":
+                                                                        jump gf_neat
 
-                                                                "Time is overrated.":
-                                                                    jump gf_overrated
+                                                                    "Time is overrated.":
+                                                                        jump gf_overrated
 
-                                                                    label gf_neat:
+                                                                        label gf_neat:
 
-                                                                        s "Exactly! More than pretty neat! That would be revolutionary!"
-                                                                        jump gf_s_gift
+                                                                            s "Exactly! More than pretty neat! That would be revolutionary!"
+                                                                            jump gf_s_gift
 
-                                                                    label gf_overrated:
+                                                                        label gf_overrated:
 
-                                                                        s "Well then you take time for granted. Imagine how hard it would be to get anything done without time. The four of us have managed in this space without it, but it makes things so unpredictable."
-                                                                        s "I don't want our world to be like that!"
-                                                                        jump gf_s_gift
+                                                                            s "Well then you take time for granted. Imagine how hard it would be to get anything done without time. The four of us have managed in this space without it, but it makes things so unpredictable."
+                                                                            s "I don't want our world to be like that!"
+                                                                            jump gf_s_gift
 
-                                                                        label gf_s_gift:
-
-
-                                                                            s "So that's why my gift to this world will be the gift of time!"
-
-                                                                            "The Student shakes their hands back and forth with a jazzy motion."
-
-                                                                            s "This will make everything easier for everyone! No more guesswork, no more frustrations! Denizens will be able to learn, grow, and change for the better! Pretty good, right?"
-                                                                            menu:
-                                                                                "...":
-                                                                                    jump gf_unsure
-                                                                                "Seems like a great idea.":
-                                                                                    jump gf_great
-
-                                                                                    label gf_unsure:
+                                                                            label gf_s_gift:
 
 
-                                                                                        s "I can see you need a bit more time to fully understand my gift as it applies to this world."
-                                                                                        jump gf_s_finish
+                                                                                s "So that's why my gift to this world will be the gift of time!"
 
-                                                                                    label gf_great:
+                                                                                "The Student shakes their hands back and forth with a jazzy motion."
 
-                                                                                        "The Student nods proudly."
+                                                                                s "This will make everything easier for everyone! No more guesswork, no more frustrations! Denizens will be able to learn, grow, and change for the better! Pretty good, right?"
+                                                                                menu:
+                                                                                    "...":
+                                                                                        jump gf_unsure
+                                                                                    "Seems like a great idea.":
+                                                                                        jump gf_great
 
-                                                                                        s "I think everyone is going to like it."
-                                                                                        jump gf_s_finish
+                                                                                        label gf_unsure:
 
-                                                                                        label gf_s_finish:
+
+                                                                                            s "I can see you need a bit more time to fully understand my gift as it applies to this world."
+                                                                                            jump gf_s_finish
+
+                                                                                        label gf_great:
+
+                                                                                            "The Student nods proudly."
+
+                                                                                            s "I think everyone is going to like it."
+                                                                                            jump gf_s_finish
+
+                                                                                            label gf_s_finish:
 
 
 
-                                                                                            s "Now, I'm sure you've got your own matters to attend to. You've got your own world to build, after all."
-                                                                                            s "Maybe some others need help with their gifts, hmm? Until next time."
+                                                                                                s "Now, I'm sure you've got your own matters to attend to. You've got your own world to build, after all."
+                                                                                                s "Maybe some others need help with their gifts, hmm? Until next time."
 
-                                                                                            hide student onlayer Foreground
+                                                                                                hide student onlayer Foreground
 
-                                                                                            "Rather full of themselves, The Student walks off."
-                                                                                            $ tracker += 1
+                                                                                                "Rather full of themselves, The Student walks off."
+                                                                                                $ tracker += 1
 
-                                                                                            if tracker >= 3:
-                                                                                                jump gf_next
-                                                                                            else:
-                                                                                                jump gf_talk
+                                                                                                if tracker >= 3:
+                                                                                                    jump gf_next
+                                                                                                else:
+                                                                                                    jump gf_talk
 
 
             label gf_parent:
