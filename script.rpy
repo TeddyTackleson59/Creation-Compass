@@ -895,12 +895,630 @@ label gf_talk:
 
                                                                                         "The Child runs off, shining brightly again."
                                                                                         $ Child = False
+        "You come upon The Student, who is running back and forth over and over again."
+
+        menu:
+            "What are you doing?":
+                jump gf_doing
+
+                label gf_doing:
+
+                    show student onlayer Foreground at student_right
+
+                    "The Student stops for a second, out of breath."
+
+                    s "I'm…testing…my theory…"
+
+                    "The Student straightens up, taking a few deep breaths."
+
+                    s "It's actually related to my gift, in case you were wondering."
+
+                    menu:
+                        "Go on.":
+                            jummp gf_goon
+
+                            label gf_goon:
+
+                                "The Student grins proudly."
+
+                                s "Well, as I'm sure you noticed, I was over there."
+
+                                "The Student points to the spot where they were running back and forth."
+
+                                s "But now I'm here."
+
+                                menu:
+                                    "Should I be surprised?":
+                                        jump gf_time
+
+                                    "So what does that mean?":
+                                        jump gf_time
+
+                                        label gf_time:
+
+                                            s "Well, for you of course, I'm sure that being there and then here seems normal. But do you know how long it took me to get from there to here? How long exactly?"
+
+                                            "The Student moves from one spot to another, and as you consider their question, you realize you don't know how long it took them."
+                                            "You try to count the seconds, but find yourself coming up with a different number each time. It could've taken five seconds, or months, or somewhere in between."
+
+                                            menu:
+                                                "I don't...":
+                                                    jump gf_dont
+
+                                                    label gf_dont:
+
+
+                                                        s "Exactly! Things just happen here, and they either happen before or after each other, but that's as specific as you can get."
+                                                        s "Your world, the dream world, has time. That's how we know about before, and after, and now, and later, ooh I'm a big fan of later. Time only sort of exists here, but what if we had proper time? A proper way to keep track of things?"
+                                                        menu:
+                                                            "I think that would be pretty neat.":
+                                                                jump gf_neat
+
+                                                            "Time is overrated.":
+                                                                jump gf_overrated
+
+                                                                label gf_neat:
+
+                                                                    s "Exactly! More than pretty neat! That would be revolutionary!"
+                                                                    jump gf_s_gift
+
+                                                                label gf_overrated:
+
+                                                                    s "Well then you take time for granted. Imagine how hard it would be to get anything done without time. The four of us have managed in this space without it, but it makes things so unpredictable."
+                                                                    s "I don't want our world to be like that!"
+                                                                    jump gf_s_gift
+
+                                                                    label gf_s_gift:
+
+
+                                                                        s "So that's why my gift to this world will be the gift of time!"
+
+                                                                        "The Student shakes their hands back and forth with a jazzy motion."
+
+                                                                        s "This will make everything easier for everyone! No more guesswork, no more frustrations! Denizens will be able to learn, grow, and change for the better! Pretty good, right?"
+                                                                        menu:
+                                                                            "...":
+                                                                                jump gf_unsure
+                                                                            "Seems like a great idea.":
+                                                                                jump gf_great
+
+                                                                                label gf_unsure:
+
+
+                                                                                    s "I can see you need a bit more time to fully understand my gift as it applies to this world."
+                                                                                    jump gf_s_finish
+
+                                                                                label gf_great:
+
+                                                                                    "The Student nods proudly."
+
+                                                                                    s "I think everyone is going to like it."
+                                                                                    jump gf_s_finish
+
+                                                                                    label gf_s_finish:
+
+
+
+                                                                                        s "Now, I'm sure you've got your own matters to attend to. You've got your own world to build, after all."
+                                                                                        s "Maybe some others need help with their gifts, hmm? Until next time."
+
+                                                                                        hide student onlayer Foreground
+
+                                                                                        "Rather full of themselves, The Student walks off."
+                                                                                        $ tracker += 1
+
+                                                                                        if tracker >= 3:
+                                                                                            jump gf_next
+                                                                                        else:
+                                                                                            jump gf_talk
+
 
             label gf_parent:
                 $ Parent = False
+                $ if Child == True:
+                        "Before you reach your destination, you feel a presence at your side. You look down and see The Child, uncharacteristically dimmed."
+
+                        show child onlayer Foreground at child_right
+
+                        c "...what if I can't do it?"
+
+                        menu:
+                            "Can't do what?":
+                                jump gf_cant
+
+                                label gf_cant:
+
+                                    c "What if I can't find my gift?"
+                                    menu:
+                                        "Why would you say that?":
+                                            jump gf_why
+
+                                            label gf_why:
+
+                                                "The Child looks down."
+
+                                                c "Well, The Student said this was my one gift. They already know what their gift is. But I don't know…"
+                                                c "What if I just can't figure it out?"
+                                                menu:
+                                                    "Have you thought about it?":
+                                                        jump gf_thought
+
+                                                        label gf_thought:
+
+
+                                                            c "Yeah…I thought about it a bit. I know I have ideas. But I'm not sure if they'll be as good as everyone else's."
+                                                            c "I just don't know if I can do this right."
+                                                            menu:
+                                                                "You don't need to compare your ideas to others.":
+                                                                    jump gf_compare
+                                                                "The first step to making something good is getting started.":
+                                                                    jump gf_first
+
+                                                                    label gf_compare:
+
+                                                                        c "Ok…Ok. Maybe you could still ask the others about their gifts? Just so we know what they are. Just so I don't do the same one…"
+                                                                        jump gf_figure
+
+                                                                    label gf_first:
+
+                                                                        "The Child takes a breath."
+
+                                                                        c "Ok…Ok. If you say I can do it, then I can do it. I'll get started. I can work on my ideas some more."
+                                                                        jump gf_figure
+
+                                                                        label gf_figure:
+                                                                            menu:
+                                                                                "You can do this!":
+                                                                                    jump gf_cando
+
+                                                                                    label gf_cando:
+
+                                                                                        c "All right. Yeah! You're right! I can do this! I'm gonna go and figure out all the stuff about my gift!"
+                                                                                        c "Thanks worldbuilder!"
+                                                                                        hide child onlayer Foreground
+
+                                                                                        "The Child runs off, shining brightly again."
+                                                                                        $ Child = False
+        "The Parent is crouched down, talking to The Child."
+
+        show parent onlayer Foreground at parent_right
+
+        p "Well, here's the thing, little one. Whatever you decide to do, I will be there to support you. My gift will help sustain all of yours, if you'll let it. Understand?"
+
+        hide parent onlayer Foreground
+        show child onlayer Foreground at child_right
+
+        c "I understand. I'm just thinking about it a bit."
+
+        hide child onlayer Foreground
+
+        "The Parent smiles sweetly."
+
+        show parent onlayer Foreground at parent_right
+
+        p "That's good, I'm glad to see you being a bit more reflective."
+        p "Perhaps you will find your gift in the skies, or possibly the light and dark, or in pain and joy."
+
+        hide parent onlayer Foreground
+        show child onlayer Foreground at child_right
+
+        c "Yeah! Those are all great ideas! Ok, I'll do those!"
+
+        hide child onlayer Foreground
+        show parent onlayer Foreground at parent_right
+
+        p "But, do you mean-"
+
+        hide parent onlayer Foreground
+
+        "Before The Parent can finish, The Child has run off." 
+        "The Parent chuckles to themselves and stands up. They turn to face you."
+
+        show parent onlayer Foreground at parent_right
+
+        p "Oh hello dear. I didn't see you there. Everything going well, I hope?"
+
+        menu:
+            "Things are well.":
+                jump gf_well
+
+            "Things could be better.":
+                jump gf_better
+
+                label gf_well:
+
+
+                    p "That's lovely to hear. It's so nice to see everyone working hard, and equally lovely to see you speaking with them all."
+                    jump gf_p_gift
+
+                label gf_better:
+
+                    p "Oh, I'm sorry to hear that dear. I appreciate you still deciding to talk to everyone. You've been a big help."
+                    jump gf_p_gift
+                    
+                    label gf_p_gift:
+
+                        p "Ah, yes. It took me a bit, but I figured it out. You see, everyone else seems interested in building up their complex systems or concepts. But everyone needs ground to stand on. So that will be my gift."
+                        p "The ground, the water, the air. The materials that make up our world. This way, the others will have something to place their creations on."
+                        menu:
+                            "How thoughtful of you.":
+                                jump gf_thoughtful
+
+                                label gf_thoughtful:
+
+
+                                    "The Parent nods and smiles."
+
+                                    p "Well, it is a necessity. And no one else was thinking about it. So I am happy to step in and put my effort towards this. I hope that my gift will go on to nourish the things of this world, as well as those who created it."
+                                    p "And speaking of materials, perhaps you could use some of your own. I am not certain if you have located what you need yet, but when creating a world, one can use materials from all over."
+                                    p "If you have access to some, paper, pencil, tools, craft supplies, colored implements, or just anything that would help you create your world, create a realized version of it, then I suggest you find those. You might even get some ideas along the way."
+
+                                    "The Parent gives a knowing wink."
+
+                                    p "Now then, I wish to speak with The Student. I hope to talk again."
+
+                                    centered "…"
+                                    $ tracker += 1
+                                    if tracker >= 3:
+                                        jump gf_next
+                                    else:
+                                        jump gf_talk
+
             label gf_elder:
                 $ Elder = False
-          
+                if Child == True:
+                        "Before you reach your destination, you feel a presence at your side. You look down and see The Child, uncharacteristically dimmed."
+
+                        show child onlayer Foreground at child_right
+
+                        c "...what if I can't do it?"
+
+                        menu:
+                            "Can't do what?":
+                                jump gf_cant
+
+                                label gf_cant:
+
+                                    c "What if I can't find my gift?"
+                                    menu:
+                                        "Why would you say that?":
+                                            jump gf_why
+
+                                            label gf_why:
+
+                                                "The Child looks down."
+
+                                                c "Well, The Student said this was my one gift. They already know what their gift is. But I don't know…"
+                                                c "What if I just can't figure it out?"
+                                                menu:
+                                                    "Have you thought about it?":
+                                                        jump gf_thought
+
+                                                        label gf_thought:
+
+
+                                                            c "Yeah…I thought about it a bit. I know I have ideas. But I'm not sure if they'll be as good as everyone else's."
+                                                            c "I just don't know if I can do this right."
+                                                            menu:
+                                                                "You don't need to compare your ideas to others.":
+                                                                    jump gf_compare
+                                                                "The first step to making something good is getting started.":
+                                                                    jump gf_first
+
+                                                                    label gf_compare:
+
+                                                                        c "Ok…Ok. Maybe you could still ask the others about their gifts? Just so we know what they are. Just so I don't do the same one…"
+                                                                        jump gf_figure
+
+                                                                    label gf_first:
+
+                                                                        "The Child takes a breath."
+
+                                                                        c "Ok…Ok. If you say I can do it, then I can do it. I'll get started. I can work on my ideas some more."
+                                                                        jump gf_figure
+
+                                                                        label gf_figure:
+                                                                            menu:
+                                                                                "You can do this!":
+                                                                                    jump gf_cando
+
+                                                                                    label gf_cando:
+
+                                                                                        c "All right. Yeah! You're right! I can do this! I'm gonna go and figure out all the stuff about my gift!"
+                                                                                        c "Thanks worldbuilder!"
+                                                                                        hide child onlayer Foreground
+
+                                                                                        "The Child runs off, shining brightly again."
+                                                                                        $ Child = False
+        "The Elder sits still, completely unmoving. Their face is unreadable."
+        menu:
+            "...":
+                jump gf_e_1
+
+                label gf_e_1:
+                    show elder onlayer Foreground at elder_right
+                    e "..."
+                    menu:  
+                        "What are you doing?":
+                            jump gf_e_2
+
+                            label gf_e_2:
+
+                                e "Sitting here with myself. Alone."
+                                menu:
+                                    "Do you have a gift?":
+                                        jump gf_e_3
+
+                                        label gf_e_3:
+
+                                            e "No."
+                                            menu:
+                                                "Are you going to create a gift?":
+                                                    jump gf_e_4
+
+                                                    label gf_e_4:
+
+                                                        e "No."
+                                                        menu:
+                                                            "Why not?":
+                                                                jump gf_e_5
+
+                                                                label gf_e_5:
+                                                                    e "I don't have anything I want to add to this project."
+                                                                    menu:
+                                                                        "Do you want help?":
+                                                                            jump gf_e_6
+
+                                                                            label gf_e_6:
+
+                                                                                e "No."
+                                                                                menu:
+                                                                                    "Goodbye.":
+                                                                                        jump gf_e_goodbye
+
+                                                                                        label gf_e_goodbye:
+                                                                                            e "Goodbye."
+                                                                                            hide elder onlayer Foreground
+
+                                                                                            $ tracker += 1
+                                                                                            if tracker >= 3:
+                                                                                                jump gf_next
+                                                                                            else:
+                                                                                                jump gf_talk
+label gf_next:
+    "As you look around the space, you suddenly see different colored streaks of light shooting off into the Darkness from a ways away."
+    menu:
+        "Investigate the light.":
+            jump gf_investigate
+
+            label gf_investigate:
+
+                "As you get closer to the light, you see its origin point. The Child seems to be performing rather animated motions, shooting light from their body upwards, creating all kinds of twisting shapes and colors."
+                "They look towards you with a fervor in their being."
+                menu:
+                    "Are you ok?!":
+                        jump gf_ok
+
+                        label gf_ok:
+                            show child onlayer Foreground at child_right
+
+                            c "I heard about everyone else's gifts! They were so cool, and I can't wait to do mine! And I talked to everyone too! They made lots of suggestions!"
+                            c "The Parent said I could do some stuff with emotions, so I really want to do that."
+                            c "The Student said I should focus on what I like, and I really want to do that too! I like candy. I could make my gift all about emotions and candy. Maybe it could be like, the emotions you feel when eating candy."
+                            c "Although I've never eaten candy before. But I still know it's good!"
+                            c "And The Elder isn't doing a gift, so I probably should do an extra one for them. I like shiny metal too! So my gift can be metal and candy and feelings. Like, I can make people feel good when they bake cookies on a shiny metal tray. That could be my gift!"
+
+                            "The light starts streaking off of The Child faster and faster. Above them, the distinct shapes of hearts and tears, cookies and chocolate, and shiny coins and brass buttons form."
+                            menu:
+                                "Be careful!":
+                                    jump gf_careful
+
+                                    label gf_careful:
+                                        "You call out, shouting above the roaring sound of the bolts of light."
+                                        menu:
+                                            "It seems like you're trying to do quite a lot of things with this gift!":
+                                                jump gf_lots
+
+                                                label gf_lots:
+
+                                                    c "I was just trying to follow what everyone else was saying! Last time you all said I was doing too much, so this time I just did all of what they said! Was I not supposed to do all of it?"
+                                                    menu:
+                                                        "You were supposed to make your own decision!":
+                                                            jump gf_decision
+                                                        "You should both your friends, and yourself!":
+                                                            jump gf_trust
+
+                                                            label gf_decision:
+
+                                                                c "But last time I got it wrong! That was what I was worried about this time!"
+                                                                menu:
+                                                                    "You didn't get it wrong.":
+                                                                        jump gf_wrong
+
+                                                                        label gf_wrong:
+
+                                                                            "The Child pauses for a moment."
+
+                                                                            c "I didn't?"
+                                                                            menu:
+                                                                                "You just tried to do it a different way. And sometimes that way works, and sometimes you listen to others when they tell you something needs to change.":
+                                                                                    jump gf_different:
+
+                                                                                    label gf_different:
+                                                                                        "The light surrounding The Child starts to come back down to its usual level."
+
+                                                                                        c "I…I…"
+                                                                                        jump gf_resolution
+
+                                                            label gf_trust:
+
+                                                                c "...both?"
+                                                                menu:
+                                                                    "Yes. Sometimes you do it your way even when others tell you not to, and sometimes you listen to them when they tell you to try something else."
+                                                                        jump gf_yourway
+
+                                                                        label gf_yourway:
+
+                                                                            "The light surrounding The Child starts to come back down to its usual level."
+
+                                                                            c "I…I…"
+                                                                            jump gf_resolution
+
+                                                                                        label gf_resolution:
+
+                                                                                            c "I just have all of these things I want to do. And…something others say I'm being silly by trying to do so much. I think that people will say I'm not being r-re-realistic."
+                                                                                            menu:
+                                                                                                "The others said that?":
+                                                                                                    jump gf_others
+
+                                                                                                    label gf_others:
+                                                                                                        "The Child sniffles a little and shrugs."
+
+                                                                                                        c "Well…kind of…I know that they think it sometimes. Sometimes I ignore them. But then sometimes when I ignore them, everything blows up in my face."
+                                                                                                        c "I figured this time around, if I just did what everyone else said I should do, it would work out ok."
+                                                                                                        menu:
+                                                                                                            "How do you feel now?":
+                                                                                                                jump gf_feel
+
+                                                                                                                label gf_feel:
+                                                                                                                    c "I feel like maybe I shouldn't have said yes to everything. I think I get that now."
+
+                                                                                                                    "The Child looks up at you hopefully."
+
+                                                                                                                    c "But…it's not too late, is it? I can still figure out my gift. My own gift. Right?"
+                                                                                                                    menu:
+                                                                                                                        "Absolutely.":
+                                                                                                                            jump gf_absolutely
+
+                                                                                                                            label gf_absolutely:
+
+                                                                                                                                "The Child gives a small grin."
+
+                                                                                                                                c "Well…then I'm gonna do it. Figure out my gift. Just the one gift. I'll listen to myself, and I'll listen to what the others told me, and I'll make a decision from that. Does that sound good?"
+                                                                                                                                menu:
+                                                                                                                                    "Sounds great.":
+                                                                                                                                        jump gf_sounds
+
+                                                                                                                                        label gf_sounds:
+
+                                                                                                                                            c "Ok. Then I need to go think. I'm sure I can figure it out."
+                                                                                                                                            c "Thank you, worldbuilder. Thank you for helping me when I felt sad."
+
+                                                                                                                                            hide child onlayer Foreground
+                                                                                                                                            jump gf_finish
+label gf_finish:
+
+    "After everyone has gone off on their own for a while, the entities start coming together."
+    "The Parent and The Student talk to each other, while The Elder maintains a distance. The Child is nowhere to be seen. After another wait, The Student speaks."
+
+    show student onlayer Foreground at student_right
+
+    s "All right, let's see what we've all come up with. What are everyone's gifts?"
+
+    hide student onlayer Foreground
+    show parent onlayer Foreground at parent_right
+
+    p "I can speak first. I have decided to give the gift of materials."
+
+    "The Student nods approvingly. The Parent addressed The Elder hopefully."
+
+    p "Do you have anything to share?"
+
+    hide parent onlayer Foreground
+    show elder onlayer Foreground at elder_right
+
+    e "I do not."
+
+    hide elder onlayer Foreground
+
+    "The Parent sighs."
+
+    show student onlayer Foreground at student_right
+
+    s "Well, I certainly found my gift. My gift shall be the gift of time!"
+
+    hide student onlayer Foreground
+    show parent onlayer Foreground at parent_right
+
+    "The Parent nods slowly."
+
+    p "I believe I understand…and I am excited to see what comes of your gift dear."
+
+    "The Student smiles proudly."
+
+    p "Now, where is The Child?"
+
+    hide parent onlayer Foreground
+    show child onlayer Foreground at child_right
+
+    c "BOO!"
+
+    "The Child is suddenly standing among you. You are unsure of when they got there, as you did not see them prior to this point."
+
+    hide child onlayer Foreground
+    show parent onlayer Foreground at parent_right
+
+    p "Oh! You seem to have snuck up on us, dear."
+
+    hide parent onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "How did you manage that?"
+
+    hide student onlayer Foreground
+    show child onlayer Foreground at child_right
+
+    c "I have picked my gift. I thought about everything I liked, and I know what I wanna do."
+    c "My gift is…magic!"
+
+    hide child onlayer Foreground
+    show student onlayer Foreground at student_right
+
+    s "The gift of magic?"
+
+    hide student onlayer Foreground
+    show child onlayer Foreground at child_right
+
+    c "The whole world will be magical. Magic will be here and there, and all kinds of crazy stuff will happen! Just you wait!"
+
+    hide child onlayer Foreground
+
+    "The Elder grumbles to themself, which The Parent attempts to cover up."
+
+    show parent onlayer Foreground at parent_right
+
+    p "That is just wonderful. I am so glad you found your gift."
+    p "And I'm so proud of all of you for what you have offered. May the world we create be better off with all of these gifts."
+
+    hide parent onlayer Foreground
+
+    "The Student and The Child nod."
+
+    show student onlayer Foreground at student_right
+
+    s "Indeed!"
+
+    p "Then I suppose it is time to start marking the world. We need to create something physical now. Some land, some waves, some magical energies. And whatever else that will be a part of the world's form."
+    p "And that means you too, worldbuilder. It's high time you made physical marks of your world, if you haven't already. A map, a drawing, a sculpture. We need to see what your world looks like. Are you all ready?"
+    hide parent onlayer Foreground
+    menu:
+        "As ready as I'll ever be.":
+            jump gf_ever
+
+            label gf_ever:
+                show student onlayer Foreground at student_right
+                s "Then it's time! Let's finally go and put something in the world!"
+                hide student onlayer Foreground
+
+                "The Four all soar off in different directions, leaving you alone with the world of your own."
+
+                centered "…"
+                $ Child = True
+                $ Student = True
+                $ Parent = True
+                $ Elder = True
+                $ Tracker = 0
+
 
                     
 return
