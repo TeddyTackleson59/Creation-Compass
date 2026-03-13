@@ -3611,7 +3611,7 @@ label nr_talk:
                                                                                                                 "The Light swells bigger and bigger, until nothing is left."
                                                                                                                 hide background1 onlayer master
 
-                                                                                                                scene white
+                                                                                                                scene white with fade
 
                                                                                                                 centered "..."
 label e:
@@ -3621,7 +3621,7 @@ label e:
     "In the end, two worlds stood among thousands. The Four live on in myriad forms, within memories, with creations, within their own world. Timeless entities have learned what it means to be a creative, lessons that many of us have had to learn over and over again."
 
     "People of all worlds are always learning. Their creators are always learning as well."
-    
+
     "The concept of Creation is too vast to be so easily understood. To use ideas to make new ideas, and use those ideas further, and then to look back and see the great heaps of ideas behind you, your creations, inspirations, desires, follies, and everything in between."
 
     "It's not the same for everyone. But this is how it was for me. And I truly hope this isn't the end of your world. I know it certainly isn't the end of mine."
