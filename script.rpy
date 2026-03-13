@@ -2351,14 +2351,13 @@ label cm_next:
 
                                                                     "The Student smiles gently. Their flame burns just a bit brighter."
 
-                                                                    s """
+                                                                    s "And then there's the God of Eyes. The keeper of truths. Another entity that is closer to the goings on in the world than we might be, and can better determine what needs to happen."
+                                                                    
 
-                                                                    And then there's the God of Eyes. The keeper of truths. Another entity that is closer to the goings on in the world than we might be, and can better determine what needs to happen.
+                                                                    s "At least, if we need to step in."
 
-                                                                    At least, if we need to step in.
-
-                                                                    …So…that's all of mine.
-                                                                    """
+                                                                    s "…So…that's all of mine."
+                                                                    
 
                                                                     hide student onlayer Foreground
                                                                     show parent onlayer Foreground at parent_right
