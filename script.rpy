@@ -910,7 +910,7 @@ label gf_talk:
                                                                                         "The Child runs off, shining brightly again."
                                                                                         if Student = False:
                                                                                             jump gf_student
-                                                                                        else if Parent = False:
+                                                                                        elif Parent = False:
                                                                                             jump gf_parent
                                                                                         else:
                                                                                             jump gf_elder
