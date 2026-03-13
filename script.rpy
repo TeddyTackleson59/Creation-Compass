@@ -2103,7 +2103,7 @@ label cm_talk:
 
                                                                                         label cm_will:
 
-                                                                                            e "Hey, make sure you’re taking it seriously. The Student was trying to slow things down, but they were right about one thing. There needs to be intention behind the living things in your world. They're the important part of it. If you haven't made cities, you should probably do that too."
+                                                                                            e "Hey, make sure you're taking it seriously. The Student was trying to slow things down, but they were right about one thing. There needs to be intention behind the living things in your world. They're the important part of it. If you haven't made cities, you should probably do that too."
                                                                                             e "Now stop bothering me, I need to work."
                                                                                             hide elder onlayer Foreground
 
@@ -2196,7 +2196,7 @@ label cm_next:
 
                                 "The cloud above explodes outward with a thundering cry"
 
-                                s "But I can’t do that. I can’t make it how I wanted. I just have to…"
+                                s "But I can't do that. I can't make it how I wanted. I just have to…"
 
                                 menu:
 
@@ -2249,7 +2249,7 @@ label cm_next:
 
                                                         …
 
-                                                        Then I suppose it’s something we both need to learn.
+                                                        Then I suppose it's something we both need to learn.
 
                                                         Together?
                                                         """
@@ -2371,7 +2371,7 @@ label cm_next:
 
                                                                     show child onlayer Foreground at child_right
 
-                                                                    c "Grrreeat!! Everyone did such a good job! It’s time to offishally give our world life!"
+                                                                    c "Grrreeat!! Everyone did such a good job! It's time to offishally give our world life!"
 
                                                                     hide child onlayer Foreground
                                                                     show parent onlayer Foreground at parent_right
@@ -2386,6 +2386,12 @@ label cm_next:
                                                                     hide student onlayer Foreground
 
                                                                     "The Elder tries to hide a grin."
+
+                                                                    """
+                                                                    Hey
+                                                                    hi
+                                                                    how are you?
+                                                                    """
 
                                                                     "Tens of thousands of small sparkles of light drift towards the map. Each one will go on to become their own creature, living, breathing, and ready to greet a new world."
                                                                     jump rs
