@@ -1174,6 +1174,7 @@ label gf_talk:
                                             "The Parent gives a knowing wink."
 
                                             p "Now then, I wish to speak with The Student. I hope to talk again."
+                                            hide parent onlayer Foreground
 
                                             centered "…"
                                             $ tracker += 1
@@ -1548,7 +1549,7 @@ label cm:
     centered "Chapter 3: Concious Movement"
     centered "In which Craft releases its grasp"
 
-    show background1 onlayer master
+    show background1 onlayer master at background
 
     "The Four have been hard at work. The space below is now populated with what resembles a map, sprawling away in all directions."
     "Four distinct land masses are arranged on the map, their landscapes of mountains, forests, and rivers having just been sculpted and shaped. Having rested, The Student stands to face the rest of the group."
@@ -1568,7 +1569,7 @@ label cm:
     s "But now we must press forward. The next subject to tackle is…"
 
     hide student onlayer Foreground
-    show chil onlayer Foreground at child_right
+    show child onlayer Foreground at child_right
 
     "The Child jumps up and down with their hand raised."
 
@@ -1580,7 +1581,7 @@ label cm:
     s "...Yes?"
 
     hide student onlayer Foreground
-    show chil onlayer Foreground at child_right
+    show child onlayer Foreground at child_right
 
     c "We need people! The world is lonely, so we need to put people there!"
     hide child onlayer Foreground
@@ -1589,7 +1590,7 @@ label cm:
     s "Well, I suppose, but I think that creating denizens will be a rather complicated process of collaboration and-"
 
     hide student onlayer Foreground
-    show chil onlayer Foreground at child_right
+    show child onlayer Foreground at child_right
 
     c "Nah, it'll be easy! I've got a bunch of ideas right here."
 
@@ -2396,7 +2397,7 @@ label rs:
     hide background1 onlayer master
     centered "Chatper 4: Running, Soaring"
     centered "In which Love learns temperance"
-    show background1 onlayer master
+    show background1 onlayer master at background
     "In the time since the population of their world, The Four have continued to create all manner of new and exciting things."
     
     "The space you've been occupying is now littered with half-finished projects. The map is brighter than ever, complete with four large statues of each of The Four that were given to the people by the gods."
@@ -2407,7 +2408,7 @@ label rs:
 
     s "The God of Eyes brings news! The people of our world have given it a name!"
 
-    hide student on Foreground
+    hide student onlayer Foreground
 
     "Excitment quickly fills the space, as the others drop what they are doing and come to gather around The Student."
 
@@ -2885,7 +2886,7 @@ label rs_talk:
                                                                                                             jump rs_sorry
 
                                                                                                             label rs_sorry:
-                                                                                                                show parent onlayer Foreground
+                                                                                                                show parent onlayer Foreground at parent_right
 
                                                                                                                 p "I'm sorry."
 
@@ -3113,6 +3114,8 @@ label rs_talk:
                                                                     hide elder onlayer Foreground
 
                                                                     "Turned loose, you walk back to where the rest of The Four are."
+                                                                    $ Elder = False
+                                                                    $ tracker += 1
 
                                                                     if tracker >= 2:
                                                                         jump rs_final
@@ -3130,7 +3133,7 @@ label rs_final:
 label nr:
     centered "Chapter 5: The Needle Rests"
     centered "In which Fate yeilds reflection"
-    show background1 onlayer master
+    show background1 onlayer master at background
     "The world of Stlethia, a shining landscape teeming with life and magic. It's strange that something so vast can seem so small, as you look at the map of the world."
 
     "Stlethia is at peace for the moment, so you and The Four have taken that moment to take a break from making and just watch. All of you reclining in a line, watching the map."
