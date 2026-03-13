@@ -1353,15 +1353,21 @@ label gf_next:
 
                                                                 c "...both?"
                                                                 menu:
-                                                                    "Yes. Sometimes you do it your way even when others tell you not to, and sometimes you listen to them when they tell you to try something else.":
-                                                                        jump gf_yourway
+                                                                    "Yes.":
+                                                                        jump gf_mhm
 
-                                                                        label gf_yourway:
+                                                                        label gf_mhm:
+                                                                            c "..."                                                                            
+                                                                            menu:
+                                                                                "Yes. Sometimes you do it your way even when others tell you not to, and sometimes you listen to them when they tell you to try something else.":
+                                                                                    jump gf_yourway
 
-                                                                            "The light surrounding The Child starts to come back down to its usual level."
+                                                                                    label gf_yourway:
 
-                                                                            c "I…I…"
-                                                                            jump gf_resolution
+                                                                                        "The light surrounding The Child starts to come back down to its usual level."
+
+                                                                                        c "I…I…"
+                                                                                        jump gf_resolution
 
                                                                                         label gf_resolution:
 
