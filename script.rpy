@@ -2929,7 +2929,7 @@ label rs_talk:
 
                                                                                                                                                                 label rs_other:
 
-                                                                                                                                                                    "The Parent smiles at you with a mixture of gratitude and pride.
+                                                                                                                                                                    "The Parent smiles at you with a mixture of gratitude and pride."
 
                                                                                                                                                                     p "Yes, very wise. When one cannot be strong, another can take its place until they have replenished themselves."
 
